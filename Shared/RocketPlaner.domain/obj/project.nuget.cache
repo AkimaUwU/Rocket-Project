@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "fHBtD7b3uZcceFrenqW8z+Guld8XRUARdIF6vzWuFbEHLxxc8DLPPH5WqXY8DnAwQTEp4WLaYFmv5+LVTGY/iA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Akima\\Desktop\\Project\\Shared\\RocketPlaner.domain\\RocketPlaner.domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Akima\\.nuget\\packages\\csharpfunctionalextensions\\3.1.0\\csharpfunctionalextensions.3.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
