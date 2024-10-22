@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Akima\\Desktop\\Project\\RocketPlaner.api\\RocketPlaner.api.csproj": {}
+    "C:\\Users\\Ramwsh\\Desktop\\Rocket Project\\Rocket-Project\\RocketPlaner.api\\RocketPlaner.api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Akima\\Desktop\\Project\\RocketPlaner.api\\RocketPlaner.api.csproj": {
+    "C:\\Users\\Ramwsh\\Desktop\\Rocket Project\\Rocket-Project\\RocketPlaner.api\\RocketPlaner.api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Akima\\Desktop\\Project\\RocketPlaner.api\\RocketPlaner.api.csproj",
+        "projectUniqueName": "C:\\Users\\Ramwsh\\Desktop\\Rocket Project\\Rocket-Project\\RocketPlaner.api\\RocketPlaner.api.csproj",
         "projectName": "RocketPlaner.api",
-        "projectPath": "C:\\Users\\Akima\\Desktop\\Project\\RocketPlaner.api\\RocketPlaner.api.csproj",
-        "packagesPath": "C:\\Users\\Akima\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Akima\\Desktop\\Project\\RocketPlaner.api\\obj\\",
+        "projectPath": "C:\\Users\\Ramwsh\\Desktop\\Rocket Project\\Rocket-Project\\RocketPlaner.api\\RocketPlaner.api.csproj",
+        "packagesPath": "C:\\Users\\Ramwsh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ramwsh\\Desktop\\Rocket Project\\Rocket-Project\\RocketPlaner.api\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Akima\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ramwsh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +26,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/tgbots/Telegram.Bot/_packaging/release/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
@@ -66,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

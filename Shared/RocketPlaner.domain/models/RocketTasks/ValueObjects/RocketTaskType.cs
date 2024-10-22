@@ -1,47 +1,42 @@
-
-
-using System.Net.Http.Headers;
-using System.Xml.Schema;
 using CSharpFunctionalExtensions;
-using RocketPlaner.domain.abstraction;
+
+using RocketPlaner.domain.Abstractions;
 
 namespace RocketPlaner.domain.models.RocketTasks.ValueObjects;
 
 public class RocketTaskType : DomainValueObject
 {
-    
+	public string Type { get; private set; }
 
-    public string ValueType {get; private set;}
+	private RocketTaskType()
+	{
+		Type = string.Empty;
+	}
 
-    private RocketTaskType()
-    {
-        ValueType=string.Empty;
+	private RocketTaskType(string type)
+	{
+		Type = type;
+	}
 
-    }
-    private RocketTaskType(string type)
-    {
-        ValueType=type;
-    }
-    public static Result<RocketTaskType> Create(string type)
-    {
-        if (string.IsNullOrWhiteSpace(type)) 
-        {
+	public static Result<RocketTaskType> Create(string type)
+	{
+		if (string.IsNullOrWhiteSpace(type))
+			return Result.Failure<RocketTaskType>("Тип задачи не указан");
 
-            return Result.Failure<RocketTaskType>("Тип задачи не указан");
-        }
-        if(rocketTaskTypesMassiv.Any(x => x.ValueType == type) == false) return Result.Failure<RocketTaskType>("Некорректный тип задачи");
-        return new RocketTaskType(type);
+		if (_types.Any(x => x.Type == type) == false)
+			return Result.Failure<RocketTaskType>($"Недопустимый тип задачи. Допустимы: {_types[0].Type} {_types[1].Type}");
 
+		return new RocketTaskType(type);
+	}
 
-    }
-    public override IEnumerable<object> GetEqualityComponents()
-    {
+	public override IEnumerable<object> GetEqualityComponents()
+	{
+		yield return Type;
+	}
 
-        yield return ValueType;
-    }
+	private static RocketTaskType[] _types = [
+		new("Повторяющаяся"),
+		new("Одноразовая")];
 
-    private static RocketTaskType[] rocketTaskTypesMassiv = [new("Повторяющииеся"), new("Одноразовое")];
-
-    public static RocketTaskType Defoult => new RocketTaskType();
-
+	public static RocketTaskType Defoult => new RocketTaskType();
 }

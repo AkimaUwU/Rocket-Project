@@ -1,10 +1,10 @@
 
 
-namespace RocketPlaner.domain.abstraction;
+namespace RocketPlaner.domain.Abstractions;
 
 abstract public class DomainValueObject
 {
-    public abstract IEnumerable<object> GetEqualityComponents();
+	public abstract IEnumerable<object> GetEqualityComponents();
 
 	public override bool Equals(object? obj)
 	{
@@ -23,7 +23,7 @@ abstract public class DomainValueObject
 		GetEqualityComponents().Aggregate(default(int), (hashcode, value) =>
 			HashCode.Combine(hashcode, value.GetHashCode()));
 
-	public static bool operator ==(DomainValueObject left, DomainValueObject? right)
+	public static bool operator ==(DomainValueObject? left, DomainValueObject? right)
 	{
 		if (left is null && right is null)
 			return true;
