@@ -4,20 +4,27 @@ using RocketPlaner.domain.Abstractions;
 
 namespace RocketPlaner.domain.models.RocketTasks.ValueObjects;
 
+// Объект - значение. Тип запланированной задачи.
 public class RocketTaskType : DomainValueObject
 {
+	// Допустимые типы запланированной задачи: Повторяющаяся и Одноразовая.
+	private static RocketTaskType[] _types = [
+		new("Повторяющаяся"),
+		new("Одноразовая")];
+
+	// Поле - значение типа запланированной задачи.
 	public string Type { get; private set; }
 
-	private RocketTaskType()
-	{
-		Type = string.Empty;
-	}
+	// Конструктор создания пустого объекта (с пустым значением)
+	private RocketTaskType() => Type = string.Empty;
 
-	private RocketTaskType(string type)
-	{
-		Type = type;
-	}
+	// Конструктор создания типа задачи.
+	private RocketTaskType(string type) => Type = type;
 
+	// Пустой вариант типа задачи.
+	public static RocketTaskType Default => new RocketTaskType();
+
+	// Фабричный метод создания типа задачи с валидацией.
 	public static Result<RocketTaskType> Create(string type)
 	{
 		if (string.IsNullOrWhiteSpace(type))
@@ -29,14 +36,9 @@ public class RocketTaskType : DomainValueObject
 		return new RocketTaskType(type);
 	}
 
+	// Реализация DomainValueObject класса для сравнения типов задач.
 	public override IEnumerable<object> GetEqualityComponents()
 	{
 		yield return Type;
 	}
-
-	private static RocketTaskType[] _types = [
-		new("Повторяющаяся"),
-		new("Одноразовая")];
-
-	public static RocketTaskType Defoult => new RocketTaskType();
 }

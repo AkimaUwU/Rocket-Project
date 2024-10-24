@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RocketPlaner.api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ead855acc2e8dbdf877bedcddd764970c2755b1d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8d839103e31c71ad6c964dad471a4e779e708d66")]
 [assembly: System.Reflection.AssemblyProductAttribute("RocketPlaner.api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RocketPlaner.api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

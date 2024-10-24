@@ -18,8 +18,8 @@ public class RocketTaskCreateSample : TestSample<RocketTask>
 		{
 			Console.WriteLine($"Создана задача: {task1.Value.Message}");
 			Console.WriteLine($"Тип задачи: {task1.Value.Type.Type}");
-			Console.WriteLine($"Дата создания: {task1.Value.CreatedTime}");
-			Console.WriteLine($"Дата уведомления: {task1.Value.NotifyTime}");
+			Console.WriteLine($"Дата создания: {task1.Value.CreatedDate}");
+			Console.WriteLine($"Дата уведомления: {task1.Value.NotifyDate}");
 		}
 
 		if (task1.IsFailure)
@@ -34,8 +34,8 @@ public class RocketTaskCreateSample : TestSample<RocketTask>
 		{
 			Console.WriteLine($"Создана задача: {task2.Value.Message}");
 			Console.WriteLine($"Тип задачи: {task2.Value.Type.Type}");
-			Console.WriteLine($"Дата создания: {task2.Value.CreatedTime}");
-			Console.WriteLine($"Дата уведомления: {task2.Value.NotifyTime}");
+			Console.WriteLine($"Дата создания: {task2.Value.CreatedDate}");
+			Console.WriteLine($"Дата уведомления: {task2.Value.NotifyDate}");
 		}
 
 		if (task2.IsFailure)
