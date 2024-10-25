@@ -1,4 +1,4 @@
-﻿using RocketPlaner.Tests.Samples.RocketTasks;
+﻿
 
 namespace RocketPlaner.Tests
 {
@@ -6,8 +6,8 @@ namespace RocketPlaner.Tests
 	{
 		static void Main()
 		{
-			RocketTaskCreateSample sample = new RocketTaskCreateSample();
-			sample.Invoke();
+			RocketTaskCreation rocketTaskCreation= new RocketTaskCreation();
+			rocketTaskCreation.startwork();
 		}
 	}
 }

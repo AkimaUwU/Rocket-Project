@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Xx+6av7YTFOO9lf/OmUuF0lp/sq5us/mfyWKex2hrFu48TxDTk7zUfaw6pQdpYAcdWO24nSEDKHYuGg4fuUS/g==",
+  "dgSpecHash": "DfpZ3qarJOpRGbipCXYzY9CVMFYBmzjFoevmNkgmSDTm3BRIJbD14sDo+HckuBeJTSZ2kc4lUOur6NbOdpt55A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ramwsh\\Desktop\\Rocket Project\\Rocket-Project\\Shared\\RocketPlaner.domain\\RocketPlaner.domain.csproj",
+  "projectFilePath": "C:\\Users\\Akima\\Desktop\\Project\\Rocket-Project\\Shared\\RocketPlaner.domain\\RocketPlaner.domain.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Ramwsh\\.nuget\\packages\\csharpfunctionalextensions\\3.1.0\\csharpfunctionalextensions.3.1.0.nupkg.sha512"
+    "C:\\Users\\Akima\\.nuget\\packages\\csharpfunctionalextensions\\3.1.0\\csharpfunctionalextensions.3.1.0.nupkg.sha512"
   ],
   "logs": []
 }

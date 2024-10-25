@@ -18,3 +18,23 @@ C:\Users\Ramwsh\Desktop\Rocket Project\Rocket-Project\RocketPlaner.Tests\obj\Deb
 C:\Users\Ramwsh\Desktop\Rocket Project\Rocket-Project\RocketPlaner.Tests\obj\Debug\net8.0\RocketPlaner.Tests.pdb
 C:\Users\Ramwsh\Desktop\Rocket Project\Rocket-Project\RocketPlaner.Tests\obj\Debug\net8.0\RocketPlaner.Tests.genruntimeconfig.cache
 C:\Users\Ramwsh\Desktop\Rocket Project\Rocket-Project\RocketPlaner.Tests\obj\Debug\net8.0\ref\RocketPlaner.Tests.dll
+C:\Users\Akima\Desktop\Project\Rocket-Project\RocketPlaner.Tests\bin\Debug\net8.0\RocketPlaner.Tests.exe
+C:\Users\Akima\Desktop\Project\Rocket-Project\RocketPlaner.Tests\bin\Debug\net8.0\RocketPlaner.Tests.deps.json
+C:\Users\Akima\Desktop\Project\Rocket-Project\RocketPlaner.Tests\bin\Debug\net8.0\RocketPlaner.Tests.runtimeconfig.json
+C:\Users\Akima\Desktop\Project\Rocket-Project\RocketPlaner.Tests\bin\Debug\net8.0\RocketPlaner.Tests.dll
+C:\Users\Akima\Desktop\Project\Rocket-Project\RocketPlaner.Tests\bin\Debug\net8.0\RocketPlaner.Tests.pdb
+C:\Users\Akima\Desktop\Project\Rocket-Project\RocketPlaner.Tests\bin\Debug\net8.0\CSharpFunctionalExtensions.dll
+C:\Users\Akima\Desktop\Project\Rocket-Project\RocketPlaner.Tests\bin\Debug\net8.0\RocketPlaner.domain.dll
+C:\Users\Akima\Desktop\Project\Rocket-Project\RocketPlaner.Tests\bin\Debug\net8.0\RocketPlaner.domain.pdb
+C:\Users\Akima\Desktop\Project\Rocket-Project\RocketPlaner.Tests\obj\Debug\net8.0\RocketPlaner.Tests.csproj.AssemblyReference.cache
+C:\Users\Akima\Desktop\Project\Rocket-Project\RocketPlaner.Tests\obj\Debug\net8.0\RocketPlaner.Tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Akima\Desktop\Project\Rocket-Project\RocketPlaner.Tests\obj\Debug\net8.0\RocketPlaner.Tests.AssemblyInfoInputs.cache
+C:\Users\Akima\Desktop\Project\Rocket-Project\RocketPlaner.Tests\obj\Debug\net8.0\RocketPlaner.Tests.AssemblyInfo.cs
+C:\Users\Akima\Desktop\Project\Rocket-Project\RocketPlaner.Tests\obj\Debug\net8.0\RocketPlaner.Tests.csproj.CoreCompileInputs.cache
+C:\Users\Akima\Desktop\Project\Rocket-Project\RocketPlaner.Tests\obj\Debug\net8.0\RocketPlaner.Tests.sourcelink.json
+C:\Users\Akima\Desktop\Project\Rocket-Project\RocketPlaner.Tests\obj\Debug\net8.0\RocketPl.C25777CA.Up2Date
+C:\Users\Akima\Desktop\Project\Rocket-Project\RocketPlaner.Tests\obj\Debug\net8.0\RocketPlaner.Tests.dll
+C:\Users\Akima\Desktop\Project\Rocket-Project\RocketPlaner.Tests\obj\Debug\net8.0\refint\RocketPlaner.Tests.dll
+C:\Users\Akima\Desktop\Project\Rocket-Project\RocketPlaner.Tests\obj\Debug\net8.0\RocketPlaner.Tests.pdb
+C:\Users\Akima\Desktop\Project\Rocket-Project\RocketPlaner.Tests\obj\Debug\net8.0\RocketPlaner.Tests.genruntimeconfig.cache
+C:\Users\Akima\Desktop\Project\Rocket-Project\RocketPlaner.Tests\obj\Debug\net8.0\ref\RocketPlaner.Tests.dll
