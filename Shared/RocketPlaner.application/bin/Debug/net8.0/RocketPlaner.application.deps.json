@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "RocketPlaner.application/1.0.0": {
+        "dependencies": {
+          "RocketPlaner.domain": "1.0.0"
+        },
+        "runtime": {
+          "RocketPlaner.application.dll": {}
+        }
+      },
+      "RocketPlaner.domain/1.0.0": {
+        "runtime": {
+          "RocketPlaner.domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RocketPlaner.application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RocketPlaner.domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

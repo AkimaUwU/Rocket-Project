@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RocketPlaner.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aefcd8ad8a4e6ea955c12165bc43d18aef5bba06")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ffa420ca0f68d57cbec5d6a9ddaf88c68444e42f")]
 [assembly: System.Reflection.AssemblyProductAttribute("RocketPlaner.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RocketPlaner.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

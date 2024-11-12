@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "v02J3434yHLiWTwF8tV+rcDnXf12OYKiAunTy1Nw17n/W6HKNis5xPKz1e9WYhxCMhuwqptNTQCjGQ/qBhjjuw==",
+  "dgSpecHash": "PgZ3Msk6zIOapEVbudBbLEIkV69iR91+1zrJnUh1ucjh11jItbADAvpD3D2HOnsTsTUuth8epbMQxWtRQXP8Ig==",
   "success": true,
   "projectFilePath": "C:\\Users\\Akima\\Desktop\\Project\\Rocket-Project\\RocketPlaner.Tests\\RocketPlaner.Tests.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Akima\\.nuget\\packages\\csharpfunctionalextensions\\3.1.0\\csharpfunctionalextensions.3.1.0.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

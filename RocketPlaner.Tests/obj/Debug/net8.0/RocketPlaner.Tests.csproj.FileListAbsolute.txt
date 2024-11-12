@@ -23,7 +23,6 @@ C:\Users\Akima\Desktop\Project\Rocket-Project\RocketPlaner.Tests\bin\Debug\net8.
 C:\Users\Akima\Desktop\Project\Rocket-Project\RocketPlaner.Tests\bin\Debug\net8.0\RocketPlaner.Tests.runtimeconfig.json
 C:\Users\Akima\Desktop\Project\Rocket-Project\RocketPlaner.Tests\bin\Debug\net8.0\RocketPlaner.Tests.dll
 C:\Users\Akima\Desktop\Project\Rocket-Project\RocketPlaner.Tests\bin\Debug\net8.0\RocketPlaner.Tests.pdb
-C:\Users\Akima\Desktop\Project\Rocket-Project\RocketPlaner.Tests\bin\Debug\net8.0\CSharpFunctionalExtensions.dll
 C:\Users\Akima\Desktop\Project\Rocket-Project\RocketPlaner.Tests\bin\Debug\net8.0\RocketPlaner.domain.dll
 C:\Users\Akima\Desktop\Project\Rocket-Project\RocketPlaner.Tests\bin\Debug\net8.0\RocketPlaner.domain.pdb
 C:\Users\Akima\Desktop\Project\Rocket-Project\RocketPlaner.Tests\obj\Debug\net8.0\RocketPlaner.Tests.csproj.AssemblyReference.cache

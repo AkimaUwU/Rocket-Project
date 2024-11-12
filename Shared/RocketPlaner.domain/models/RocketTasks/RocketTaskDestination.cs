@@ -1,6 +1,7 @@
-using CSharpFunctionalExtensions;
+
 using System.ComponentModel.Design;
 using RocketPlaner.domain.Abstractions;
+using RocketPlaner.domain.Tools;
 
 public class RocketTaskDestination : DomainEntity
 {
@@ -10,10 +11,10 @@ public class RocketTaskDestination : DomainEntity
 
 	private RocketTaskDestination(Guid id, string chatId) : base(id) => ChatId = chatId;		        	    
 
-	public static Result<RocketTaskDestination> Create(string chatId)
+	public static Resoult<RocketTaskDestination> Create(string chatId)
 	{
 		if (string.IsNullOrWhiteSpace(chatId))
-			return Result.Failure<RocketTaskDestination>("ID чата не было указано");
+			return new Error ("ID чата не было указано");
 		
 		return new RocketTaskDestination(Guid.NewGuid(), chatId);
 	}
