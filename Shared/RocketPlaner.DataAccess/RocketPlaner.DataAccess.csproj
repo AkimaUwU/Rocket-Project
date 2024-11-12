@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RocketPlaner.application\RocketPlaner.application.csproj" />
+    <ProjectReference Include="..\RocketPlaner.Application\RocketPlaner.Application.csproj" />
   </ItemGroup>
 
 </Project>

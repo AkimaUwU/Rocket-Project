@@ -20,7 +20,7 @@ namespace RocketPlaner.DataAccess.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.10");
 
-            modelBuilder.Entity("RocketPlaner.application.Contracts.DataBaseContracts.DestinationDatBaseTable", b =>
+            modelBuilder.Entity("RocketPlaner.Application.Contracts.DataBaseContracts.DestinationDatBaseTable", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -42,7 +42,7 @@ namespace RocketPlaner.DataAccess.Migrations
                     b.ToTable("Destinations");
                 });
 
-            modelBuilder.Entity("RocketPlaner.application.Contracts.DataBaseContracts.TaskDataBaseTable", b =>
+            modelBuilder.Entity("RocketPlaner.Application.Contracts.DataBaseContracts.TaskDataBaseTable", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -78,7 +78,7 @@ namespace RocketPlaner.DataAccess.Migrations
                     b.ToTable("Tasks");
                 });
 
-            modelBuilder.Entity("RocketPlaner.application.Contracts.DataBaseContracts.UserDataBaseTable", b =>
+            modelBuilder.Entity("RocketPlaner.Application.Contracts.DataBaseContracts.UserDataBaseTable", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -94,9 +94,9 @@ namespace RocketPlaner.DataAccess.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("RocketPlaner.application.Contracts.DataBaseContracts.DestinationDatBaseTable", b =>
+            modelBuilder.Entity("RocketPlaner.Application.Contracts.DataBaseContracts.DestinationDatBaseTable", b =>
                 {
-                    b.HasOne("RocketPlaner.application.Contracts.DataBaseContracts.TaskDataBaseTable", "Task")
+                    b.HasOne("RocketPlaner.Application.Contracts.DataBaseContracts.TaskDataBaseTable", "Task")
                         .WithMany("Destinations")
                         .HasForeignKey("TaskId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -105,9 +105,9 @@ namespace RocketPlaner.DataAccess.Migrations
                     b.Navigation("Task");
                 });
 
-            modelBuilder.Entity("RocketPlaner.application.Contracts.DataBaseContracts.TaskDataBaseTable", b =>
+            modelBuilder.Entity("RocketPlaner.Application.Contracts.DataBaseContracts.TaskDataBaseTable", b =>
                 {
-                    b.HasOne("RocketPlaner.application.Contracts.DataBaseContracts.UserDataBaseTable", "Owner")
+                    b.HasOne("RocketPlaner.Application.Contracts.DataBaseContracts.UserDataBaseTable", "Owner")
                         .WithMany("Tasks")
                         .HasForeignKey("OwnerId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -116,12 +116,12 @@ namespace RocketPlaner.DataAccess.Migrations
                     b.Navigation("Owner");
                 });
 
-            modelBuilder.Entity("RocketPlaner.application.Contracts.DataBaseContracts.TaskDataBaseTable", b =>
+            modelBuilder.Entity("RocketPlaner.Application.Contracts.DataBaseContracts.TaskDataBaseTable", b =>
                 {
                     b.Navigation("Destinations");
                 });
 
-            modelBuilder.Entity("RocketPlaner.application.Contracts.DataBaseContracts.UserDataBaseTable", b =>
+            modelBuilder.Entity("RocketPlaner.Application.Contracts.DataBaseContracts.UserDataBaseTable", b =>
                 {
                     b.Navigation("Tasks");
                 });

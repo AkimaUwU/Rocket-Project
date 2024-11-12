@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RocketPlaner.api", "RocketPlaner.api\RocketPlaner.api.csproj", "{43B3400B-448D-4470-B4BF-2376CA579823}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RocketPlaner.TelegramBot", "RocketPlaner.TelegramBot\RocketPlaner.TelegramBot.csproj", "{43B3400B-448D-4470-B4BF-2376CA579823}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{2447B615-0C1F-43FD-861C-12B67375FDBA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketPlaner.domain", "Shared\RocketPlaner.domain\RocketPlaner.domain.csproj", "{E52AEB62-1C2D-46E8-9AB8-5558BF81584A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketPlaner.Core", "Shared\RocketPlaner.Core\RocketPlaner.Core.csproj", "{E52AEB62-1C2D-46E8-9AB8-5558BF81584A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketPlaner.Tests", "RocketPlaner.Tests\RocketPlaner.Tests.csproj", "{92E3D016-C1B9-4F2D-A606-60F02A25DB36}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketPlaner.application", "Shared\RocketPlaner.application\RocketPlaner.application.csproj", "{58E943E9-3142-481E-8E7D-E1F83F1D3629}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketPlaner.Application", "Shared\RocketPlaner.Application\RocketPlaner.Application.csproj", "{58E943E9-3142-481E-8E7D-E1F83F1D3629}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketPlaner.DataAccess", "Shared\RocketPlaner.DataAccess\RocketPlaner.DataAccess.csproj", "{14E06117-416F-4A90-B13C-0CE21F1B88A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketPlanner.Application.Tests", "RocketPlanner.Application.Tests\RocketPlanner.Application.Tests.csproj", "{1C659546-1ECC-47B6-8C8B-00414B053FB0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,6 @@ Global
 		{E52AEB62-1C2D-46E8-9AB8-5558BF81584A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E52AEB62-1C2D-46E8-9AB8-5558BF81584A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E52AEB62-1C2D-46E8-9AB8-5558BF81584A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{92E3D016-C1B9-4F2D-A606-60F02A25DB36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{92E3D016-C1B9-4F2D-A606-60F02A25DB36}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{92E3D016-C1B9-4F2D-A606-60F02A25DB36}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{92E3D016-C1B9-4F2D-A606-60F02A25DB36}.Release|Any CPU.Build.0 = Release|Any CPU
 		{58E943E9-3142-481E-8E7D-E1F83F1D3629}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{58E943E9-3142-481E-8E7D-E1F83F1D3629}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58E943E9-3142-481E-8E7D-E1F83F1D3629}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -41,6 +37,10 @@ Global
 		{14E06117-416F-4A90-B13C-0CE21F1B88A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14E06117-416F-4A90-B13C-0CE21F1B88A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14E06117-416F-4A90-B13C-0CE21F1B88A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C659546-1ECC-47B6-8C8B-00414B053FB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C659546-1ECC-47B6-8C8B-00414B053FB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C659546-1ECC-47B6-8C8B-00414B053FB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C659546-1ECC-47B6-8C8B-00414B053FB0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
