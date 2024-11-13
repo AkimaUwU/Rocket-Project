@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = RocketPlaner.DataAccess
-build_property.ProjectDir = C:\Users\Ramwsh\Desktop\RocketProj\Rocket-Project\Shared\RocketPlaner.DataAccess\
+build_property.ProjectDir = C:\Users\Akima\Desktop\Project\Rocket-Project-2\Rocket-Project\Shared\RocketPlaner.DataAccess\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

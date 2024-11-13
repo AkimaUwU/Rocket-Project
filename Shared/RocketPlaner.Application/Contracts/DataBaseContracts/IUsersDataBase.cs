@@ -6,5 +6,5 @@ public interface IUsersDataBase
 {
     Task AddUser(User user);
     Task RemoveUser(User user);
-    Task GetUser(long telegramId);
+    Task<User> GetUser(long telegramId);
 }

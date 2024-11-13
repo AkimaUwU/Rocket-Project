@@ -83,7 +83,7 @@ public class RocketTask : DomainAggregateRoot
         string message,
         string[] destinations,
         User user,
-        RocketTaskType type,
+        string type,
         DateTime notifyTime,
         string title
     )
@@ -104,7 +104,17 @@ public class RocketTask : DomainAggregateRoot
                 "Некорректное время уведомления задачи. Время уведомления задачи не может быть текущим"
             );
 
-        RocketTask task = new RocketTask(message, user, type, notifyTime, title);
+        RocketTaskType? typee = type switch
+        {
+            "Одноразовая"=> new OneLife(),
+            "Повторяющаяся"=> new NoOneLife(),
+            _=>null
+        };
+        if (typee == null)
+        {
+            return new Error("Некорректный тип задачи");
+        }
+        RocketTask task = new RocketTask(message, user, typee, notifyTime, title);
 
         foreach (string dest in destinations)
         {
