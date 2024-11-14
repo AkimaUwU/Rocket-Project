@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using RocketPlaner.App.Contracts.DataBaseContracts;
+using RocketPlaner.Application.Contracts.DataBaseContracts;
 using RocketPlaner.DataAccess.DataBase.Config;
 
 namespace RocketPlaner.DataAccess.DataBase;

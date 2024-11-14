@@ -7,7 +7,7 @@ public class RocketTaskDestinationList : CustomList<RocketTaskDestination>
 {
     internal RocketTaskDestinationList() { }
 
-    public override Result<RocketTaskDestination> Add(RocketTaskDestination item)
+    public override Result<RocketTaskDestination> Add(RocketTaskDestination? item)
     {
         if (item == null)
             return new Error("Место отправки некорректно");

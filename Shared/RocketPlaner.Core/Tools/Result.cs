@@ -33,4 +33,6 @@ public class Result<T>
     public static implicit operator Result<T>(T value) => Success(value);
 
     public static implicit operator Result<T>(Error error) => Fail(error);
+
+    public static implicit operator T(Result<T> result) => result.Value;
 }

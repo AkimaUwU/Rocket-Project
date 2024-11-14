@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using RocketPlaner.App.Contracts.DataBaseContracts;
+using RocketPlaner.Application.Contracts.DataBaseContracts;
 
 namespace RocketPlaner.DataAccess.DataBase.Config;
 

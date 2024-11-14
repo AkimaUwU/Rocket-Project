@@ -1,3 +1,4 @@
+using System.Text;
 using RocketPlaner.Core.models.RocketTasks.ValueObjects;
 using RocketPlaner.Core.models.Users;
 using RocketPlaner.Core.Tools;
@@ -82,7 +83,7 @@ public class RocketTask : DomainAggregateRoot
     public static Result<RocketTask> Create(
         string message,
         string[] destinations,
-        User user,
+        User? user,
         string type,
         DateTime notifyTime,
         string title
@@ -104,17 +105,16 @@ public class RocketTask : DomainAggregateRoot
                 "Некорректное время уведомления задачи. Время уведомления задачи не может быть текущим"
             );
 
-        RocketTaskType? typee = type switch
+        RocketTaskType? requestedType = type switch
         {
-            "Одноразовая"=> new OneLife(),
-            "Повторяющаяся"=> new NoOneLife(),
-            _=>null
+            "Одноразовая" => new OneLife(),
+            "Повторяющаяся" => new NoOneLife(),
+            _ => null,
         };
-        if (typee == null)
-        {
+        if (requestedType == null)
             return new Error("Некорректный тип задачи");
-        }
-        RocketTask task = new RocketTask(message, user, typee, notifyTime, title);
+
+        RocketTask task = new RocketTask(message, user, requestedType, notifyTime, title);
 
         foreach (string dest in destinations)
         {
@@ -137,5 +137,17 @@ public class RocketTask : DomainAggregateRoot
 
         NotifyDate = updated;
         return this;
+    }
+
+    public override string ToString()
+    {
+        StringBuilder builder = new StringBuilder();
+        builder.AppendLine($"ИД задачи: {Id}");
+        builder.AppendLine($"Заголовок задачи: {Title}");
+        builder.AppendLine($"Текст задачи: {Message}");
+        builder.AppendLine($"Дата создания задачи: {CreatedDate.ToString("dd/MM/yyyy")}");
+        builder.AppendLine($"Дата удаления задачи: {NotifyDate.ToString("dd/MM/yyyy")}");
+        builder.AppendLine($"Тип задачи: {Type.Type}");
+        return builder.ToString();
     }
 }

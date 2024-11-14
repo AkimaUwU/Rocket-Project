@@ -1,4 +1,3 @@
-using System;
 using RocketPlaner.Core.Abstractions;
 using RocketPlaner.Core.models.RocketTasks;
 using RocketPlaner.Core.Tools;
@@ -9,7 +8,7 @@ public class UserTasksList : CustomList<RocketTask>
 {
     internal UserTasksList() { }
 
-    public override Result<RocketTask> Add(RocketTask item)
+    public override Result<RocketTask> Add(RocketTask? item)
     {
         if (item == null)
             return new Error("Задача некорректна");

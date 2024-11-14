@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Akima\\Desktop\\Project\\Rocket-Project-2\\Rocket-Project\\Shared\\RocketPlaner.DataAccess\\RocketPlaner.DataAccess.csproj": {}
+    "C:\\Users\\Ramwsh\\Desktop\\rocketpg\\Rocket-Project\\Shared\\RocketPlaner.DataAccess\\RocketPlaner.DataAccess.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Akima\\Desktop\\Project\\Rocket-Project-2\\Rocket-Project\\Shared\\RocketPlaner.Application\\RocketPlaner.Application.csproj": {
+    "C:\\Users\\Ramwsh\\Desktop\\rocketpg\\Rocket-Project\\Shared\\RocketPlaner.Application\\RocketPlaner.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Akima\\Desktop\\Project\\Rocket-Project-2\\Rocket-Project\\Shared\\RocketPlaner.Application\\RocketPlaner.Application.csproj",
+        "projectUniqueName": "C:\\Users\\Ramwsh\\Desktop\\rocketpg\\Rocket-Project\\Shared\\RocketPlaner.Application\\RocketPlaner.Application.csproj",
         "projectName": "RocketPlaner.Application",
-        "projectPath": "C:\\Users\\Akima\\Desktop\\Project\\Rocket-Project-2\\Rocket-Project\\Shared\\RocketPlaner.Application\\RocketPlaner.Application.csproj",
-        "packagesPath": "C:\\Users\\Akima\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Akima\\Desktop\\Project\\Rocket-Project-2\\Rocket-Project\\Shared\\RocketPlaner.Application\\obj\\",
+        "projectPath": "C:\\Users\\Ramwsh\\Desktop\\rocketpg\\Rocket-Project\\Shared\\RocketPlaner.Application\\RocketPlaner.Application.csproj",
+        "packagesPath": "C:\\Users\\Ramwsh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ramwsh\\Desktop\\rocketpg\\Rocket-Project\\Shared\\RocketPlaner.Application\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Akima\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ramwsh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,14 +26,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/tgbots/Telegram.Bot/_packaging/release/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Akima\\Desktop\\Project\\Rocket-Project-2\\Rocket-Project\\Shared\\RocketPlaner.Core\\RocketPlaner.Core.csproj": {
-                "projectPath": "C:\\Users\\Akima\\Desktop\\Project\\Rocket-Project-2\\Rocket-Project\\Shared\\RocketPlaner.Core\\RocketPlaner.Core.csproj"
+              "C:\\Users\\Ramwsh\\Desktop\\rocketpg\\Rocket-Project\\Shared\\RocketPlaner.Core\\RocketPlaner.Core.csproj": {
+                "projectPath": "C:\\Users\\Ramwsh\\Desktop\\rocketpg\\Rocket-Project\\Shared\\RocketPlaner.Core\\RocketPlaner.Core.csproj"
               }
             }
           }
@@ -64,21 +69,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Akima\\Desktop\\Project\\Rocket-Project-2\\Rocket-Project\\Shared\\RocketPlaner.Core\\RocketPlaner.Core.csproj": {
+    "C:\\Users\\Ramwsh\\Desktop\\rocketpg\\Rocket-Project\\Shared\\RocketPlaner.Core\\RocketPlaner.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Akima\\Desktop\\Project\\Rocket-Project-2\\Rocket-Project\\Shared\\RocketPlaner.Core\\RocketPlaner.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Ramwsh\\Desktop\\rocketpg\\Rocket-Project\\Shared\\RocketPlaner.Core\\RocketPlaner.Core.csproj",
         "projectName": "RocketPlaner.Core",
-        "projectPath": "C:\\Users\\Akima\\Desktop\\Project\\Rocket-Project-2\\Rocket-Project\\Shared\\RocketPlaner.Core\\RocketPlaner.Core.csproj",
-        "packagesPath": "C:\\Users\\Akima\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Akima\\Desktop\\Project\\Rocket-Project-2\\Rocket-Project\\Shared\\RocketPlaner.Core\\obj\\",
+        "projectPath": "C:\\Users\\Ramwsh\\Desktop\\rocketpg\\Rocket-Project\\Shared\\RocketPlaner.Core\\RocketPlaner.Core.csproj",
+        "packagesPath": "C:\\Users\\Ramwsh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ramwsh\\Desktop\\rocketpg\\Rocket-Project\\Shared\\RocketPlaner.Core\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Akima\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ramwsh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -86,7 +95,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/tgbots/Telegram.Bot/_packaging/release/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
@@ -124,21 +134,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Akima\\Desktop\\Project\\Rocket-Project-2\\Rocket-Project\\Shared\\RocketPlaner.DataAccess\\RocketPlaner.DataAccess.csproj": {
+    "C:\\Users\\Ramwsh\\Desktop\\rocketpg\\Rocket-Project\\Shared\\RocketPlaner.DataAccess\\RocketPlaner.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Akima\\Desktop\\Project\\Rocket-Project-2\\Rocket-Project\\Shared\\RocketPlaner.DataAccess\\RocketPlaner.DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\Ramwsh\\Desktop\\rocketpg\\Rocket-Project\\Shared\\RocketPlaner.DataAccess\\RocketPlaner.DataAccess.csproj",
         "projectName": "RocketPlaner.DataAccess",
-        "projectPath": "C:\\Users\\Akima\\Desktop\\Project\\Rocket-Project-2\\Rocket-Project\\Shared\\RocketPlaner.DataAccess\\RocketPlaner.DataAccess.csproj",
-        "packagesPath": "C:\\Users\\Akima\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Akima\\Desktop\\Project\\Rocket-Project-2\\Rocket-Project\\Shared\\RocketPlaner.DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\Ramwsh\\Desktop\\rocketpg\\Rocket-Project\\Shared\\RocketPlaner.DataAccess\\RocketPlaner.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\Ramwsh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ramwsh\\Desktop\\rocketpg\\Rocket-Project\\Shared\\RocketPlaner.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Akima\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ramwsh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -146,14 +160,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/tgbots/Telegram.Bot/_packaging/release/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Akima\\Desktop\\Project\\Rocket-Project-2\\Rocket-Project\\Shared\\RocketPlaner.Application\\RocketPlaner.Application.csproj": {
-                "projectPath": "C:\\Users\\Akima\\Desktop\\Project\\Rocket-Project-2\\Rocket-Project\\Shared\\RocketPlaner.Application\\RocketPlaner.Application.csproj"
+              "C:\\Users\\Ramwsh\\Desktop\\rocketpg\\Rocket-Project\\Shared\\RocketPlaner.Application\\RocketPlaner.Application.csproj": {
+                "projectPath": "C:\\Users\\Ramwsh\\Desktop\\rocketpg\\Rocket-Project\\Shared\\RocketPlaner.Application\\RocketPlaner.Application.csproj"
               }
             }
           }
@@ -204,7 +219,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
