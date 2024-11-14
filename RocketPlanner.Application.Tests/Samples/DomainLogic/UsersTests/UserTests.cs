@@ -44,7 +44,7 @@ public class UserTests
             message,
             destinations,
             user,
-            oneLifeType,
+            "Повторяющаяся",
             notificationDate,
             title
         );
@@ -69,7 +69,7 @@ public class UserTests
             message,
             destinations,
             user,
-            oneLifeType,
+            "Повторяющаяся",
             notificationDate,
             title
         );
@@ -95,7 +95,7 @@ public class UserTests
             message,
             destinations,
             user,
-            oneLifeType,
+            "Повторяющаяся",
             notificationDate,
             title
         );
@@ -121,7 +121,7 @@ public class UserTests
             message,
             destinations,
             user,
-            oneLifeType,
+            "Повторяющаяся",
             notificationDate,
             title
         );

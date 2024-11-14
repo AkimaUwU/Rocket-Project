@@ -23,7 +23,7 @@ public class UserTaskTest
             message,
             destinations,
             user,
-            oneLifeType,
+            "Повторяющаяся",
             notificationDate,
             title
         );
@@ -46,7 +46,7 @@ public class UserTaskTest
             message,
             destinations,
             user,
-            oneLifeType,
+            "Повторяющаяся",
             notificationDate,
             title
         );
@@ -72,7 +72,7 @@ public class UserTaskTest
             message,
             destinations,
             user,
-            oneLifeType,
+            "Повторяющаяся",
             notificationDate,
             title
         );
@@ -98,7 +98,7 @@ public class UserTaskTest
             message,
             destinations,
             user,
-            oneLifeType,
+            "Повторяющаяся",
             notificationDate,
             title
         );
@@ -121,7 +121,7 @@ public class UserTaskTest
             message,
             destinations,
             user,
-            oneLifeType,
+            "Повторяющаяся",
             notificationDate,
             title
         );
@@ -144,7 +144,7 @@ public class UserTaskTest
             message,
             destinations,
             user,
-            oneLifeType,
+            "Повторяющаяся",
             notificationDate,
             title
         );
@@ -176,7 +176,7 @@ public class UserTaskTest
             message,
             destinations,
             user,
-            oneLifeType,
+            "Повторяющаяся",
             notificationDate,
             title
         );
