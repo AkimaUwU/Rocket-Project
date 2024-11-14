@@ -22,7 +22,7 @@ public class UserTasksList : CustomList<RocketTask>
 
     public override Result<RocketTask> Find(Func<RocketTask, bool> predicate)
     {
-        var task = Items.FirstOrDefault(predicate);
+        var task = TwoWaySearch(predicate);
         if (task == null)
             return new Error("Задача не найдена");
 

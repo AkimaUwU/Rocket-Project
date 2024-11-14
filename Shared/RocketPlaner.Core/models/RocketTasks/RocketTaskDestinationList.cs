@@ -21,7 +21,7 @@ public class RocketTaskDestinationList : CustomList<RocketTaskDestination>
 
     public override Result<RocketTaskDestination> Find(Func<RocketTaskDestination, bool> predicate)
     {
-        var destination = Items.FirstOrDefault(predicate);
+        var destination = TwoWaySearch(predicate);
         if (destination == null)
             return new Error("Чат не найден");
 

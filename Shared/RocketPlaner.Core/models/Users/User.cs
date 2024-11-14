@@ -11,7 +11,7 @@ public sealed class User : DomainAggregateRoot
     /// <summary>
     /// Список задач пользователя
     /// </summary>
-    public UserTasksList Tasks { get; init; } = [];
+    public UserTasksList Tasks { get; init; } = new UserTasksList();
 
     /// <summary>
     /// ИД телеграмма пользователя

@@ -38,7 +38,7 @@ public class RocketTask : DomainAggregateRoot
     /// <summary>
     /// Список чатов, куда задача будет отправляться
     /// </summary>
-    public RocketTaskDestinationList Destinations { get; init; } = [];
+    public RocketTaskDestinationList Destinations { get; init; } = new RocketTaskDestinationList();
 
     /// <summary>
     /// Заголовок задачи
