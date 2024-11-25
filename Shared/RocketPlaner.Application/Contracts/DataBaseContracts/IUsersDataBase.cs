@@ -25,4 +25,6 @@ public interface IUsersDataBase
     /// <param name="telegramId">Идентификатор ИД телеграмма пользователя</param>
     /// <returns>Модель пользователя</returns>
     Task<UsersDao?> GetUser(long? telegramId);
+
+    Task<bool> EnsureTelegramIdIsUnique(long? telegramId);
 }

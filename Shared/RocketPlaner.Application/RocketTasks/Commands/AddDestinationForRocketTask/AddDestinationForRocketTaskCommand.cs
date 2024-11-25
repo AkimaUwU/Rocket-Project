@@ -5,7 +5,18 @@ namespace RocketPlaner.Application.RocketTasks.Commands.AddDestinationForRocketT
 
 public sealed class AddDestinationForRocketTaskCommand : ICommand<RocketTaskDestination>
 {
-    public long? UserId { get; set; }
-    public string? TaskTitle { get; set; }
-    public string? DestinationChatId { get; set; }
+    public long? UserId { get; init; }
+    public string? TaskTitle { get; init; }
+    public string? DestinationChatId { get; init; }
+
+    public AddDestinationForRocketTaskCommand(
+        long? userId,
+        string? taskTitle,
+        string? destinationChatId
+    )
+    {
+        UserId = userId;
+        TaskTitle = taskTitle;
+        DestinationChatId = destinationChatId;
+    }
 }

@@ -11,8 +11,8 @@ using RocketPlaner.DataAccess.DataBase;
 namespace RocketPlaner.DataAccess.Migrations
 {
     [DbContext(typeof(DataBaseContext))]
-    [Migration("20241112130919_First")]
-    partial class First
+    [Migration("20241125121117_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,7 +20,7 @@ namespace RocketPlaner.DataAccess.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.10");
 
-            modelBuilder.Entity("RocketPlaner.Application.Contracts.DataBaseContracts.DestinationDatBaseTable", b =>
+            modelBuilder.Entity("RocketPlaner.Application.Contracts.DataBaseContracts.DestinationsDao", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -42,7 +42,7 @@ namespace RocketPlaner.DataAccess.Migrations
                     b.ToTable("Destinations");
                 });
 
-            modelBuilder.Entity("RocketPlaner.Application.Contracts.DataBaseContracts.TaskDataBaseTable", b =>
+            modelBuilder.Entity("RocketPlaner.Application.Contracts.DataBaseContracts.TasksDao", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -51,7 +51,7 @@ namespace RocketPlaner.DataAccess.Migrations
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Messege")
+                    b.Property<string>("Message")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -78,7 +78,7 @@ namespace RocketPlaner.DataAccess.Migrations
                     b.ToTable("Tasks");
                 });
 
-            modelBuilder.Entity("RocketPlaner.Application.Contracts.DataBaseContracts.UserDataBaseTable", b =>
+            modelBuilder.Entity("RocketPlaner.Application.Contracts.DataBaseContracts.UsersDao", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -94,9 +94,9 @@ namespace RocketPlaner.DataAccess.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("RocketPlaner.Application.Contracts.DataBaseContracts.DestinationDatBaseTable", b =>
+            modelBuilder.Entity("RocketPlaner.Application.Contracts.DataBaseContracts.DestinationsDao", b =>
                 {
-                    b.HasOne("RocketPlaner.Application.Contracts.DataBaseContracts.TaskDataBaseTable", "Task")
+                    b.HasOne("RocketPlaner.Application.Contracts.DataBaseContracts.TasksDao", "Task")
                         .WithMany("Destinations")
                         .HasForeignKey("TaskId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -105,9 +105,9 @@ namespace RocketPlaner.DataAccess.Migrations
                     b.Navigation("Task");
                 });
 
-            modelBuilder.Entity("RocketPlaner.Application.Contracts.DataBaseContracts.TaskDataBaseTable", b =>
+            modelBuilder.Entity("RocketPlaner.Application.Contracts.DataBaseContracts.TasksDao", b =>
                 {
-                    b.HasOne("RocketPlaner.Application.Contracts.DataBaseContracts.UserDataBaseTable", "Owner")
+                    b.HasOne("RocketPlaner.Application.Contracts.DataBaseContracts.UsersDao", "Owner")
                         .WithMany("Tasks")
                         .HasForeignKey("OwnerId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -116,12 +116,12 @@ namespace RocketPlaner.DataAccess.Migrations
                     b.Navigation("Owner");
                 });
 
-            modelBuilder.Entity("RocketPlaner.Application.Contracts.DataBaseContracts.TaskDataBaseTable", b =>
+            modelBuilder.Entity("RocketPlaner.Application.Contracts.DataBaseContracts.TasksDao", b =>
                 {
                     b.Navigation("Destinations");
                 });
 
-            modelBuilder.Entity("RocketPlaner.Application.Contracts.DataBaseContracts.UserDataBaseTable", b =>
+            modelBuilder.Entity("RocketPlaner.Application.Contracts.DataBaseContracts.UsersDao", b =>
                 {
                     b.Navigation("Tasks");
                 });

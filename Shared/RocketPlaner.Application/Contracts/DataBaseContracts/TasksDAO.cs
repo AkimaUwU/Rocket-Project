@@ -84,6 +84,7 @@ public static class TasksDaoExtensions
             Owner = user,
             OwnerId = user.Id,
             Title = task.Title,
+            Type = task.Type.Type,
         };
         var destinations = task.Destinations.GetAll().ToArray();
         var destinationsDao = destinations

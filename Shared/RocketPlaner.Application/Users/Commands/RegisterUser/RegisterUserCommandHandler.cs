@@ -10,7 +10,10 @@ public class RegisterUserCommandHandler(IUsersDataBase users)
 {
     public async Task<Result<User>> Handle(RegisterUserCommand command)
     {
-        Result<User> user = User.Create(Guid.NewGuid(), command.TelegramId);
+        if (!await users.EnsureTelegramIdIsUnique(command.TelegramId))
+            return UserErrors.IdIsNotUnique;
+
+        var user = User.Create(Guid.NewGuid(), command.TelegramId);
         if (user.IsError)
             return user.Error;
 
