@@ -6,6 +6,19 @@
 
   <ItemGroup>
     <Compile Remove="Users\Commands\RegisterUser\RgisterUserCommandHandler.cs" />
+    <Compile Remove="RocketTaskDestinations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="RocketTaskDestinations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="RocketTaskDestinations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="RocketTasks\Queries\" />
   </ItemGroup>
 
   <PropertyGroup>

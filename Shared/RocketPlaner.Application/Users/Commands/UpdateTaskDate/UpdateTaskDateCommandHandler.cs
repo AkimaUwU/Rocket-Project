@@ -10,10 +10,11 @@ public class UpdateTaskDateCommandHandler(ITaskDataBase tasks, IUsersDataBase us
 {
     public async Task<Result<RocketTask>> Handle(UpdateTaskDateCommand command)
     {
-        var user = await users.GetUser(command.TelegramId);
-        if (user == null)
+        var userDao = await users.GetUser(command.TelegramId);
+        if (userDao == null)
             return new Error("Пользователь с таким id Телеграмма не найден");
 
+        var user = userDao.ToUser();
         var task = user.Tasks.Find(x => x.Title == command.Title);
         if (task.IsError)
             return task.Error;
@@ -22,7 +23,7 @@ public class UpdateTaskDateCommandHandler(ITaskDataBase tasks, IUsersDataBase us
         if (task.IsError)
             return task.Error;
 
-        await tasks.Update(task);
+        await tasks.Update(task.Value.ToRocketTaskDao(userDao));
         return task;
     }
 }

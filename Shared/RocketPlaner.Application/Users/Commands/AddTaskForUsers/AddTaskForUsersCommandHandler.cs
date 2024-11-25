@@ -15,9 +15,9 @@ public class AddTaskForUsersCommandHandler(IUsersDataBase users, ITaskDataBase t
             return new Error("Пользователь с таким id Телеграмма не найден");
 
         var task = RocketTask.Create(
+            Guid.NewGuid(),
             command.Message,
-            command.Destination,
-            user,
+            user.ToUser(),
             command.TypeTask,
             command.NotifyDate,
             command.TitleTask
@@ -26,7 +26,7 @@ public class AddTaskForUsersCommandHandler(IUsersDataBase users, ITaskDataBase t
         if (task.IsError)
             return task.Error;
 
-        await tasks.AddTask(task.Value);
+        await tasks.AddTask(task.Value.ToRocketTaskDao(task.Value.Owner.ToUsersDao()));
         return task;
     }
 }

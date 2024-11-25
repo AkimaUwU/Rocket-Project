@@ -1,3 +1,5 @@
+using RocketPlaner.Core.models.RocketTasks;
+
 namespace RocketPlaner.Application.Contracts.DataBaseContracts;
 
 /// <summary>
@@ -24,4 +26,33 @@ public class DestinationsDao
     /// Внешний ключ к таблице задач
     /// </summary>
     public Guid TaskId { get; set; }
+}
+
+public static class DestinationsDaoExtensions
+{
+    public static RocketTaskDestination ToRocketTaskDestination(
+        this DestinationsDao destinationsDao,
+        RocketTask task
+    )
+    {
+        var destination = RocketTaskDestination
+            .Create(destinationsDao.Id, task, destinationsDao.ChatId)
+            .Value;
+        return destination;
+    }
+
+    public static DestinationsDao ToDestinationsDao(
+        this RocketTaskDestination destination,
+        TasksDao task
+    )
+    {
+        var destinationsDao = new DestinationsDao()
+        {
+            Id = destination.Id,
+            ChatId = destination.ChatId,
+            TaskId = destination.Task.Id,
+            Task = task,
+        };
+        return destinationsDao;
+    }
 }

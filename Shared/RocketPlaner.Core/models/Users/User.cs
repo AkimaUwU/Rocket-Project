@@ -31,12 +31,12 @@ public sealed class User : DomainAggregateRoot
     /// </summary>
     /// <param name="telegramId">ИД телеграмма</param>
     /// <returns>Результат создания сущности пользователь.</returns>
-    public static Result<User> Create(long telegramId)
+    public static Result<User> Create(Guid id, long telegramId)
     {
         if (telegramId <= 0)
             return new Error("ID телеграмма пользователя некорректно");
 
-        return new User(telegramId, Guid.NewGuid());
+        return new User(telegramId, id);
     }
 
     public override string ToString()

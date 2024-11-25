@@ -11,7 +11,7 @@
           "Microsoft.EntityFrameworkCore": "8.0.10",
           "Microsoft.EntityFrameworkCore.Sqlite": "8.0.10",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.10",
-          "RocketPlaner.application": "1.0.0"
+          "RocketPlaner.Application": "1.0.0"
         },
         "runtime": {
           "RocketPlaner.DataAccess.dll": {}
@@ -690,17 +690,17 @@
         }
       },
       "System.Threading.Channels/6.0.0": {},
-      "RocketPlaner.application/1.0.0": {
+      "RocketPlaner.Application/1.0.0": {
         "dependencies": {
-          "RocketPlaner.domain": "1.0.0"
+          "RocketPlaner.Core": "1.0.0"
         },
         "runtime": {
-          "RocketPlaner.application.dll": {}
+          "RocketPlaner.Application.dll": {}
         }
       },
-      "RocketPlaner.domain/1.0.0": {
+      "RocketPlaner.Core/1.0.0": {
         "runtime": {
-          "RocketPlaner.domain.dll": {}
+          "RocketPlaner.Core.dll": {}
         }
       }
     }
@@ -1026,12 +1026,12 @@
       "path": "system.threading.channels/6.0.0",
       "hashPath": "system.threading.channels.6.0.0.nupkg.sha512"
     },
-    "RocketPlaner.application/1.0.0": {
+    "RocketPlaner.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "RocketPlaner.domain/1.0.0": {
+    "RocketPlaner.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

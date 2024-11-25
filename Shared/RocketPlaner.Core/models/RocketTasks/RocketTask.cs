@@ -48,19 +48,21 @@ public class RocketTask : DomainAggregateRoot
     /// <summary>
     /// Конструктор создания экземпляра класса RocketTask
     /// </summary>
+    /// <param name="id">id сущности</param>
     /// <param name="message">Сообщение задачи</param>
     /// <param name="user">Обладатель задачи</param>
     /// <param name="type">Тип задачи</param>
     /// <param name="notifyTime">Время уведомления задачи</param>
     /// <param name="title">Заголовок задачи</param>
     private RocketTask(
+        Guid id,
         string message,
         User user,
         RocketTaskType type,
         DateTime notifyTime,
         string title
     )
-        : base(Guid.NewGuid())
+        : base(id)
     {
         Owner = user;
         Message = message;
@@ -73,16 +75,16 @@ public class RocketTask : DomainAggregateRoot
     /// <summary>
     /// Статичный фабричный метод создания экземпляра задачи
     /// </summary>
+    /// <param name="id">id сущности</param>
     /// <param name="message">Сообщение задачи</param>
-    /// <param name="destinations">Место назначения задачи</param>
     /// <param name="user">Пользователь обладатель задачи</param>
     /// <param name="type">Тип задачи</param>
     /// <param name="notifyTime">Время уведомления о задаче</param>
     /// <param name="title">Заголовок задачи</param>
     /// <returns>Экземпляр класса RocketTask. Успешен/Ошибка</returns>
     public static Result<RocketTask> Create(
+        Guid id,
         string message,
-        string[] destinations,
         User? user,
         string type,
         DateTime notifyTime,
@@ -114,13 +116,7 @@ public class RocketTask : DomainAggregateRoot
         if (requestedType == null)
             return new Error("Некорректный тип задачи");
 
-        RocketTask task = new RocketTask(message, user, requestedType, notifyTime, title);
-
-        foreach (string dest in destinations)
-        {
-            task.Destinations.Add(RocketTaskDestination.Create(dest).Value);
-        }
-
+        RocketTask task = new RocketTask(id, message, user, requestedType, notifyTime, title);
         return task;
     }
 

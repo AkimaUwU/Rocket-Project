@@ -13,8 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketPlaner.Application", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketPlaner.DataAccess", "Shared\RocketPlaner.DataAccess\RocketPlaner.DataAccess.csproj", "{14E06117-416F-4A90-B13C-0CE21F1B88A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketPlanner.Application.Tests", "RocketPlanner.Application.Tests\RocketPlanner.Application.Tests.csproj", "{1C659546-1ECC-47B6-8C8B-00414B053FB0}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,10 +35,6 @@ Global
 		{14E06117-416F-4A90-B13C-0CE21F1B88A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14E06117-416F-4A90-B13C-0CE21F1B88A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14E06117-416F-4A90-B13C-0CE21F1B88A5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1C659546-1ECC-47B6-8C8B-00414B053FB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1C659546-1ECC-47B6-8C8B-00414B053FB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1C659546-1ECC-47B6-8C8B-00414B053FB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1C659546-1ECC-47B6-8C8B-00414B053FB0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

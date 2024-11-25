@@ -1,5 +1,3 @@
-using RocketPlaner.Core.models.Users;
-
 namespace RocketPlaner.Application.Contracts.DataBaseContracts;
 
 /// <summary>
@@ -12,19 +10,19 @@ public interface IUsersDataBase
     /// </summary>
     /// <param name="user">Модель пользователя</param>
     /// <returns>Task выполнение асинхронной операции</returns>
-    Task AddUser(User user);
+    Task AddUser(UsersDao user);
 
     /// <summary>
     /// Метод удаления пользователя из таблицы базы данных
     /// </summary>
     /// <param name="user">Модель пользователя</param>
     /// <returns>Task выполнение асинхронной операции</returns>
-    Task RemoveUser(User user);
+    Task RemoveUser(UsersDao user);
 
     /// <summary>
     /// Метод получения пользователя по ИД
     /// </summary>
     /// <param name="telegramId">Идентификатор ИД телеграмма пользователя</param>
     /// <returns>Модель пользователя</returns>
-    Task<User?> GetUser(long telegramId);
+    Task<UsersDao?> GetUser(long? telegramId);
 }

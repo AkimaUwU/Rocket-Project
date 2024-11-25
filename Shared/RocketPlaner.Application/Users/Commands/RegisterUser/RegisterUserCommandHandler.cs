@@ -10,11 +10,11 @@ public class RegisterUserCommandHandler(IUsersDataBase users)
 {
     public async Task<Result<User>> Handle(RegisterUserCommand command)
     {
-        Result<User> user = User.Create(command.TelegramId);
+        Result<User> user = User.Create(Guid.NewGuid(), command.TelegramId);
         if (user.IsError)
             return user.Error;
 
-        await users.AddUser(user.Value);
+        await users.AddUser(user.Value.ToUsersDao());
         return user;
     }
 }

@@ -10,16 +10,17 @@ public class RemoveTaskForUserCommandHandler(ITaskDataBase tasks, IUsersDataBase
 {
     public async Task<Result<RocketTask>> Handle(RemoveTaskForUsersCommand command)
     {
-        var user = await users.GetUser(command.TelegramId);
-        if (user == null)
+        var userDao = await users.GetUser(command.TelegramId);
+        if (userDao == null)
             return new Error("Пользователь с таким id Телеграмма не найден");
 
-        var task = user.Tasks.Find(x => x.Title == command.Title);
+        var user = userDao.ToUser();
+        var task = user.Tasks.Find(t => t.Title == command.Title);
         if (task.IsError)
-            return task.Error;
+            return task;
 
         task = user.Tasks.Remove(task);
-        await tasks.Remove(task.Value);
+        await tasks.Remove(task.Value.ToRocketTaskDao(userDao));
         return task;
     }
 }

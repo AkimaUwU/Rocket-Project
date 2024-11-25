@@ -8,8 +8,7 @@ public class AddTaskForUsersCommand(
     long idUser,
     string typeTask,
     DateTime notifyDate,
-    string title,
-    params string[] destination
+    string title
 ) : ICommand<RocketTask>
 {
     public string Message { get; init; } = message;
@@ -21,6 +20,4 @@ public class AddTaskForUsersCommand(
     public DateTime NotifyDate { get; init; } = notifyDate;
 
     public string TitleTask { get; init; } = title;
-
-    public string[] Destination { get; init; } = destination;
 }

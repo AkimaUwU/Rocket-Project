@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "i1y/tWauD24=",
+  "dgSpecHash": "VVCIJa5SbsVcc5bZbG7VoGS2gUZusSQXwDRtqct3uhHkOKcSvXkrMm6hv7ej2zOJvzg3tT920PDmdIdTLrRlcw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ramwsh\\Desktop\\rocketprojectrefactor\\Rocket-Project\\RocketPlaner.TelegramBot\\RocketPlaner.TelegramBot.csproj",
+  "projectFilePath": "C:\\Users\\Ramwsh\\Desktop\\rocket\\Rocket-Project\\RocketPlaner.TelegramBot\\RocketPlaner.TelegramBot.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ramwsh\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "C:\\Users\\Ramwsh\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",

@@ -1747,11 +1747,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ramwsh\\Desktop\\rocketprojectrefactor\\Rocket-Project\\RocketPlaner.TelegramBot\\RocketPlaner.TelegramBot.csproj",
+      "projectUniqueName": "C:\\Users\\Ramwsh\\Desktop\\rocket\\Rocket-Project\\RocketPlaner.TelegramBot\\RocketPlaner.TelegramBot.csproj",
       "projectName": "RocketPlaner.TelegramBot",
-      "projectPath": "C:\\Users\\Ramwsh\\Desktop\\rocketprojectrefactor\\Rocket-Project\\RocketPlaner.TelegramBot\\RocketPlaner.TelegramBot.csproj",
+      "projectPath": "C:\\Users\\Ramwsh\\Desktop\\rocket\\Rocket-Project\\RocketPlaner.TelegramBot\\RocketPlaner.TelegramBot.csproj",
       "packagesPath": "C:\\Users\\Ramwsh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ramwsh\\Desktop\\rocketprojectrefactor\\Rocket-Project\\RocketPlaner.TelegramBot\\obj\\",
+      "outputPath": "C:\\Users\\Ramwsh\\Desktop\\rocket\\Rocket-Project\\RocketPlaner.TelegramBot\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
