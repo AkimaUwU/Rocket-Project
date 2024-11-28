@@ -1,20 +1,51 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using RocketPlaner.Application.Contracts.DataBaseContracts;
+using RocketPlaner.Core.models.RocketTasks;
 
 namespace RocketPlaner.DataAccess.DataBase.Config;
 
-public class TasksConfig : IEntityTypeConfiguration<TasksDao>
+public class TasksConfig : IEntityTypeConfiguration<RocketTask>
 {
-    public void Configure(EntityTypeBuilder<TasksDao> builder)
+    public void Configure(EntityTypeBuilder<RocketTask> builder)
     {
         builder.HasKey(t => t.Id);
-        builder.Property(t => t.CreateDate).IsRequired();
-        builder.Property(t => t.NotifyDate).IsRequired();
-        builder.Property(t => t.Type).IsRequired();
-        builder.Property(t => t.Message).IsRequired();
-        builder.Property(t => t.Title).IsRequired();
-        builder.HasIndex(t => t.Title);
-        builder.HasMany(t => t.Destinations).WithOne(j => j.Task).HasForeignKey(t => t.TaskId);
+
+        builder
+            .HasMany(t => t.Destinations)
+            .WithOne(d => d.BelongsTo)
+            .IsRequired()
+            .OnDelete(DeleteBehavior.Cascade);
+
+        builder.ComplexProperty(
+            t => t.Title,
+            cpb =>
+            {
+                cpb.Property(tit => tit.Title).IsRequired();
+            }
+        );
+
+        builder.ComplexProperty(
+            t => t.Message,
+            cpb =>
+            {
+                cpb.Property(m => m.Message).IsRequired();
+            }
+        );
+
+        builder.ComplexProperty(
+            t => t.Type,
+            cpb =>
+            {
+                cpb.Property(ty => ty.Type).IsRequired();
+            }
+        );
+
+        builder.ComplexProperty(
+            t => t.FireDate,
+            cpb =>
+            {
+                cpb.Property(fd => fd.FireDate).IsRequired();
+            }
+        );
     }
 }

@@ -1,7 +1,10 @@
 using RocketPlaner.Application.Contracts.DataBaseContracts;
+using RocketPlaner.Application.Contracts.Events;
 using RocketPlaner.Application.Contracts.Operations;
-using RocketPlaner.Core.models.RocketTasks;
-using RocketPlaner.Core.models.Users;
+using RocketPlaner.Core.models.RocketTasks.RocketTaskDestinations;
+using RocketPlaner.Core.models.RocketTasks.RocketTaskDestinations.ValueObjects;
+using RocketPlaner.Core.models.RocketTasks.ValueObjects;
+using RocketPlaner.Core.models.Users.ValueObjects;
 using RocketPlaner.Core.Tools;
 
 namespace RocketPlaner.Application.RocketTasks.Commands.AddDestinationForRocketTask;
@@ -10,46 +13,46 @@ public sealed class AddDestinationForRocketTaskCommandHandler
     : ICommandHandler<AddDestinationForRocketTaskCommand, RocketTaskDestination>
 {
     private readonly IUsersDataBase _usersDb;
-    private readonly ITaskDestinationDatabase _destinationsDb;
+    private readonly DomainEventDispatcher _dispatcher;
 
     public AddDestinationForRocketTaskCommandHandler(
         IUsersDataBase usersDb,
-        ITaskDestinationDatabase destinationsDb
+        DomainEventDispatcher dispatcher
     )
     {
         _usersDb = usersDb;
-        _destinationsDb = destinationsDb;
+        _dispatcher = dispatcher;
     }
 
     public async Task<Result<RocketTaskDestination>> Handle(
         AddDestinationForRocketTaskCommand command
     )
     {
-        var userDao = await _usersDb.GetUser(command.UserId);
-        if (userDao is null)
-            return UserErrors.UserNotFound;
+        var userTelegramId = UserTelegramId.Create(command.UserTelegramId);
+        if (userTelegramId.IsError)
+            return userTelegramId.Error;
 
-        var user = userDao.ToUser();
+        var taskTitle = RocketTaskTitle.Create(command.Title);
+        if (taskTitle.IsError)
+            return taskTitle.Error;
 
-        var rocketTask = user.Tasks.Find(t => t.Title == command.TaskTitle);
-        if (rocketTask.IsError)
-            return rocketTask.Error;
+        var destinationChatId = DestinationChatId.Create(command.ChatId);
+        if (destinationChatId.IsError)
+            return destinationChatId.Error;
 
-        var rocketTaskDestination = RocketTaskDestination.Create(
-            Guid.NewGuid(),
-            rocketTask,
-            command.DestinationChatId
-        );
-        if (rocketTaskDestination.IsError)
-            return rocketTaskDestination.Error;
+        var user = await _usersDb.GetUser(userTelegramId);
+        if (user is null)
+            return userTelegramId.Error;
 
-        rocketTaskDestination = rocketTask.Value.Destinations.Add(rocketTaskDestination.Value);
-        if (rocketTaskDestination.IsError)
-            return rocketTaskDestination.Error;
+        var task = user.FindRocketTask(t => t.Title == taskTitle);
+        if (task.IsError)
+            return task.Error;
 
-        await _destinationsDb.AddDestination(
-            rocketTaskDestination.Value.ToDestinationsDao(rocketTask.Value.ToRocketTaskDao(userDao))
-        );
-        return rocketTaskDestination;
+        var destination = task.Value.AddDestination(destinationChatId);
+        if (destination.IsError)
+            return destination;
+
+        await _dispatcher.Dispatch(task.Value.GetDomainEvents());
+        return destination;
     }
 }

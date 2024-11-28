@@ -5,5 +5,5 @@ namespace RocketPlaner.Application.Users.Commands.RegisterUser;
 
 public class RegisterUserCommand(long telegramId) : ICommand<User>
 {
-    public long TelegramId { get; init; } = telegramId;
+    public long? TelegramId { get; init; } = telegramId;
 }

@@ -1,23 +1,35 @@
 using RocketPlaner.Application.Contracts.DataBaseContracts;
+using RocketPlaner.Application.Contracts.Events;
 using RocketPlaner.Application.Contracts.Operations;
 using RocketPlaner.Core.models.Users;
+using RocketPlaner.Core.models.Users.Errors;
+using RocketPlaner.Core.models.Users.ValueObjects;
 using RocketPlaner.Core.Tools;
 
 namespace RocketPlaner.Application.Users.Commands.RegisterUser;
 
-public class RegisterUserCommandHandler(IUsersDataBase users)
-    : ICommandHandler<RegisterUserCommand, User>
+public class RegisterUserCommandHandler : ICommandHandler<RegisterUserCommand, User>
 {
+    private readonly DomainEventDispatcher _dispatcher;
+    private readonly IUsersDataBase _users;
+
+    public RegisterUserCommandHandler(DomainEventDispatcher dispatcher, IUsersDataBase users)
+    {
+        _dispatcher = dispatcher;
+        _users = users;
+    }
+
     public async Task<Result<User>> Handle(RegisterUserCommand command)
     {
-        if (!await users.EnsureTelegramIdIsUnique(command.TelegramId))
-            return UserErrors.IdIsNotUnique;
+        var telegramId = UserTelegramId.Create(command.TelegramId);
+        if (telegramId.IsError)
+            return telegramId.Error;
 
-        var user = User.Create(Guid.NewGuid(), command.TelegramId);
-        if (user.IsError)
-            return user.Error;
+        if (!await _users.EnsureTelegramIdIsUnique(telegramId))
+            return UserErrors.TelegramIdIsNotUnuqie;
 
-        await users.AddUser(user.Value.ToUsersDao());
+        var user = new User(telegramId);
+        await _dispatcher.Dispatch(user.GetDomainEvents());
         return user;
     }
 }

@@ -7,14 +7,17 @@
   <ItemGroup>
     <Compile Remove="Users\Commands\RegisterUser\RgisterUserCommandHandler.cs" />
     <Compile Remove="RocketTaskDestinations\**" />
+    <Compile Remove="Contracts\EventHandlers\**" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Remove="RocketTaskDestinations\**" />
+    <EmbeddedResource Remove="Contracts\EventHandlers\**" />
   </ItemGroup>
 
   <ItemGroup>
     <None Remove="RocketTaskDestinations\**" />
+    <None Remove="Contracts\EventHandlers\**" />
   </ItemGroup>
 
   <ItemGroup>

@@ -33,7 +33,7 @@ public class UserTasksList : CustomList<RocketTask>
 
     public override Result<RocketTask> Remove(RocketTask item)
     {
-        Items.Remove(item);
-        return item;
+        var isRemoved = Items.Remove(item);
+        return isRemoved ? item : new Error("Задача для удаления не была найдена");
     }
 }

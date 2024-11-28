@@ -1,4 +1,13 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ATaskAwaitAdapter_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003F3fad8e3b42a0f7ae367986c4177c844d48c22c6e8a9ebc5ec7c60ad5e677267_003FTaskAwaitAdapter_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9aa89f48_002Dbbf1_002D476a_002Da71f_002De01472150cf6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;And&gt;&#xD;
+    &lt;Project Location="C:\Users\Ramwsh\Desktop\rocket-proj\Rocket-Project\RocketPlaner.Tests" Presentation="&amp;lt;RocketPlaner.Tests&amp;gt;" /&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::772E1598-2955-43F8-A09E-3FB70D123A97::net8.0::RocketPlaner.Tests.UserTests.UserCRUDTests&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+  &lt;/And&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=de155274_002D2251_002D4bda_002D9c72_002D23bb06e9690e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from &amp;lt;RocketPlanner.Application.Tests&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;Project Location="C:\Users\Ramwsh\Desktop\rocket\Rocket-Project\Shared\RocketPlaner.Tests" Presentation="&amp;lt;Shared&amp;gt;\&amp;lt;RocketPlaner.Tests&amp;gt;" /&gt;&#xD;
+  &lt;Project Location="C:\Users\Ramwsh\Desktop\rocket-proj\Rocket-Project\RocketPlaner.Tests" Presentation="&amp;lt;RocketPlaner.Tests&amp;gt;" /&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

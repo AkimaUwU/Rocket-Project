@@ -3,8 +3,4 @@ using RocketPlaner.Core.models.RocketTasks;
 
 namespace RocketPlaner.Application.Users.Commands.RemoveTaskForUsers;
 
-public class RemoveTaskForUsersCommand(long telegramId, string title) : ICommand<RocketTask>
-{
-    public long TelegramId { get; init; } = telegramId;
-    public string Title { get; init; } = title;
-}
+public record RemoveTaskForUsersCommand(string? Title, long? UserTelegramId) : ICommand<RocketTask>;

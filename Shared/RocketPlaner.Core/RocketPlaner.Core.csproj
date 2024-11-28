@@ -6,4 +6,19 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Abstractions\CustomList.cs" />
+    <Compile Remove="models\Users\UserTasksList.cs" />
+    <Compile Remove="models\RocketTasks\RocketTaskDestinationList.cs" />
+    <Compile Remove="models\Users\Abstractions\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="models\Users\Abstractions\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="models\Users\Abstractions\**" />
+  </ItemGroup>
+
 </Project>

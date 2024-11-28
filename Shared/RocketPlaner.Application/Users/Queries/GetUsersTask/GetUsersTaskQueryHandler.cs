@@ -1,22 +1,27 @@
 using RocketPlaner.Application.Contracts.DataBaseContracts;
 using RocketPlaner.Application.Contracts.Operations;
 using RocketPlaner.Core.models.RocketTasks;
-using RocketPlaner.Core.models.Users;
+using RocketPlaner.Core.models.Users.ValueObjects;
 using RocketPlaner.Core.Tools;
 
 namespace RocketPlaner.Application.Users.Queries.GetUsersTask;
 
-public class GetUsersTaskQueryHandler(IUsersDataBase users)
-    : IQueryHandler<GetUsersTaskQuery, IReadOnlyList<RocketTask>>
+public class GetUsersTaskQueryHandler : IQueryHandler<GetUsersTaskQuery, IReadOnlyList<RocketTask>>
 {
+    private readonly IUsersDataBase _users;
+
+    public GetUsersTaskQueryHandler(IUsersDataBase users)
+    {
+        _users = users;
+    }
+
     public async Task<Result<IReadOnlyList<RocketTask>>> Handle(GetUsersTaskQuery query)
     {
-        var userDao = await users.GetUser(query.TelegramId);
-        if (userDao is null)
-            return UserErrors.UserNotFound;
+        var userTelegramId = UserTelegramId.Create(query.TelegramId);
+        if (userTelegramId.IsError)
+            return new List<RocketTask>();
 
-        var user = userDao.ToUser();
-        var tasks = user.Tasks.GetAll();
-        return Result<IReadOnlyList<RocketTask>>.Success(tasks);
+        var user = await _users.GetUser(userTelegramId);
+        return user is null ? [] : user.Tasks.ToList();
     }
 }

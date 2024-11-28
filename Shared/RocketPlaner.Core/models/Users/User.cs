@@ -1,49 +1,66 @@
-using System.Text;
+using RocketPlaner.Core.models.RocketTasks;
+using RocketPlaner.Core.models.RocketTasks.Errors;
+using RocketPlaner.Core.models.RocketTasks.ValueObjects;
+using RocketPlaner.Core.models.Users.Events;
+using RocketPlaner.Core.models.Users.ValueObjects;
 using RocketPlaner.Core.Tools;
 
 namespace RocketPlaner.Core.models.Users;
 
-/// <summary>
-/// Сущность - пользователь
-/// </summary>
 public sealed class User : DomainAggregateRoot
 {
-    /// <summary>
-    /// Список задач пользователя
-    /// </summary>
-    public UserTasksList Tasks { get; init; } = new UserTasksList();
+    private readonly List<RocketTask> _tasks = [];
 
-    /// <summary>
-    /// ИД телеграмма пользователя
-    /// </summary>
-    public long TelegramId { get; init; }
+    private User()
+        : base(Guid.Empty) { } // EF core constructor
 
-    /// <summary>
-    /// Закрытый конструктор создания экземпляра класса пользователь
-    /// </summary>
-    /// <param name="telegramId">ИД телеграмма</param>
-    /// <param name="id">ИД пользователя</param>
-    private User(long telegramId, Guid id)
-        : base(id) => TelegramId = telegramId;
-
-    /// <summary>
-    /// Фабричный метод создания экземпляра класса пользователя
-    /// </summary>
-    /// <param name="telegramId">ИД телеграмма</param>
-    /// <returns>Результат создания сущности пользователь.</returns>
-    public static Result<User> Create(Guid id, long telegramId)
+    public User(UserTelegramId telegramId, Guid id = default)
+        : base(id == Guid.Empty ? Guid.NewGuid() : id)
     {
-        if (telegramId <= 0)
-            return new Error("ID телеграмма пользователя некорректно");
-
-        return new User(telegramId, id);
+        TelegramId = telegramId;
+        RaiseEvent(new UserCreated(this));
     }
 
-    public override string ToString()
+    public UserTelegramId TelegramId { get; init; }
+    public IReadOnlyList<RocketTask> Tasks => _tasks;
+
+    public Result<RocketTask> RegisterRocketTask(
+        RocketTaskTitle title,
+        RocketTaskMessage message,
+        RocketTaskType type,
+        RocketTaskFireDate fireDate
+    )
     {
-        StringBuilder builder = new StringBuilder();
-        builder.AppendLine($"ИД пользователя: {Id}");
-        builder.AppendLine($"ИД телеграмма пользователя: {TelegramId}");
-        return builder.ToString();
+        if (DoesUserHaveTask(t => t.Title == title))
+            return RocketTaskErrors.UserOwnsTaskAlready;
+
+        var task = new RocketTask(title, message, type, fireDate, this);
+        _tasks.Add(task);
+        RaiseEvent(new UserAddedTask(this, task));
+        return task;
     }
+
+    public Result<RocketTask> UnregisterRocketTask(RocketTask? task)
+    {
+        if (task is null)
+            return RocketTaskErrors.RocketTaskIsNull;
+
+        if (!DoesUserHaveTask(t => t.Id == task.Id))
+            return RocketTaskErrors.UserDoesntOwnsTask;
+
+        var isRemoved = _tasks.Remove(task);
+        if (!isRemoved)
+            return RocketTaskErrors.UserDoesntOwnsTask;
+
+        RaiseEvent(new UserRemovedTask(this, task));
+        return task;
+    }
+
+    public Result<RocketTask> FindRocketTask(Func<RocketTask, bool> predicate)
+    {
+        var requested = _tasks.FirstOrDefault(predicate);
+        return requested is null ? RocketTaskErrors.TaskWasNotFoundInUserTasksList : requested;
+    }
+
+    private bool DoesUserHaveTask(Func<RocketTask, bool> predicate) => _tasks.Any(predicate);
 }

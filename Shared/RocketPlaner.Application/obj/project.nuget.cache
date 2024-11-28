@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GVjHlzeYVHg=",
+  "dgSpecHash": "Ok2oMehV03Y=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ramwsh\\Desktop\\rocket\\Rocket-Project\\Shared\\RocketPlaner.Application\\RocketPlaner.Application.csproj",
+  "projectFilePath": "C:\\Users\\Ramwsh\\Desktop\\rocket-proj\\Rocket-Project\\Shared\\RocketPlaner.Application\\RocketPlaner.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ramwsh\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.0\\microsoft.extensions.dependencyinjection.9.0.0.nupkg.sha512",
     "C:\\Users\\Ramwsh\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.0\\microsoft.extensions.dependencyinjection.abstractions.9.0.0.nupkg.sha512"

@@ -1,18 +1,10 @@
 using RocketPlaner.Application.Contracts.Operations;
-using RocketPlaner.Core.models.RocketTasks;
+using RocketPlaner.Core.models.RocketTasks.RocketTaskDestinations;
 
 namespace RocketPlaner.Application.RocketTasks.Commands.RemoveDestinationFromRocketTask;
 
-public sealed class RemoveDestinationFromRocketTaskCommand : ICommand<RocketTaskDestination>
-{
-    public long? TelegramId { get; init; }
-    public string? Title { get; init; }
-    public string? ChatId { get; init; }
-
-    public RemoveDestinationFromRocketTaskCommand(long? telegramId, string? title, string? chatId)
-    {
-        TelegramId = telegramId;
-        Title = title;
-        ChatId = chatId;
-    }
-}
+public record RemoveDestinationFromRocketTaskCommand(
+    long? UserTelegramId,
+    string? Title,
+    long? ChatId
+) : ICommand<RocketTaskDestination>;

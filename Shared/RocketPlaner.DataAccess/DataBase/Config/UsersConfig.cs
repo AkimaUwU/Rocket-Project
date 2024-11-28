@@ -1,16 +1,27 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using RocketPlaner.Application.Contracts.DataBaseContracts;
+using RocketPlaner.Core.models.Users;
 
 namespace RocketPlaner.DataAccess.DataBase.Config;
 
-internal sealed class UsersConfig : IEntityTypeConfiguration<UsersDao>
+internal sealed class UsersConfig : IEntityTypeConfiguration<User>
 {
-    public void Configure(EntityTypeBuilder<UsersDao> builder)
+    public void Configure(EntityTypeBuilder<User> builder)
     {
-        builder.HasKey(t => t.Id);
-        builder.Property(t => t.TelegramId).IsRequired();
-        builder.HasIndex(t => t.TelegramId);
-        builder.HasMany(t => t.Tasks).WithOne(j => j.Owner).HasForeignKey(t => t.OwnerId);
+        builder.HasKey(u => u.Id);
+
+        builder
+            .HasMany(u => u.Tasks)
+            .WithOne(t => t.Owner)
+            .IsRequired()
+            .OnDelete(DeleteBehavior.Cascade);
+
+        builder.ComplexProperty(
+            u => u.TelegramId,
+            cpb =>
+            {
+                cpb.Property(tid => tid.TelegramId);
+            }
+        );
     }
 }

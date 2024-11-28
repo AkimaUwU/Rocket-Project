@@ -1,15 +1,20 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using RocketPlaner.Application.Contracts.DataBaseContracts;
+using RocketPlaner.Core.models.RocketTasks.RocketTaskDestinations;
 
 namespace RocketPlaner.DataAccess.DataBase.Config;
 
-public class DestinatonConfig : IEntityTypeConfiguration<DestinationsDao>
+public class DestinatonConfig : IEntityTypeConfiguration<RocketTaskDestination>
 {
-    public void Configure(EntityTypeBuilder<DestinationsDao> builder)
+    public void Configure(EntityTypeBuilder<RocketTaskDestination> builder)
     {
         builder.HasKey(t => t.Id);
-        builder.Property(t => t.ChatId).IsRequired();
-        builder.HasIndex(t => t.ChatId);
+        builder.ComplexProperty(
+            d => d.ChatId,
+            cpb =>
+            {
+                cpb.Property(cid => cid.ChatId).IsRequired();
+            }
+        );
     }
 }
