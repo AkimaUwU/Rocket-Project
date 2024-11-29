@@ -1,12 +1,13 @@
 using Microsoft.Extensions.DependencyInjection;
 using RocketPlaner.Application.Contracts.DataBaseContracts;
-using RocketPlaner.Application.Contracts.Events;
 using RocketPlaner.Application.Contracts.Operations;
+using RocketPlaner.Application.DependencyInjection;
+using RocketPlaner.Application.RocketTasks.DependencyInjection;
 using RocketPlaner.Application.Users.Commands.RegisterUser;
 using RocketPlaner.Application.Users.Commands.UnregisterUser;
+using RocketPlaner.Application.Users.DependencyInjection;
 using RocketPlaner.Core.models.Users;
-using RocketPlaner.Core.models.Users.Events;
-using RocketPlaner.DataAccess.DatabaseImplementations.UsersDatabase;
+using RocketPlaner.DataAccess.DependencyInjection;
 
 namespace RocketPlaner.Tests.UserTests;
 
@@ -19,22 +20,11 @@ public sealed class UserCrudTests
     public UserCrudTests()
     {
         _services = new ServiceCollection();
-
-        _services.AddScoped<IUsersDataBase, UsersDatabase>();
-
-        _services.AddScoped<ICommandDispatcher, CommandDispatcher>();
-        _services.AddScoped<DomainEventDispatcher, DomainEventDispatcher>();
-
-        _services.AddTransient<
-            ICommandHandler<RegisterUserCommand, User>,
-            RegisterUserCommandHandler
-        >();
-        _services.AddTransient<
-            ICommandHandler<UnregisterUserCommand, User>,
-            UnregisterUserCommandHandler
-        >();
-
-        _services.AddTransient<IDomainEventHandler<UserCreated>, RegisterUserEventHandler>();
+        _services
+            .AddApplicationCommonServices()
+            .AddDataAccessServices()
+            .AddUserApplicationServices()
+            .AddRocketTasksServices();
     }
 
     [Test, Order(1)]

@@ -7,26 +7,22 @@ using RocketPlaner.Core.Tools;
 
 namespace RocketPlaner.Application.Users.Commands.UnregisterUser;
 
-public sealed class UnregisterUserCommandHandler : ICommandHandler<UnregisterUserCommand, User>
+public sealed class UnregisterUserCommandHandler(
+    IUsersDataBase users,
+    ICommandValidator<UnregisterUserCommand, User> validator
+) : ICommandHandler<UnregisterUserCommand, User>
 {
-    private readonly IUsersDataBase _users;
-
-    public UnregisterUserCommandHandler(IUsersDataBase users)
-    {
-        _users = users;
-    }
-
     public async Task<Result<User>> Handle(UnregisterUserCommand command)
     {
-        var userTelegramId = UserTelegramId.Create(command.UserTelegramId);
-        if (userTelegramId.IsError)
-            return userTelegramId.Error;
+        if (!await validator.IsCommandValidAsync(command))
+            return validator.GetLastError();
 
-        var user = await _users.GetUser(userTelegramId);
+        var userTelegramId = UserTelegramId.Create(command.UserTelegramId);
+        var user = await users.GetUser(userTelegramId);
         if (user is null)
             return UserErrors.UserNotFound;
 
-        await _users.RemoveUser(user);
+        await users.RemoveUser(user);
         return user;
     }
 }

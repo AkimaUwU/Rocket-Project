@@ -9,35 +9,27 @@ using RocketPlaner.Core.Tools;
 
 namespace RocketPlaner.Application.Users.Commands.RemoveTaskForUsers;
 
-public class RemoveTaskForUserCommandHandler
-    : ICommandHandler<RemoveTaskForUsersCommand, RocketTask>
+public class RemoveTaskForUserCommandHandler(
+    DomainEventDispatcher dispatcher,
+    IUsersDataBase users,
+    ICommandValidator<RemoveTaskForUsersCommand, RocketTask> validator
+) : ICommandHandler<RemoveTaskForUsersCommand, RocketTask>
 {
-    private readonly DomainEventDispatcher _dispatcher;
-    private readonly IUsersDataBase _users;
-
-    public RemoveTaskForUserCommandHandler(DomainEventDispatcher dispatcher, IUsersDataBase users)
-    {
-        _dispatcher = dispatcher;
-        _users = users;
-    }
-
     public async Task<Result<RocketTask>> Handle(RemoveTaskForUsersCommand command)
     {
+        if (!await validator.IsCommandValidAsync(command))
+            return validator.GetLastError();
+
         var telegramId = UserTelegramId.Create(command.UserTelegramId);
-        if (telegramId.IsError)
-            return telegramId.Error;
-
         var title = RocketTaskTitle.Create(command.Title);
-        if (title.IsError)
-            return title.Error;
 
-        var user = await _users.GetUser(telegramId);
+        var user = await users.GetUser(telegramId);
         if (user is null)
             return UserErrors.UserNotFound;
 
         var task = user.FindRocketTask(t => t.Title == title);
         task = user.UnregisterRocketTask(task);
-        await _dispatcher.Dispatch(user.GetDomainEvents());
+        await dispatcher.Dispatch(user.GetDomainEvents());
         return task;
     }
 }

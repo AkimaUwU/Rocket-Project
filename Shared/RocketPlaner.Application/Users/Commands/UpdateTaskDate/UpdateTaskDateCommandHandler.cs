@@ -9,28 +9,19 @@ using RocketPlaner.Core.Tools;
 
 namespace RocketPlaner.Application.Users.Commands.UpdateTaskDate;
 
-public class UpdateTaskDateCommandHandler : ICommandHandler<UpdateTaskDateCommand, RocketTask>
+public class UpdateTaskDateCommandHandler(
+    DomainEventDispatcher dispatcher,
+    IUsersDataBase users,
+    ICommandValidator<UpdateTaskDateCommand, RocketTask> validator
+) : ICommandHandler<UpdateTaskDateCommand, RocketTask>
 {
-    private readonly DomainEventDispatcher _dispatcher;
-    private readonly IUsersDataBase _users;
-
-    public UpdateTaskDateCommandHandler(DomainEventDispatcher dispatcher, IUsersDataBase users)
-    {
-        _dispatcher = dispatcher;
-        _users = users;
-    }
-
     public async Task<Result<RocketTask>> Handle(UpdateTaskDateCommand command)
     {
+        if (!await validator.IsCommandValidAsync(command))
+            return validator.GetLastError();
+
         var telegramId = UserTelegramId.Create(command.TelegramId);
-        if (telegramId.IsError)
-            return telegramId.Error;
-
-        var fireDate = RocketTaskFireDate.Create(command.NewFireDate);
-        if (fireDate.IsError)
-            return fireDate.Error;
-
-        var user = await _users.GetUser(telegramId);
+        var user = await users.GetUser(telegramId);
         if (user is null)
             return UserErrors.UserNotFound;
 
@@ -39,8 +30,9 @@ public class UpdateTaskDateCommandHandler : ICommandHandler<UpdateTaskDateComman
         if (task.IsError)
             return task;
 
+        var fireDate = RocketTaskFireDate.Create(command.NewFireDate);
         task.Value.UpdateNotificationDate(fireDate);
-        await _dispatcher.Dispatch(task.Value.GetDomainEvents());
+        await dispatcher.Dispatch(task.Value.GetDomainEvents());
         return task;
     }
 }

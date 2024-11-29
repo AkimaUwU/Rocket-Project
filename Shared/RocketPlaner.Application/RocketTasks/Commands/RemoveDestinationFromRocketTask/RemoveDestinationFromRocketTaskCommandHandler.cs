@@ -10,39 +10,23 @@ using RocketPlaner.Core.Tools;
 
 namespace RocketPlaner.Application.RocketTasks.Commands.RemoveDestinationFromRocketTask;
 
-public sealed class RemoveDestinationFromRocketTaskCommandHandler
-    : ICommandHandler<RemoveDestinationFromRocketTaskCommand, RocketTaskDestination>
+public sealed class RemoveDestinationFromRocketTaskCommandHandler(
+    IUsersDataBase usersDb,
+    DomainEventDispatcher dispatcher,
+    ICommandValidator<RemoveDestinationFromRocketTaskCommand, RocketTaskDestination> validator
+) : ICommandHandler<RemoveDestinationFromRocketTaskCommand, RocketTaskDestination>
 {
-    private readonly IUsersDataBase _usersDb;
-    private readonly DomainEventDispatcher _dispatcher;
-
-    public RemoveDestinationFromRocketTaskCommandHandler(
-        IUsersDataBase usersDb,
-        DomainEventDispatcher dispatcher
-    )
-    {
-        _usersDb = usersDb;
-        _dispatcher = dispatcher;
-    }
-
     public async Task<Result<RocketTaskDestination>> Handle(
         RemoveDestinationFromRocketTaskCommand command
     )
     {
+        if (!await validator.IsCommandValidAsync(command))
+            return validator.GetLastError();
+
         var userTelegramId = UserTelegramId.Create(command.UserTelegramId);
         var taskTitle = RocketTaskTitle.Create(command.Title);
         var chatId = DestinationChatId.Create(command.ChatId);
-
-        if (userTelegramId.IsError)
-            return userTelegramId.Error;
-
-        if (taskTitle.IsError)
-            return taskTitle.Error;
-
-        if (chatId.IsError)
-            return chatId.Error;
-
-        var user = await _usersDb.GetUser(userTelegramId);
+        var user = await usersDb.GetUser(userTelegramId);
         if (user is null)
             return UserErrors.UserNotFound;
 
@@ -56,7 +40,7 @@ public sealed class RemoveDestinationFromRocketTaskCommandHandler
         if (destination.IsError)
             return destination;
 
-        await _dispatcher.Dispatch(task.Value.GetDomainEvents());
+        await dispatcher.Dispatch(task.Value.GetDomainEvents());
         return destination;
     }
 }

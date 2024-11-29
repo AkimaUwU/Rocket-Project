@@ -1,19 +1,17 @@
 using Microsoft.Extensions.DependencyInjection;
 using RocketPlaner.Application.Contracts.DataBaseContracts;
-using RocketPlaner.Application.Contracts.Events;
 using RocketPlaner.Application.Contracts.Operations;
+using RocketPlaner.Application.DependencyInjection;
+using RocketPlaner.Application.RocketTasks.DependencyInjection;
 using RocketPlaner.Application.Users.Commands.AddTaskForUsers;
 using RocketPlaner.Application.Users.Commands.RegisterUser;
-using RocketPlaner.Application.Users.Commands.RemoveTaskForUsers;
 using RocketPlaner.Application.Users.Commands.UnregisterUser;
 using RocketPlaner.Application.Users.Commands.UpdateTaskDate;
+using RocketPlaner.Application.Users.DependencyInjection;
 using RocketPlaner.Core.models.RocketTasks;
-using RocketPlaner.Core.models.RocketTasks.Events;
 using RocketPlaner.Core.models.Users;
-using RocketPlaner.Core.models.Users.Events;
 using RocketPlaner.Core.models.Users.ValueObjects;
-using RocketPlaner.DataAccess.DatabaseImplementations.TasksDatabase;
-using RocketPlaner.DataAccess.DatabaseImplementations.UsersDatabase;
+using RocketPlaner.DataAccess.DependencyInjection;
 
 namespace RocketPlaner.Tests.UserInteractionWithTasksTests;
 
@@ -26,47 +24,11 @@ public sealed class UserInteractionWithTaskTest
     public UserInteractionWithTaskTest()
     {
         _services = new ServiceCollection();
-
-        _services = new ServiceCollection();
-
-        _services.AddScoped<IUsersDataBase, UsersDatabase>();
-        _services.AddScoped<ITaskDataBase, TasksDatabase>();
-
-        _services.AddScoped<ICommandDispatcher, CommandDispatcher>();
-        _services.AddScoped<DomainEventDispatcher, DomainEventDispatcher>();
-
-        _services.AddTransient<
-            ICommandHandler<RegisterUserCommand, User>,
-            RegisterUserCommandHandler
-        >();
-        _services.AddTransient<
-            ICommandHandler<UnregisterUserCommand, User>,
-            UnregisterUserCommandHandler
-        >();
-
-        _services.AddTransient<
-            ICommandHandler<AddTaskForUsersCommand, RocketTask>,
-            AddTaskForUsersCommandHandler
-        >();
-        _services.AddTransient<
-            ICommandHandler<RemoveTaskForUsersCommand, RocketTask>,
-            RemoveTaskForUserCommandHandler
-        >();
-        _services.AddTransient<
-            ICommandHandler<UpdateTaskDateCommand, RocketTask>,
-            UpdateTaskDateCommandHandler
-        >();
-
-        _services.AddTransient<IDomainEventHandler<UserCreated>, RegisterUserEventHandler>();
-        _services.AddTransient<IDomainEventHandler<UserAddedTask>, AddTaskForUserEventHandler>();
-        _services.AddTransient<
-            IDomainEventHandler<UserRemovedTask>,
-            RemoveTaskForUserEventHandler
-        >();
-        _services.AddTransient<
-            IDomainEventHandler<RocketTaskFireDateUpdated>,
-            UpdateTaskDateEventHandler
-        >();
+        _services
+            .AddApplicationCommonServices()
+            .AddDataAccessServices()
+            .AddUserApplicationServices()
+            .AddRocketTasksServices();
     }
 
     [Test, Order(1)]

@@ -6,22 +6,17 @@ using RocketPlaner.Core.Tools;
 
 namespace RocketPlaner.Application.Users.Queries.GetUsersTask;
 
-public class GetUsersTaskQueryHandler : IQueryHandler<GetUsersTaskQuery, IReadOnlyList<RocketTask>>
+public class GetUsersTaskQueryHandler(
+    IUsersDataBase users,
+    IQueryValidator<GetUsersTaskQuery, IReadOnlyList<RocketTask>> validator
+) : IQueryHandler<GetUsersTaskQuery, IReadOnlyList<RocketTask>>
 {
-    private readonly IUsersDataBase _users;
-
-    public GetUsersTaskQueryHandler(IUsersDataBase users)
-    {
-        _users = users;
-    }
-
     public async Task<Result<IReadOnlyList<RocketTask>>> Handle(GetUsersTaskQuery query)
     {
+        if (!await validator.IsQueryValidAsync(query))
+            return validator.GetLastError();
         var userTelegramId = UserTelegramId.Create(query.TelegramId);
-        if (userTelegramId.IsError)
-            return new List<RocketTask>();
-
-        var user = await _users.GetUser(userTelegramId);
+        var user = await users.GetUser(userTelegramId);
         return user is null ? [] : user.Tasks.ToList();
     }
 }

@@ -4,11 +4,8 @@ using RocketPlaner.Core.models.Users.Events;
 
 namespace RocketPlaner.Application.Users.Commands.RegisterUser;
 
-public sealed class RegisterUserEventHandler : IDomainEventHandler<UserCreated>
+public sealed class RegisterUserEventHandler(IUsersDataBase users)
+    : IDomainEventHandler<UserCreated>
 {
-    private readonly IUsersDataBase _users;
-
-    public RegisterUserEventHandler(IUsersDataBase users) => _users = users;
-
-    public async Task Handle(UserCreated domainEvent) => await _users.AddUser(domainEvent.User);
+    public async Task Handle(UserCreated domainEvent) => await users.AddUser(domainEvent.User);
 }

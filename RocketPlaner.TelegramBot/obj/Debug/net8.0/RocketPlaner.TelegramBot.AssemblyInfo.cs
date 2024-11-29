@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RocketPlaner.TelegramBot")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89ccbcfb5f5f0a2f0aa0968fdb5d2756d2f28275")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e963d367f2e6d1eea69cde7d493ab59bdcb560c7")]
 [assembly: System.Reflection.AssemblyProductAttribute("RocketPlaner.TelegramBot")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RocketPlaner.TelegramBot")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

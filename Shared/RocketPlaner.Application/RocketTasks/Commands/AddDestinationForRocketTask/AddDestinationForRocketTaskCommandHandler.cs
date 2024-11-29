@@ -9,38 +9,24 @@ using RocketPlaner.Core.Tools;
 
 namespace RocketPlaner.Application.RocketTasks.Commands.AddDestinationForRocketTask;
 
-public sealed class AddDestinationForRocketTaskCommandHandler
-    : ICommandHandler<AddDestinationForRocketTaskCommand, RocketTaskDestination>
+public sealed class AddDestinationForRocketTaskCommandHandler(
+    IUsersDataBase usersDb,
+    DomainEventDispatcher dispatcher,
+    ICommandValidator<AddDestinationForRocketTaskCommand, RocketTaskDestination> validator
+) : ICommandHandler<AddDestinationForRocketTaskCommand, RocketTaskDestination>
 {
-    private readonly IUsersDataBase _usersDb;
-    private readonly DomainEventDispatcher _dispatcher;
-
-    public AddDestinationForRocketTaskCommandHandler(
-        IUsersDataBase usersDb,
-        DomainEventDispatcher dispatcher
-    )
-    {
-        _usersDb = usersDb;
-        _dispatcher = dispatcher;
-    }
-
     public async Task<Result<RocketTaskDestination>> Handle(
         AddDestinationForRocketTaskCommand command
     )
     {
+        if (!await validator.IsCommandValidAsync(command))
+            return validator.GetLastError();
+
         var userTelegramId = UserTelegramId.Create(command.UserTelegramId);
-        if (userTelegramId.IsError)
-            return userTelegramId.Error;
-
         var taskTitle = RocketTaskTitle.Create(command.Title);
-        if (taskTitle.IsError)
-            return taskTitle.Error;
-
         var destinationChatId = DestinationChatId.Create(command.ChatId);
-        if (destinationChatId.IsError)
-            return destinationChatId.Error;
+        var user = await usersDb.GetUser(userTelegramId);
 
-        var user = await _usersDb.GetUser(userTelegramId);
         if (user is null)
             return userTelegramId.Error;
 
@@ -52,7 +38,7 @@ public sealed class AddDestinationForRocketTaskCommandHandler
         if (destination.IsError)
             return destination;
 
-        await _dispatcher.Dispatch(task.Value.GetDomainEvents());
+        await dispatcher.Dispatch(task.Value.GetDomainEvents());
         return destination;
     }
 }
