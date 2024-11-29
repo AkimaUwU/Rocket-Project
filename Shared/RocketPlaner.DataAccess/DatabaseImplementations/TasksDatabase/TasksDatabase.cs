@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using RocketPlaner.Application.Contracts.DataBaseContracts;
 using RocketPlaner.Core.models.RocketTasks;
 using RocketPlaner.DataAccess.DataBase;
@@ -44,6 +45,7 @@ public sealed class TasksDatabase : ITaskDataBase
         await using var transaction = await _context.Database.BeginTransactionAsync();
         try
         {
+            _context.Tasks.Entry(task).State = EntityState.Modified;
             _context.Tasks.Update(task);
             await _context.SaveChangesAsync();
             await transaction.CommitAsync();

@@ -11,11 +11,12 @@ using RocketPlaner.DataAccess.DatabaseImplementations.UsersDatabase;
 namespace RocketPlaner.Tests.UserTests;
 
 [TestFixture]
-public sealed class UserCRUDTests
+[Category("UserTests")]
+public sealed class UserCrudTests
 {
     private readonly IServiceCollection _services;
 
-    public UserCRUDTests()
+    public UserCrudTests()
     {
         _services = new ServiceCollection();
 
@@ -39,7 +40,7 @@ public sealed class UserCRUDTests
     [Test, Order(1)]
     public async Task RegisterUser()
     {
-        var telegramId = 123;
+        const int telegramId = 123;
         var command = new RegisterUserCommand(telegramId);
         await using var provider = _services.BuildServiceProvider();
         var dispatcher = provider.GetRequiredService<ICommandDispatcher>();

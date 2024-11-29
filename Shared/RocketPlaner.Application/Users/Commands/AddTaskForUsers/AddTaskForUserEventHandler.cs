@@ -6,9 +6,13 @@ namespace RocketPlaner.Application.Users.Commands.AddTaskForUsers;
 
 public sealed class AddTaskForUserEventHandler : IDomainEventHandler<UserAddedTask>
 {
-    private readonly ITaskDataBase _tasks;
+    private readonly IUsersDataBase _users;
 
-    public AddTaskForUserEventHandler(ITaskDataBase tasks) => _tasks = tasks;
+    public AddTaskForUserEventHandler(IUsersDataBase users)
+    {
+        _users = users;
+    }
 
-    public async Task Handle(UserAddedTask domainEvent) => await _tasks.AddTask(domainEvent.Task);
+    public async Task Handle(UserAddedTask domainEvent) =>
+        await _users.UpdateUser(domainEvent.User);
 }

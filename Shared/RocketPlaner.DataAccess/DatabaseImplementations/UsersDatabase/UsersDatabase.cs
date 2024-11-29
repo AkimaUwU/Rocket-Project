@@ -30,7 +30,7 @@ public sealed class UsersDatabase : IUsersDataBase
         await using var transaction = await _context.Database.BeginTransactionAsync();
         try
         {
-            _context.Users.Remove(user);
+            _context.Users.Entry(user).State = EntityState.Deleted;
             await _context.SaveChangesAsync();
             await transaction.CommitAsync();
         }
@@ -52,5 +52,20 @@ public sealed class UsersDatabase : IUsersDataBase
             u.TelegramId.TelegramId == telegramId.TelegramId
         );
         return !uniqueness;
+    }
+
+    public async Task UpdateUser(User user)
+    {
+        await using var transaction = await _context.Database.BeginTransactionAsync();
+        try
+        {
+            _context.Users.Entry(user).State = EntityState.Modified;
+            _context.Users.Update(user);
+            await _context.SaveChangesAsync();
+        }
+        catch
+        {
+            await transaction.RollbackAsync();
+        }
     }
 }

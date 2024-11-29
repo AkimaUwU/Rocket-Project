@@ -9,4 +9,5 @@ public interface IUsersDataBase
     Task RemoveUser(User user);
     Task<User?> GetUser(UserTelegramId telegramId);
     Task<bool> EnsureTelegramIdIsUnique(UserTelegramId telegramId);
+    Task UpdateUser(User user);
 }
