@@ -5,6 +5,9 @@ namespace RocketPlaner.Core.models.RocketTasks.ValueObjects;
 
 public record RocketTaskType
 {
+    public static readonly string Single = "Одноразовая";
+    public static readonly string Periodic = "Многоразовая";
+
     public string Type { get; init; }
 
     private RocketTaskType(string type) => Type = type;

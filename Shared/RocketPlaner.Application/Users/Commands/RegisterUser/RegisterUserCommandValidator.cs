@@ -20,7 +20,7 @@ public sealed class RegisterUserCommandValidator(IUsersDataBase usersDataBase)
         if (!await usersDataBase.EnsureTelegramIdIsUnique(telegramId))
             errors.Add(UserErrors.TelegramIdIsNotUnuqie);
 
-        return errors.Count == 0;
+        return HasErrors;
     }
 
     public Error GetLastError() => LastError;

@@ -12,27 +12,12 @@ public sealed class AddTaskForUsersCommandValidator
 {
     public async Task<bool> IsCommandValidAsync(AddTaskForUsersCommand command)
     {
-        var userTelegramId = UserTelegramId.Create(command.UserTelegramId);
-        if (userTelegramId.IsError)
-            errors.Add(userTelegramId.Error);
-
-        var title = RocketTaskTitle.Create(command.Title);
-        if (title.IsError)
-            errors.Add(title.Error);
-
-        var type = RocketTaskType.Create(command.Type);
-        if (type.IsError)
-            errors.Add(type.Error);
-
-        var message = RocketTaskMessage.Create(command.Message);
-        if (message.IsError)
-            errors.Add(message.Error);
-
-        var date = RocketTaskFireDate.Create(command.FireDate);
-        if (date.IsError)
-            errors.Add(date.Error);
-
-        return await Task.FromResult(errors.Count == 0);
+        AddErrorFromResult(UserTelegramId.Create(command.UserTelegramId));
+        AddErrorFromResult(RocketTaskTitle.Create(command.Title));
+        AddErrorFromResult(RocketTaskType.Create(command.Type));
+        AddErrorFromResult(RocketTaskMessage.Create(command.Message));
+        AddErrorFromResult(RocketTaskFireDate.Create(command.FireDate));
+        return await Task.FromResult(HasErrors);
     }
 
     public Error GetLastError() => LastError;

@@ -11,11 +11,8 @@ public sealed class UnregisterUserCommandValidator
 {
     public async Task<bool> IsCommandValidAsync(UnregisterUserCommand command)
     {
-        var userTelegramId = UserTelegramId.Create(command.UserTelegramId);
-        if (userTelegramId.IsError)
-            errors.Add(userTelegramId.Error);
-
-        return await Task.FromResult(errors.Count == 0);
+        AddErrorFromResult(UserTelegramId.Create(command.UserTelegramId));
+        return await Task.FromResult(HasErrors);
     }
 
     public Error GetLastError() => LastError;

@@ -1,3 +1,4 @@
+using RocketPlaner.Core.models.PendingTasks;
 using RocketPlaner.Core.models.RocketTasks.Errors;
 using RocketPlaner.Core.models.RocketTasks.Events;
 using RocketPlaner.Core.models.RocketTasks.RocketTaskDestinations;
@@ -33,11 +34,11 @@ public class RocketTask : DomainAggregateRoot
         FireDate = fireDate;
     }
 
-    public RocketTaskTitle Title { get; private set; }
-    public RocketTaskMessage Message { get; private set; }
-    public RocketTaskType Type { get; private set; }
+    public RocketTaskTitle Title { get; private set; } = null!;
+    public RocketTaskMessage Message { get; private set; } = null!;
+    public RocketTaskType Type { get; private set; } = null!;
     public RocketTaskFireDate FireDate { get; private set; }
-    public User Owner { get; private set; }
+    public User Owner { get; private set; } = null!;
 
     public IReadOnlyList<RocketTaskDestination> Destinations => _destinations;
 
@@ -80,6 +81,15 @@ public class RocketTask : DomainAggregateRoot
     {
         var destination = _destinations.FirstOrDefault(predicate);
         return destination is null ? RocketTaskDestinationErrors.DestinationNotFound : destination;
+    }
+
+    public Result<PendingRocketTask> CreatePending(RocketTask? task)
+    {
+        return task switch
+        {
+            null => RocketTaskErrors.CannotCreatePending,
+            _ => new PendingRocketTask(task),
+        };
     }
 
     private bool OwnsDestination(Func<RocketTaskDestination, bool> predicate) =>

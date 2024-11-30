@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RocketPlaner.DataAccess")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e963d367f2e6d1eea69cde7d493ab59bdcb560c7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+18a385c2f47edc9ea8d477a3c1aa668cb05a72a8")]
 [assembly: System.Reflection.AssemblyProductAttribute("RocketPlaner.DataAccess")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RocketPlaner.DataAccess")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

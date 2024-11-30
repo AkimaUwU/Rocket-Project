@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KeJzF7NwvKs=",
+  "dgSpecHash": "Auc+O7uUAx8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ramwsh\\Desktop\\rocket-proj\\Rocket-Project\\RocketPlaner.Tests\\RocketPlaner.Tests.csproj",
+  "projectFilePath": "C:\\Users\\Ramwsh\\Desktop\\rocketProject\\Rocket-Project\\RocketPlaner.Tests\\RocketPlaner.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ramwsh\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\Ramwsh\\.nuget\\packages\\microsoft.codecoverage\\17.8.0\\microsoft.codecoverage.17.8.0.nupkg.sha512",

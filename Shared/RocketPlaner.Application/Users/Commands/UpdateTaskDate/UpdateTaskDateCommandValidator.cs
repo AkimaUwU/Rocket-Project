@@ -12,19 +12,10 @@ public sealed class UpdateTaskDateCommandValidator
 {
     public async Task<bool> IsCommandValidAsync(UpdateTaskDateCommand command)
     {
-        var telegramId = UserTelegramId.Create(command.TelegramId);
-        if (telegramId.IsError)
-            errors.Add(telegramId.Error);
-
-        var title = RocketTaskTitle.Create(command.Title);
-        if (title.IsError)
-            errors.Add(title.Error);
-
-        var date = RocketTaskFireDate.Create(command.NewFireDate);
-        if (date.IsError)
-            errors.Add(date.Error);
-
-        return await Task.FromResult(errors.Count == 0);
+        AddErrorFromResult(UserTelegramId.Create(command.TelegramId));
+        AddErrorFromResult(RocketTaskTitle.Create(command.Title));
+        AddErrorFromResult(RocketTaskFireDate.Create(command.NewFireDate));
+        return await Task.FromResult(HasErrors);
     }
 
     public Error GetLastError() => LastError;

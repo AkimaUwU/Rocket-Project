@@ -19,6 +19,6 @@ public class RocketTaskDestination : DomainEntity
         BelongsTo = belongsTo;
     }
 
-    public RocketTask BelongsTo { get; init; }
+    public RocketTask BelongsTo { get; init; } = null!;
     public DestinationChatId ChatId { get; private set; }
 }

@@ -49,4 +49,8 @@ public static class RocketTaskErrors
     public static readonly Error DoesntOwnsDestinationChat = new Error(
         "Не имеет такого места отправки"
     );
+
+    public static readonly Error CannotCreatePending = new Error(
+        "Невозможно добавить задачу в пулл планировщика"
+    );
 }

@@ -12,15 +12,9 @@ public sealed class RemoveTaskForUsersCommandValidator
 {
     public async Task<bool> IsCommandValidAsync(RemoveTaskForUsersCommand command)
     {
-        var telegramId = UserTelegramId.Create(command.UserTelegramId);
-        if (telegramId.IsError)
-            errors.Add(telegramId.Error);
-
-        var title = RocketTaskTitle.Create(command.Title);
-        if (title.IsError)
-            errors.Add(title.Error);
-
-        return await Task.FromResult(errors.Count == 0);
+        AddErrorFromResult(UserTelegramId.Create(command.UserTelegramId));
+        AddErrorFromResult(RocketTaskTitle.Create(command.Title));
+        return await Task.FromResult(HasErrors);
     }
 
     public Error GetLastError() => LastError;

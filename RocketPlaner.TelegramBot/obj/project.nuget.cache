@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GReD33LAkZY=",
+  "dgSpecHash": "RgbIzWnpRTU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ramwsh\\Desktop\\rocket-proj\\Rocket-Project\\RocketPlaner.TelegramBot\\RocketPlaner.TelegramBot.csproj",
+  "projectFilePath": "C:\\Users\\Ramwsh\\Desktop\\rocketProject\\Rocket-Project\\RocketPlaner.TelegramBot\\RocketPlaner.TelegramBot.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ramwsh\\.nuget\\packages\\microsoft.data.sqlite.core\\9.0.0\\microsoft.data.sqlite.core.9.0.0.nupkg.sha512",
     "C:\\Users\\Ramwsh\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.0\\microsoft.entityframeworkcore.9.0.0.nupkg.sha512",
