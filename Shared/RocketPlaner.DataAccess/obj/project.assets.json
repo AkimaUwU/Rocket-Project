@@ -3271,12 +3271,13 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ramwsh\\Desktop\\rocketProject\\Rocket-Project\\Shared\\RocketPlaner.DataAccess\\RocketPlaner.DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\Ramwsh\\Desktop\\rocketprj\\Rocket-Project\\Shared\\RocketPlaner.DataAccess\\RocketPlaner.DataAccess.csproj",
       "projectName": "RocketPlaner.DataAccess",
-      "projectPath": "C:\\Users\\Ramwsh\\Desktop\\rocketProject\\Rocket-Project\\Shared\\RocketPlaner.DataAccess\\RocketPlaner.DataAccess.csproj",
+      "projectPath": "C:\\Users\\Ramwsh\\Desktop\\rocketprj\\Rocket-Project\\Shared\\RocketPlaner.DataAccess\\RocketPlaner.DataAccess.csproj",
       "packagesPath": "C:\\Users\\Ramwsh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ramwsh\\Desktop\\rocketProject\\Rocket-Project\\Shared\\RocketPlaner.DataAccess\\obj\\",
+      "outputPath": "C:\\Users\\Ramwsh\\Desktop\\rocketprj\\Rocket-Project\\Shared\\RocketPlaner.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
+      "UsingMicrosoftNETSdk": false,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
@@ -3298,8 +3299,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Ramwsh\\Desktop\\rocketProject\\Rocket-Project\\Shared\\RocketPlaner.Application\\RocketPlaner.Application.csproj": {
-              "projectPath": "C:\\Users\\Ramwsh\\Desktop\\rocketProject\\Rocket-Project\\Shared\\RocketPlaner.Application\\RocketPlaner.Application.csproj"
+            "C:\\Users\\Ramwsh\\Desktop\\rocketprj\\Rocket-Project\\Shared\\RocketPlaner.Application\\RocketPlaner.Application.csproj": {
+              "projectPath": "C:\\Users\\Ramwsh\\Desktop\\rocketprj\\Rocket-Project\\Shared\\RocketPlaner.Application\\RocketPlaner.Application.csproj"
             }
           }
         }
@@ -3350,7 +3351,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

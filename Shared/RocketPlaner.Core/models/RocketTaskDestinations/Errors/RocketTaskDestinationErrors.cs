@@ -1,6 +1,6 @@
 using RocketPlaner.Core.Tools;
 
-namespace RocketPlaner.Core.models.RocketTasks.RocketTaskDestinations.Errors;
+namespace RocketPlaner.Core.models.RocketTaskDestinations.Errors;
 
 public static class RocketTaskDestinationErrors
 {

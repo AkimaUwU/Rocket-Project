@@ -4,14 +4,10 @@ using RocketPlaner.Core.models.RocketTasks.Events;
 
 namespace RocketPlaner.Application.RocketTasks.Commands.RemoveDestinationFromRocketTask;
 
-public sealed class RemoveDestinationFromRocketTaskEventHandler
-    : IDomainEventHandler<RocketTaskDestinationRemoved>
+public sealed class RemoveDestinationFromRocketTaskEventHandler(
+    ITaskDestinationDatabase destinations
+) : IDomainEventHandler<RocketTaskDestinationRemoved>
 {
-    private readonly ITaskDestinationDatabase _destinations;
-
-    public RemoveDestinationFromRocketTaskEventHandler(ITaskDestinationDatabase destinations) =>
-        _destinations = destinations;
-
     public async Task Handle(RocketTaskDestinationRemoved domainEvent) =>
-        await _destinations.RemoveDestination(domainEvent.Destination);
+        await destinations.RemoveDestination(domainEvent.Destination);
 }

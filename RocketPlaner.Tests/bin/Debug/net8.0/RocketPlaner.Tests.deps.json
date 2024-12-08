@@ -703,12 +703,18 @@
           "RocketPlaner.Core": "1.0.0"
         },
         "runtime": {
-          "RocketPlaner.Application.dll": {}
+          "RocketPlaner.Application.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "RocketPlaner.Core/1.0.0": {
         "runtime": {
-          "RocketPlaner.Core.dll": {}
+          "RocketPlaner.Core.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "RocketPlaner.DataAccess/1.0.0": {
@@ -718,7 +724,10 @@
           "RocketPlaner.Application": "1.0.0"
         },
         "runtime": {
-          "RocketPlaner.DataAccess.dll": {}
+          "RocketPlaner.DataAccess.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

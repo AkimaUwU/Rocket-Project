@@ -1,5 +1,5 @@
 using RocketPlaner.Application.Contracts.Operations;
-using RocketPlaner.Core.models.RocketTasks.RocketTaskDestinations;
+using RocketPlaner.Core.models.RocketTaskDestinations;
 
 namespace RocketPlaner.Application.RocketTasks.Commands.RemoveDestinationFromRocketTask;
 

@@ -821,12 +821,18 @@
           "RocketPlaner.Core": "1.0.0"
         },
         "runtime": {
-          "RocketPlaner.Application.dll": {}
+          "RocketPlaner.Application.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "RocketPlaner.Core/1.0.0": {
         "runtime": {
-          "RocketPlaner.Core.dll": {}
+          "RocketPlaner.Core.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

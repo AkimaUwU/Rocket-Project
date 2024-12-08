@@ -1,7 +1,7 @@
-using RocketPlaner.Core.models.RocketTasks.RocketTaskDestinations.Errors;
+using RocketPlaner.Core.models.RocketTaskDestinations.Errors;
 using RocketPlaner.Core.Tools;
 
-namespace RocketPlaner.Core.models.RocketTasks.RocketTaskDestinations.ValueObjects;
+namespace RocketPlaner.Core.models.RocketTaskDestinations.ValueObjects;
 
 public readonly record struct DestinationChatId
 {

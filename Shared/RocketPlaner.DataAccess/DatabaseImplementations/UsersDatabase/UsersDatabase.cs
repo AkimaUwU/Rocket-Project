@@ -44,14 +44,12 @@ public sealed class UsersDatabase : IUsersDataBase
         await _context
             .Users.Include(u => u.Tasks)
             .ThenInclude(t => t.Destinations)
-            .FirstOrDefaultAsync(u => u.TelegramId.TelegramId == telegramId.TelegramId);
+            .FirstOrDefaultAsync(u => u.TelegramId == telegramId);
 
     public async Task<bool> EnsureTelegramIdIsUnique(UserTelegramId telegramId)
     {
-        var uniqueness = await _context.Users.AnyAsync(u =>
-            u.TelegramId.TelegramId == telegramId.TelegramId
-        );
-        return !uniqueness;
+        var uniquesness = await _context.Users.AnyAsync(u => u.TelegramId == telegramId);
+        return !uniquesness;
     }
 
     public async Task UpdateUser(User user)

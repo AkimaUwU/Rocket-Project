@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace RocketPlaner.DataAccess.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -15,20 +15,20 @@ namespace RocketPlaner.DataAccess.Migrations
                 name: "Users",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
-                    TelegramId_TelegramId = table.Column<long>(type: "INTEGER", nullable: false)
+                    TelegramId = table.Column<long>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Users", x => x.Id);
+                    table.PrimaryKey("PK_Users", x => x.TelegramId);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Tasks",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
-                    OwnerId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    OwnerTelegramId = table.Column<long>(type: "INTEGER", nullable: false),
                     FireDate_FireDate = table.Column<DateTime>(type: "TEXT", nullable: false),
                     Message_Message = table.Column<string>(type: "TEXT", nullable: false),
                     Title_Title = table.Column<string>(type: "TEXT", nullable: false),
@@ -38,10 +38,10 @@ namespace RocketPlaner.DataAccess.Migrations
                 {
                     table.PrimaryKey("PK_Tasks", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Tasks_Users_OwnerId",
-                        column: x => x.OwnerId,
+                        name: "FK_Tasks_Users_OwnerTelegramId",
+                        column: x => x.OwnerTelegramId,
                         principalTable: "Users",
-                        principalColumn: "Id",
+                        principalColumn: "TelegramId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -49,13 +49,12 @@ namespace RocketPlaner.DataAccess.Migrations
                 name: "Destinations",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
-                    BelongsToId = table.Column<Guid>(type: "TEXT", nullable: false),
-                    ChatId_ChatId = table.Column<long>(type: "INTEGER", nullable: false)
+                    ChatId = table.Column<long>(type: "INTEGER", nullable: false),
+                    BelongsToId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Destinations", x => x.Id);
+                    table.PrimaryKey("PK_Destinations", x => x.ChatId);
                     table.ForeignKey(
                         name: "FK_Destinations_Tasks_BelongsToId",
                         column: x => x.BelongsToId,
@@ -70,9 +69,9 @@ namespace RocketPlaner.DataAccess.Migrations
                 column: "BelongsToId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Tasks_OwnerId",
+                name: "IX_Tasks_OwnerTelegramId",
                 table: "Tasks",
-                column: "OwnerId");
+                column: "OwnerTelegramId");
         }
 
         /// <inheritdoc />

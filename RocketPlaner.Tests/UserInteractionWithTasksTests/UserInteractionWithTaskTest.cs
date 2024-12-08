@@ -50,10 +50,10 @@ public sealed class UserInteractionWithTaskTest
     public async Task BCreateTaskTest()
     {
         var serviceProvider = _services.BuildServiceProvider();
-        string title = "Some title";
-        string message = "Some message";
-        string type = "Одноразовая";
-        DateTime fireDate = DateTime.Now.AddHours(1);
+        var title = "Some title";
+        var message = "Some message";
+        var type = "Одноразовая";
+        var fireDate = DateTime.Now.AddHours(1);
         const long telegramId = 123;
 
         var addTaskCommand = new AddTaskForUsersCommand(title, message, type, fireDate, telegramId);

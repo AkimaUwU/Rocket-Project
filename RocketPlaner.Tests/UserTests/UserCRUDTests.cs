@@ -30,7 +30,7 @@ public sealed class UserCrudTests
     [Test, Order(1)]
     public async Task RegisterUser()
     {
-        const int telegramId = 123;
+        const long telegramId = 123;
         var command = new RegisterUserCommand(telegramId);
         await using var provider = _services.BuildServiceProvider();
         var dispatcher = provider.GetRequiredService<ICommandDispatcher>();
@@ -45,7 +45,7 @@ public sealed class UserCrudTests
     [Test, Order(2)]
     public async Task UnregisterUser()
     {
-        var telegramId = 123;
+        const long telegramId = 123;
         var command = new UnregisterUserCommand(telegramId);
         await using var provider = _services.BuildServiceProvider();
         var dispatcher = provider.GetRequiredService<ICommandDispatcher>();

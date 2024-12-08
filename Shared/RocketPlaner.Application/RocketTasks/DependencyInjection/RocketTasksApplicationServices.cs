@@ -3,8 +3,8 @@ using RocketPlaner.Application.Contracts.Events;
 using RocketPlaner.Application.Contracts.Operations;
 using RocketPlaner.Application.RocketTasks.Commands.AddDestinationForRocketTask;
 using RocketPlaner.Application.RocketTasks.Commands.RemoveDestinationFromRocketTask;
+using RocketPlaner.Core.models.RocketTaskDestinations;
 using RocketPlaner.Core.models.RocketTasks.Events;
-using RocketPlaner.Core.models.RocketTasks.RocketTaskDestinations;
 
 namespace RocketPlaner.Application.RocketTasks.DependencyInjection;
 

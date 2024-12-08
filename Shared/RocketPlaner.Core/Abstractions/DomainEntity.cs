@@ -2,10 +2,6 @@ namespace RocketPlaner.Core.Abstractions;
 
 public abstract class DomainEntity
 {
-    public Guid Id { get; init; }
-
-    public DomainEntity(Guid id) => Id = id;
-
     protected List<IDomainEvent> Events = [];
 
     public void RaiseEvent(IDomainEvent domainEvent) => Events.Add(domainEvent);

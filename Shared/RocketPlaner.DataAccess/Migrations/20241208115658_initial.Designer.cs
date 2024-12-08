@@ -12,8 +12,8 @@ using RocketPlaner.DataAccess.DataBase;
 namespace RocketPlaner.DataAccess.Migrations
 {
     [DbContext(typeof(DataBaseContext))]
-    [Migration("20241128213418_Initial")]
-    partial class Initial
+    [Migration("20241208115658_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -21,14 +21,29 @@ namespace RocketPlaner.DataAccess.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.0");
 
+            modelBuilder.Entity("RocketPlaner.Core.models.RocketTaskDestinations.RocketTaskDestination", b =>
+                {
+                    b.Property<long>("ChatId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("BelongsToId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("ChatId");
+
+                    b.HasIndex("BelongsToId");
+
+                    b.ToTable("Destinations");
+                });
+
             modelBuilder.Entity("RocketPlaner.Core.models.RocketTasks.RocketTask", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("INTEGER");
 
-                    b.Property<Guid>("OwnerId")
-                        .HasColumnType("TEXT");
+                    b.Property<long>("OwnerTelegramId")
+                        .HasColumnType("INTEGER");
 
                     b.ComplexProperty<Dictionary<string, object>>("FireDate", "RocketPlaner.Core.models.RocketTasks.RocketTask.FireDate#RocketTaskFireDate", b1 =>
                         {
@@ -63,64 +78,25 @@ namespace RocketPlaner.DataAccess.Migrations
                                 .HasColumnType("TEXT");
                         });
 
-                    b.HasKey("Id");
+                    b.HasKey("Id")
+                        .HasAnnotation("Sqlite:Autoincrement", true);
 
-                    b.HasIndex("OwnerId");
+                    b.HasIndex("OwnerTelegramId");
 
                     b.ToTable("Tasks");
                 });
 
-            modelBuilder.Entity("RocketPlaner.Core.models.RocketTasks.RocketTaskDestinations.RocketTaskDestination", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
-
-                    b.Property<Guid>("BelongsToId")
-                        .HasColumnType("TEXT");
-
-                    b.ComplexProperty<Dictionary<string, object>>("ChatId", "RocketPlaner.Core.models.RocketTasks.RocketTaskDestinations.RocketTaskDestination.ChatId#DestinationChatId", b1 =>
-                        {
-                            b1.Property<long>("ChatId")
-                                .HasColumnType("INTEGER");
-                        });
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BelongsToId");
-
-                    b.ToTable("Destinations");
-                });
-
             modelBuilder.Entity("RocketPlaner.Core.models.Users.User", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
+                    b.Property<long>("TelegramId")
+                        .HasColumnType("INTEGER");
 
-                    b.ComplexProperty<Dictionary<string, object>>("TelegramId", "RocketPlaner.Core.models.Users.User.TelegramId#UserTelegramId", b1 =>
-                        {
-                            b1.Property<long>("TelegramId")
-                                .HasColumnType("INTEGER");
-                        });
-
-                    b.HasKey("Id");
+                    b.HasKey("TelegramId");
 
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("RocketPlaner.Core.models.RocketTasks.RocketTask", b =>
-                {
-                    b.HasOne("RocketPlaner.Core.models.Users.User", "Owner")
-                        .WithMany("Tasks")
-                        .HasForeignKey("OwnerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Owner");
-                });
-
-            modelBuilder.Entity("RocketPlaner.Core.models.RocketTasks.RocketTaskDestinations.RocketTaskDestination", b =>
+            modelBuilder.Entity("RocketPlaner.Core.models.RocketTaskDestinations.RocketTaskDestination", b =>
                 {
                     b.HasOne("RocketPlaner.Core.models.RocketTasks.RocketTask", "BelongsTo")
                         .WithMany("Destinations")
@@ -129,6 +105,17 @@ namespace RocketPlaner.DataAccess.Migrations
                         .IsRequired();
 
                     b.Navigation("BelongsTo");
+                });
+
+            modelBuilder.Entity("RocketPlaner.Core.models.RocketTasks.RocketTask", b =>
+                {
+                    b.HasOne("RocketPlaner.Core.models.Users.User", "Owner")
+                        .WithMany("Tasks")
+                        .HasForeignKey("OwnerTelegramId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Owner");
                 });
 
             modelBuilder.Entity("RocketPlaner.Core.models.RocketTasks.RocketTask", b =>

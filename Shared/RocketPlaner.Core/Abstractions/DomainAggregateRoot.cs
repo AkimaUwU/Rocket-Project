@@ -1,3 +1,3 @@
-using RocketPlaner.Core.Abstractions;
+namespace RocketPlaner.Core.Abstractions;
 
-public abstract class DomainAggregateRoot(Guid id) : DomainEntity(id);
+public abstract class DomainAggregateRoot : DomainEntity;

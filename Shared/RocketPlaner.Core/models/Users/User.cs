@@ -1,3 +1,4 @@
+using RocketPlaner.Core.Abstractions;
 using RocketPlaner.Core.models.RocketTasks;
 using RocketPlaner.Core.models.RocketTasks.Errors;
 using RocketPlaner.Core.models.RocketTasks.ValueObjects;
@@ -11,11 +12,10 @@ public sealed class User : DomainAggregateRoot
 {
     private readonly List<RocketTask> _tasks = [];
 
-    private User()
-        : base(Guid.Empty) { } // EF core constructor
+    private User() { } // EF core constructor
 
-    public User(UserTelegramId telegramId, Guid id = default)
-        : base(id == Guid.Empty ? Guid.NewGuid() : id)
+    public User(UserTelegramId telegramId)
+        : this()
     {
         TelegramId = telegramId;
         RaiseEvent(new UserCreated(this));

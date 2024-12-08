@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using RocketPlaner.Application.Contracts.DataBaseContracts;
-using RocketPlaner.Core.models.RocketTasks.RocketTaskDestinations;
+using RocketPlaner.Core.models.RocketTaskDestinations;
 using RocketPlaner.DataAccess.DataBase;
 
 namespace RocketPlaner.DataAccess.DatabaseImplementations.TasksDestinationsDataBase;

@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.EntityFrameworkCore.Sqlite.Metadata.Internal;
 using RocketPlaner.Core.models.RocketTasks;
 
 namespace RocketPlaner.DataAccess.DataBase.Config;
@@ -8,7 +9,7 @@ public class TasksConfig : IEntityTypeConfiguration<RocketTask>
 {
     public void Configure(EntityTypeBuilder<RocketTask> builder)
     {
-        builder.HasKey(t => t.Id);
+        builder.HasKey(t => t.Id).HasAnnotation(SqliteAnnotationNames.Autoincrement, true);
 
         builder
             .HasMany(t => t.Destinations)

@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using RocketPlaner.Core.models.RocketTaskDestinations;
 using RocketPlaner.Core.models.RocketTasks;
-using RocketPlaner.Core.models.RocketTasks.RocketTaskDestinations;
 using RocketPlaner.Core.models.Users;
 using RocketPlaner.DataAccess.DataBase.Config;
 

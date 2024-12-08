@@ -1,9 +1,9 @@
-using RocketPlaner.Core.models.PendingTasks;
+using RocketPlaner.Core.Abstractions;
+using RocketPlaner.Core.models.RocketTaskDestinations;
+using RocketPlaner.Core.models.RocketTaskDestinations.Errors;
+using RocketPlaner.Core.models.RocketTaskDestinations.ValueObjects;
 using RocketPlaner.Core.models.RocketTasks.Errors;
 using RocketPlaner.Core.models.RocketTasks.Events;
-using RocketPlaner.Core.models.RocketTasks.RocketTaskDestinations;
-using RocketPlaner.Core.models.RocketTasks.RocketTaskDestinations.Errors;
-using RocketPlaner.Core.models.RocketTasks.RocketTaskDestinations.ValueObjects;
 using RocketPlaner.Core.models.RocketTasks.ValueObjects;
 using RocketPlaner.Core.models.Users;
 using RocketPlaner.Core.Tools;
@@ -14,18 +14,16 @@ public class RocketTask : DomainAggregateRoot
 {
     private readonly List<RocketTaskDestination> _destinations = [];
 
-    private RocketTask()
-        : base(Guid.Empty) { }
+    private RocketTask() { }
 
     internal RocketTask(
         RocketTaskTitle title,
         RocketTaskMessage message,
         RocketTaskType type,
         RocketTaskFireDate fireDate,
-        User owner,
-        Guid id = default
+        User owner
     )
-        : base(id == default ? Guid.NewGuid() : id)
+        : this()
     {
         Title = title;
         Message = message;
@@ -34,6 +32,7 @@ public class RocketTask : DomainAggregateRoot
         FireDate = fireDate;
     }
 
+    public int Id { get; private set; }
     public RocketTaskTitle Title { get; private set; } = null!;
     public RocketTaskMessage Message { get; private set; } = null!;
     public RocketTaskType Type { get; private set; } = null!;
@@ -81,15 +80,6 @@ public class RocketTask : DomainAggregateRoot
     {
         var destination = _destinations.FirstOrDefault(predicate);
         return destination is null ? RocketTaskDestinationErrors.DestinationNotFound : destination;
-    }
-
-    public Result<PendingRocketTask> CreatePending(RocketTask? task)
-    {
-        return task switch
-        {
-            null => RocketTaskErrors.CannotCreatePending,
-            _ => new PendingRocketTask(task),
-        };
     }
 
     private bool OwnsDestination(Func<RocketTaskDestination, bool> predicate) =>

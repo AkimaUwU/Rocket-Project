@@ -1,8 +1,8 @@
 using RocketPlaner.Application.Contracts.DataBaseContracts;
 using RocketPlaner.Application.Contracts.Events;
 using RocketPlaner.Application.Contracts.Operations;
-using RocketPlaner.Core.models.RocketTasks.RocketTaskDestinations;
-using RocketPlaner.Core.models.RocketTasks.RocketTaskDestinations.ValueObjects;
+using RocketPlaner.Core.models.RocketTaskDestinations;
+using RocketPlaner.Core.models.RocketTaskDestinations.ValueObjects;
 using RocketPlaner.Core.models.RocketTasks.ValueObjects;
 using RocketPlaner.Core.models.Users.ValueObjects;
 using RocketPlaner.Core.Tools;

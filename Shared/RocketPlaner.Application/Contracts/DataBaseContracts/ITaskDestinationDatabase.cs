@@ -1,4 +1,4 @@
-using RocketPlaner.Core.models.RocketTasks.RocketTaskDestinations;
+using RocketPlaner.Core.models.RocketTaskDestinations;
 
 namespace RocketPlaner.Application.Contracts.DataBaseContracts;
 
