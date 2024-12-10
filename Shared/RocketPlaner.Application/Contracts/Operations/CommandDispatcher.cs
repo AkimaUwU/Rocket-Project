@@ -5,19 +5,22 @@ namespace RocketPlaner.Application.Contracts.Operations;
 
 public sealed class CommandDispatcher : ICommandDispatcher
 {
-    private readonly IServiceProvider _serviceProvider;
+    private readonly IServiceScopeFactory _factory;
 
-    public CommandDispatcher(IServiceProvider serviceProvider)
+    public CommandDispatcher(IServiceScopeFactory factory)
     {
-        _serviceProvider = serviceProvider;
+        _factory = factory;
     }
 
     public async Task<Result<TCommandResult>> Resolve<TCommand, TCommandResult>(TCommand command)
         where TCommand : ICommand<TCommandResult>
     {
-        var handler = _serviceProvider.GetRequiredService<
-            ICommandHandler<TCommand, TCommandResult>
-        >();
-        return await handler.Handle(command);
+        using (var scope = _factory.CreateScope())
+        {
+            var handler = scope.ServiceProvider.GetRequiredService<
+                ICommandHandler<TCommand, TCommandResult>
+            >();
+            return await handler.Handle((TCommand)command);
+        }
     }
 }

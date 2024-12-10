@@ -6,7 +6,7 @@ namespace RocketPlaner.Core.models.RocketTasks.ValueObjects;
 public record RocketTaskType
 {
     public static readonly string Single = "Одноразовая";
-    public static readonly string Periodic = "Многоразовая";
+    public static readonly string Periodic = "Периодическая";
 
     public string Type { get; init; }
 
@@ -24,7 +24,8 @@ public record RocketTaskType
                 RocketTaskErrors.CannotCreateWithEmptyType,
             not null when string.Equals("Одноразовая", type, StringComparison.OrdinalIgnoreCase) =>
                 new RocketTaskType(type),
-            not null when string.Equals("Многоразовая", type, StringComparison.OrdinalIgnoreCase) =>
+            not null
+                when string.Equals("Периодическая", type, StringComparison.OrdinalIgnoreCase) =>
                 new RocketTaskType(type),
             _ => RocketTaskErrors.RocketTaskTypeIsNotAllowed,
         };

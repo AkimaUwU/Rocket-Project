@@ -5,17 +5,19 @@ namespace RocketPlaner.Application.Contracts.Operations;
 
 public sealed class QueryDispatcher : IQueryDispatcher
 {
-    private readonly IServiceProvider _serviceProvider;
+    private readonly IServiceScopeFactory _factory;
 
-    public QueryDispatcher(IServiceProvider serviceProvider)
-    {
-        _serviceProvider = serviceProvider;
-    }
+    public QueryDispatcher(IServiceScopeFactory factory) => _factory = factory;
 
     public async Task<Result<TQueryResult>> Resolve<TQuery, TQueryResult>(TQuery query)
         where TQuery : IQuery<TQueryResult>
     {
-        var handler = _serviceProvider.GetRequiredService<IQueryHandler<TQuery, TQueryResult>>();
-        return await handler.Handle(query);
+        using (var scope = _factory.CreateScope())
+        {
+            var handler = scope.ServiceProvider.GetRequiredService<
+                IQueryHandler<TQuery, TQueryResult>
+            >();
+            return await handler.Handle(query);
+        }
     }
 }

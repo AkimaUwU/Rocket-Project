@@ -7,6 +7,7 @@ using RocketPlaner.Application.Users.Commands.RemoveTaskForUsers;
 using RocketPlaner.Application.Users.Commands.UnregisterUser;
 using RocketPlaner.Application.Users.Commands.UpdateTaskDate;
 using RocketPlaner.Application.Users.Queries.GetUsersTask;
+using RocketPlaner.Application.Users.Queries.IsUserExist;
 using RocketPlaner.Core.models.RocketTasks;
 using RocketPlaner.Core.models.RocketTasks.Events;
 using RocketPlaner.Core.models.Users;
@@ -70,7 +71,9 @@ public static class UserApplicationServices
             .AddTransient<
                 IQueryValidator<GetUsersTaskQuery, IReadOnlyList<RocketTask>>,
                 GetUsersTaskQueryValidator
-            >();
+            >()
+            .AddTransient<IQueryHandler<IsUserExistQuery, bool>, IsUserExistQueryHandler>()
+            .AddTransient<IQueryValidator<IsUserExistQuery, bool>, IsUserExistQueryValidator>();
         return services;
     }
 }
