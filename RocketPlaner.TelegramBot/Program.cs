@@ -12,6 +12,7 @@ using RocketPlaner.TelegramBot.BotEndpoints.Abstractions;
 using RocketPlaner.TelegramBot.BotEndpoints.CreateTaskEndpoint;
 using RocketPlaner.TelegramBot.BotEndpoints.UserRegistrationEndpoint;
 using RocketPlaner.TelegramBot.Configuration;
+using RocketPlanner.TimeClassifier.DependencyInjection;
 
 var builder = Host.CreateApplicationBuilder(args);
 
@@ -25,6 +26,7 @@ builder.Services.AddUserApplicationServices();
 builder.Services.AddRocketTasksServices();
 
 builder.Services.AddSingleton<CreateTaskStateContainer>();
+builder.Services.AddTimeClassification();
 
 var token = builder.Configuration.GetSection("BotSettings").GetValue<string>("Token")!;
 var host = builder.Build();

@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\RocketPlanner.TimeClassification\RocketPlanner.TimeClassification.csproj" />
     <ProjectReference Include="..\Shared\RocketPlaner.Application\RocketPlaner.Application.csproj" />
     <ProjectReference Include="..\Shared\RocketPlaner.DataAccess\RocketPlaner.DataAccess.csproj" />
   </ItemGroup>
