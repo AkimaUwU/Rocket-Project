@@ -1,0 +1,12 @@
+D:\TelegramBotTaskPlanner\Rocket-Project\main_src\ReportTaskPlanner.Utilities\bin\Debug\net9.0\ReportTaskPlanner.Utilities.deps.json
+D:\TelegramBotTaskPlanner\Rocket-Project\main_src\ReportTaskPlanner.Utilities\bin\Debug\net9.0\ReportTaskPlanner.Utilities.dll
+D:\TelegramBotTaskPlanner\Rocket-Project\main_src\ReportTaskPlanner.Utilities\bin\Debug\net9.0\ReportTaskPlanner.Utilities.pdb
+D:\TelegramBotTaskPlanner\Rocket-Project\main_src\ReportTaskPlanner.Utilities\obj\Debug\net9.0\ReportTaskPlanner.Utilities.GeneratedMSBuildEditorConfig.editorconfig
+D:\TelegramBotTaskPlanner\Rocket-Project\main_src\ReportTaskPlanner.Utilities\obj\Debug\net9.0\ReportTaskPlanner.Utilities.AssemblyInfoInputs.cache
+D:\TelegramBotTaskPlanner\Rocket-Project\main_src\ReportTaskPlanner.Utilities\obj\Debug\net9.0\ReportTaskPlanner.Utilities.AssemblyInfo.cs
+D:\TelegramBotTaskPlanner\Rocket-Project\main_src\ReportTaskPlanner.Utilities\obj\Debug\net9.0\ReportTaskPlanner.Utilities.csproj.CoreCompileInputs.cache
+D:\TelegramBotTaskPlanner\Rocket-Project\main_src\ReportTaskPlanner.Utilities\obj\Debug\net9.0\ReportTaskPlanner.Utilities.sourcelink.json
+D:\TelegramBotTaskPlanner\Rocket-Project\main_src\ReportTaskPlanner.Utilities\obj\Debug\net9.0\ReportTaskPlanner.Utilities.dll
+D:\TelegramBotTaskPlanner\Rocket-Project\main_src\ReportTaskPlanner.Utilities\obj\Debug\net9.0\refint\ReportTaskPlanner.Utilities.dll
+D:\TelegramBotTaskPlanner\Rocket-Project\main_src\ReportTaskPlanner.Utilities\obj\Debug\net9.0\ReportTaskPlanner.Utilities.pdb
+D:\TelegramBotTaskPlanner\Rocket-Project\main_src\ReportTaskPlanner.Utilities\obj\Debug\net9.0\ref\ReportTaskPlanner.Utilities.dll

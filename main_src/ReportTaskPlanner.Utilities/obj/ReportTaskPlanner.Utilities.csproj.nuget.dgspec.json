@@ -1,0 +1,70 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\TelegramBotTaskPlanner\\Rocket-Project\\main_src\\ReportTaskPlanner.Utilities\\ReportTaskPlanner.Utilities.csproj": {}
+  },
+  "projects": {
+    "D:\\TelegramBotTaskPlanner\\Rocket-Project\\main_src\\ReportTaskPlanner.Utilities\\ReportTaskPlanner.Utilities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\TelegramBotTaskPlanner\\Rocket-Project\\main_src\\ReportTaskPlanner.Utilities\\ReportTaskPlanner.Utilities.csproj",
+        "projectName": "ReportTaskPlanner.Utilities",
+        "projectPath": "D:\\TelegramBotTaskPlanner\\Rocket-Project\\main_src\\ReportTaskPlanner.Utilities\\ReportTaskPlanner.Utilities.csproj",
+        "packagesPath": "C:\\Users\\Ramwsh\\.nuget\\packages\\",
+        "outputPath": "D:\\TelegramBotTaskPlanner\\Rocket-Project\\main_src\\ReportTaskPlanner.Utilities\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Ramwsh\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "c:\\program files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/tgbots/Telegram.Bot/_packaging/release/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
