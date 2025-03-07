@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "NB3OF4n9bf4=",
+  "dgSpecHash": "zD6gvnTCNm8=",
   "success": true,
   "projectFilePath": "D:\\TGBotPlanner\\Rocket-Project\\main_src\\infrastructure\\ReportTaskPlanner.LiteDb\\ReportTaskPlanner.LiteDb.csproj",
   "expectedPackageFiles": [
@@ -8,8 +8,7 @@
     "C:\\Users\\Ramwsh\\.nuget\\packages\\litedb\\5.0.20\\litedb.5.0.20.nupkg.sha512",
     "C:\\Users\\Ramwsh\\.nuget\\packages\\litedb.async\\0.1.8\\litedb.async.0.1.8.nupkg.sha512",
     "C:\\Users\\Ramwsh\\.nuget\\packages\\serilog\\4.2.1-dev-02340\\serilog.4.2.1-dev-02340.nupkg.sha512",
-    "C:\\Users\\Ramwsh\\.nuget\\packages\\serilog.sinks.console\\6.0.1-dev-00953\\serilog.sinks.console.6.0.1-dev-00953.nupkg.sha512",
-    "C:\\Users\\Ramwsh\\.nuget\\packages\\microsoft.net.sdk.compilers.toolset\\9.0.200\\microsoft.net.sdk.compilers.toolset.9.0.200.nupkg.sha512"
+    "C:\\Users\\Ramwsh\\.nuget\\packages\\serilog.sinks.console\\6.0.1-dev-00953\\serilog.sinks.console.6.0.1-dev-00953.nupkg.sha512"
   ],
   "logs": []
 }

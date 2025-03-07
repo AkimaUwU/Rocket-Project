@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "tjY4f+6pd/8=",
+  "dgSpecHash": "F2h3djYbLm0=",
   "success": true,
   "projectFilePath": "D:\\TGBotPlanner\\Rocket-Project\\main_src\\ReportTaskPlanner.DependencyInjection\\ReportTaskPlanner.DependencyInjection.csproj",
   "expectedPackageFiles": [
@@ -12,8 +12,7 @@
     "C:\\Users\\Ramwsh\\.nuget\\packages\\microsoft.extensions.dependencymodel\\8.0.2\\microsoft.extensions.dependencymodel.8.0.2.nupkg.sha512",
     "C:\\Users\\Ramwsh\\.nuget\\packages\\scrutor\\6.0.1\\scrutor.6.0.1.nupkg.sha512",
     "C:\\Users\\Ramwsh\\.nuget\\packages\\serilog\\4.2.1-dev-02340\\serilog.4.2.1-dev-02340.nupkg.sha512",
-    "C:\\Users\\Ramwsh\\.nuget\\packages\\serilog.sinks.console\\6.0.1-dev-00953\\serilog.sinks.console.6.0.1-dev-00953.nupkg.sha512",
-    "C:\\Users\\Ramwsh\\.nuget\\packages\\microsoft.net.sdk.compilers.toolset\\9.0.200\\microsoft.net.sdk.compilers.toolset.9.0.200.nupkg.sha512"
+    "C:\\Users\\Ramwsh\\.nuget\\packages\\serilog.sinks.console\\6.0.1-dev-00953\\serilog.sinks.console.6.0.1-dev-00953.nupkg.sha512"
   ],
   "logs": []
 }
