@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ReportTaskPlanner.Main")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+423d16775acd8972e320217594ef59ce673dbc54")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+28b0c979f30594ab3341d8c89e43c37405d5c1c7")]
 [assembly: System.Reflection.AssemblyProductAttribute("ReportTaskPlanner.Main")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ReportTaskPlanner.Main")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

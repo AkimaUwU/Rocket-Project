@@ -11,8 +11,7 @@ public class CreateReportTaskTests
     {
         string message = "Some text here";
         DateTime date = DateTime.Now.AddHours(2);
-        ReportTask.Factory factory = new ReportTask.Factory(message, date);
-        TypedResult<ReportTask> result = factory.Create();
+        Result<ReportTask> result = ReportTask.Create(message, date);
         Assert.True(result.IsSuccess);
     }
 
@@ -21,8 +20,7 @@ public class CreateReportTaskTests
     {
         string message = "";
         DateTime date = DateTime.Now.AddHours(2);
-        ReportTask.Factory factory = new ReportTask.Factory(message, date);
-        TypedResult<ReportTask> result = factory.Create();
+        Result<ReportTask> result = ReportTask.Create(message, date);
         Assert.False(!result.IsSuccess);
     }
 
@@ -31,8 +29,7 @@ public class CreateReportTaskTests
     {
         string message = "";
         DateTime date = DateTime.Now.AddHours(-22);
-        ReportTask.Factory factory = new ReportTask.Factory(message, date);
-        TypedResult<ReportTask> result = factory.Create();
+        Result<ReportTask> result = ReportTask.Create(message, date);
         Assert.False(result.IsSuccess);
     }
 
@@ -41,8 +38,7 @@ public class CreateReportTaskTests
     {
         string message = "Some text here";
         DateTime date = DateTime.Now.AddHours(-22);
-        ReportTask.Factory factory = new ReportTask.Factory(message, date);
-        TypedResult<ReportTask> result = factory.Create();
+        Result<ReportTask> result = ReportTask.Create(message, date);
         Assert.False(result.IsSuccess);
     }
 }

@@ -982,11 +982,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\TelegramBotTaskPlanner\\Rocket-Project\\tests\\ReportTaskPlanner.Main.Tests\\ReportTaskPlanner.Main.Tests.csproj",
+      "projectUniqueName": "D:\\TGBotPlanner\\Rocket-Project\\tests\\ReportTaskPlanner.Main.Tests\\ReportTaskPlanner.Main.Tests.csproj",
       "projectName": "ReportTaskPlanner.Main.Tests",
-      "projectPath": "D:\\TelegramBotTaskPlanner\\Rocket-Project\\tests\\ReportTaskPlanner.Main.Tests\\ReportTaskPlanner.Main.Tests.csproj",
+      "projectPath": "D:\\TGBotPlanner\\Rocket-Project\\tests\\ReportTaskPlanner.Main.Tests\\ReportTaskPlanner.Main.Tests.csproj",
       "packagesPath": "C:\\Users\\Ramwsh\\.nuget\\packages\\",
-      "outputPath": "D:\\TelegramBotTaskPlanner\\Rocket-Project\\tests\\ReportTaskPlanner.Main.Tests\\obj\\",
+      "outputPath": "D:\\TGBotPlanner\\Rocket-Project\\tests\\ReportTaskPlanner.Main.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ramwsh\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -995,17 +995,14 @@
         "net9.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "c:\\program files\\dotnet\\library-packs": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://pkgs.dev.azure.com/tgbots/Telegram.Bot/_packaging/release/nuget/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "D:\\TelegramBotTaskPlanner\\Rocket-Project\\main_src\\ReportTaskPlanner.Main\\ReportTaskPlanner.Main.csproj": {
-              "projectPath": "D:\\TelegramBotTaskPlanner\\Rocket-Project\\main_src\\ReportTaskPlanner.Main\\ReportTaskPlanner.Main.csproj"
+            "D:\\TGBotPlanner\\Rocket-Project\\main_src\\ReportTaskPlanner.Main\\ReportTaskPlanner.Main.csproj": {
+              "projectPath": "D:\\TGBotPlanner\\Rocket-Project\\main_src\\ReportTaskPlanner.Main\\ReportTaskPlanner.Main.csproj"
             }
           }
         }
@@ -1018,9 +1015,9 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "direct"
+        "auditMode": "all"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net9.0": {
@@ -1054,12 +1051,18 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.Net.Sdk.Compilers.Toolset",
+            "version": "[9.0.200, 9.0.200]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
