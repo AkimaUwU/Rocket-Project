@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "1XHKLYvrbHY=",
+  "dgSpecHash": "uJqDTuq2dnY=",
   "success": true,
   "projectFilePath": "D:\\TGBotPlanner\\Rocket-Project\\main_src\\ReportTaskPlanner.Utilities\\ReportTaskPlanner.Utilities.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Ramwsh\\.nuget\\packages\\microsoft.net.sdk.compilers.toolset\\9.0.200\\microsoft.net.sdk.compilers.toolset.9.0.200.nupkg.sha512"
+  ],
   "logs": []
 }

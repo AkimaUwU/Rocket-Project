@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "KYP9TYW9cZQ=",
+  "dgSpecHash": "QvB8Na9pu74=",
   "success": true,
   "projectFilePath": "D:\\TGBotPlanner\\Rocket-Project\\main_src\\ReportTaskPlanner.UseCases\\ReportTaskPlanner.UseCases.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ramwsh\\.nuget\\packages\\fluentvalidation\\12.0.0-preview1\\fluentvalidation.12.0.0-preview1.nupkg.sha512",
     "C:\\Users\\Ramwsh\\.nuget\\packages\\serilog\\4.2.1-dev-02340\\serilog.4.2.1-dev-02340.nupkg.sha512",
-    "C:\\Users\\Ramwsh\\.nuget\\packages\\serilog.sinks.console\\6.0.1-dev-00953\\serilog.sinks.console.6.0.1-dev-00953.nupkg.sha512"
+    "C:\\Users\\Ramwsh\\.nuget\\packages\\serilog.sinks.console\\6.0.1-dev-00953\\serilog.sinks.console.6.0.1-dev-00953.nupkg.sha512",
+    "C:\\Users\\Ramwsh\\.nuget\\packages\\microsoft.net.sdk.compilers.toolset\\9.0.200\\microsoft.net.sdk.compilers.toolset.9.0.200.nupkg.sha512"
   ],
   "logs": []
 }

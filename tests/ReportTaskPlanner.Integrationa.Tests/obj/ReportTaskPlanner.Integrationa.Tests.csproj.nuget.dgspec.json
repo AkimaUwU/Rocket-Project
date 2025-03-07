@@ -40,7 +40,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
+          "auditMode": "all"
         },
         "SdkAnalysisLevel": "9.0.200"
       },
@@ -64,6 +64,81 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.Net.Sdk.Compilers.Toolset",
+              "version": "[9.0.200, 9.0.200]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\TGBotPlanner\\Rocket-Project\\main_src\\infrastructure\\ReportTaskPlanner.TimeZoneDbProvider\\ReportTaskPlanner.TimeZoneDbProvider.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\TGBotPlanner\\Rocket-Project\\main_src\\infrastructure\\ReportTaskPlanner.TimeZoneDbProvider\\ReportTaskPlanner.TimeZoneDbProvider.csproj",
+        "projectName": "ReportTaskPlanner.TimeZoneDbProvider",
+        "projectPath": "D:\\TGBotPlanner\\Rocket-Project\\main_src\\infrastructure\\ReportTaskPlanner.TimeZoneDbProvider\\ReportTaskPlanner.TimeZoneDbProvider.csproj",
+        "packagesPath": "C:\\Users\\Ramwsh\\.nuget\\packages\\",
+        "outputPath": "D:\\TGBotPlanner\\Rocket-Project\\main_src\\infrastructure\\ReportTaskPlanner.TimeZoneDbProvider\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Ramwsh\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "D:\\TGBotPlanner\\Rocket-Project\\main_src\\ReportTaskPlanner.UseCases\\ReportTaskPlanner.UseCases.csproj": {
+                "projectPath": "D:\\TGBotPlanner\\Rocket-Project\\main_src\\ReportTaskPlanner.UseCases\\ReportTaskPlanner.UseCases.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.Net.Sdk.Compilers.Toolset",
+              "version": "[9.0.200, 9.0.200]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -97,6 +172,9 @@
             "projectReferences": {
               "D:\\TGBotPlanner\\Rocket-Project\\main_src\\infrastructure\\ReportTaskPlanner.LiteDb\\ReportTaskPlanner.LiteDb.csproj": {
                 "projectPath": "D:\\TGBotPlanner\\Rocket-Project\\main_src\\infrastructure\\ReportTaskPlanner.LiteDb\\ReportTaskPlanner.LiteDb.csproj"
+              },
+              "D:\\TGBotPlanner\\Rocket-Project\\main_src\\infrastructure\\ReportTaskPlanner.TimeZoneDbProvider\\ReportTaskPlanner.TimeZoneDbProvider.csproj": {
+                "projectPath": "D:\\TGBotPlanner\\Rocket-Project\\main_src\\infrastructure\\ReportTaskPlanner.TimeZoneDbProvider\\ReportTaskPlanner.TimeZoneDbProvider.csproj"
               }
             }
           }
@@ -109,7 +187,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
+          "auditMode": "all"
         },
         "SdkAnalysisLevel": "9.0.200"
       },
@@ -141,6 +219,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.Net.Sdk.Compilers.Toolset",
+              "version": "[9.0.200, 9.0.200]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -186,7 +270,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
+          "auditMode": "all"
         },
         "SdkAnalysisLevel": "9.0.200"
       },
@@ -204,6 +288,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.Net.Sdk.Compilers.Toolset",
+              "version": "[9.0.200, 9.0.200]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -249,7 +339,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
+          "auditMode": "all"
         },
         "SdkAnalysisLevel": "9.0.200"
       },
@@ -281,6 +371,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.Net.Sdk.Compilers.Toolset",
+              "version": "[9.0.200, 9.0.200]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -322,7 +418,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
+          "auditMode": "all"
         },
         "SdkAnalysisLevel": "9.0.200"
       },
@@ -340,6 +436,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.Net.Sdk.Compilers.Toolset",
+              "version": "[9.0.200, 9.0.200]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -385,7 +487,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
+          "auditMode": "all"
         },
         "SdkAnalysisLevel": "9.0.200"
       },
@@ -421,6 +523,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.Net.Sdk.Compilers.Toolset",
+              "version": "[9.0.200, 9.0.200]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"

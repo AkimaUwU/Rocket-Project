@@ -164,6 +164,19 @@
           "bin/placeholder/ReportTaskPlanner.Main.dll": {}
         }
       },
+      "ReportTaskPlanner.TimeZoneDbProvider/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ReportTaskPlanner.UseCases": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ReportTaskPlanner.TimeZoneDbProvider.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ReportTaskPlanner.TimeZoneDbProvider.dll": {}
+        }
+      },
       "ReportTaskPlanner.UseCases/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -413,6 +426,11 @@
       "path": "../ReportTaskPlanner.Main/ReportTaskPlanner.Main.csproj",
       "msbuildProject": "../ReportTaskPlanner.Main/ReportTaskPlanner.Main.csproj"
     },
+    "ReportTaskPlanner.TimeZoneDbProvider/1.0.0": {
+      "type": "project",
+      "path": "../infrastructure/ReportTaskPlanner.TimeZoneDbProvider/ReportTaskPlanner.TimeZoneDbProvider.csproj",
+      "msbuildProject": "../infrastructure/ReportTaskPlanner.TimeZoneDbProvider/ReportTaskPlanner.TimeZoneDbProvider.csproj"
+    },
     "ReportTaskPlanner.UseCases/1.0.0": {
       "type": "project",
       "path": "../ReportTaskPlanner.UseCases/ReportTaskPlanner.UseCases.csproj",
@@ -429,6 +447,7 @@
       "Microsoft.Extensions.DependencyInjection >= 10.0.0-preview.1.25080.5",
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 10.0.0-preview.1.25080.5",
       "ReportTaskPlanner.LiteDb >= 1.0.0",
+      "ReportTaskPlanner.TimeZoneDbProvider >= 1.0.0",
       "Scrutor >= 6.0.1"
     ]
   },
@@ -459,6 +478,9 @@
           "projectReferences": {
             "D:\\TGBotPlanner\\Rocket-Project\\main_src\\infrastructure\\ReportTaskPlanner.LiteDb\\ReportTaskPlanner.LiteDb.csproj": {
               "projectPath": "D:\\TGBotPlanner\\Rocket-Project\\main_src\\infrastructure\\ReportTaskPlanner.LiteDb\\ReportTaskPlanner.LiteDb.csproj"
+            },
+            "D:\\TGBotPlanner\\Rocket-Project\\main_src\\infrastructure\\ReportTaskPlanner.TimeZoneDbProvider\\ReportTaskPlanner.TimeZoneDbProvider.csproj": {
+              "projectPath": "D:\\TGBotPlanner\\Rocket-Project\\main_src\\infrastructure\\ReportTaskPlanner.TimeZoneDbProvider\\ReportTaskPlanner.TimeZoneDbProvider.csproj"
             }
           }
         }
@@ -471,7 +493,7 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "direct"
+        "auditMode": "all"
       },
       "SdkAnalysisLevel": "9.0.200"
     },
@@ -503,6 +525,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.Net.Sdk.Compilers.Toolset",
+            "version": "[9.0.200, 9.0.200]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"

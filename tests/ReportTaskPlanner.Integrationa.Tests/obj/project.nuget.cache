@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "LBMVn86PusY=",
+  "dgSpecHash": "Gy0l6lL+Ls4=",
   "success": true,
   "projectFilePath": "D:\\TGBotPlanner\\Rocket-Project\\tests\\ReportTaskPlanner.Integrationa.Tests\\ReportTaskPlanner.Integrationa.Tests.csproj",
   "expectedPackageFiles": [
@@ -27,7 +27,8 @@
     "C:\\Users\\Ramwsh\\.nuget\\packages\\xunit.core\\2.9.2\\xunit.core.2.9.2.nupkg.sha512",
     "C:\\Users\\Ramwsh\\.nuget\\packages\\xunit.extensibility.core\\2.9.2\\xunit.extensibility.core.2.9.2.nupkg.sha512",
     "C:\\Users\\Ramwsh\\.nuget\\packages\\xunit.extensibility.execution\\2.9.2\\xunit.extensibility.execution.2.9.2.nupkg.sha512",
-    "C:\\Users\\Ramwsh\\.nuget\\packages\\xunit.runner.visualstudio\\2.8.2\\xunit.runner.visualstudio.2.8.2.nupkg.sha512"
+    "C:\\Users\\Ramwsh\\.nuget\\packages\\xunit.runner.visualstudio\\2.8.2\\xunit.runner.visualstudio.2.8.2.nupkg.sha512",
+    "C:\\Users\\Ramwsh\\.nuget\\packages\\microsoft.net.sdk.compilers.toolset\\9.0.200\\microsoft.net.sdk.compilers.toolset.9.0.200.nupkg.sha512"
   ],
   "logs": []
 }

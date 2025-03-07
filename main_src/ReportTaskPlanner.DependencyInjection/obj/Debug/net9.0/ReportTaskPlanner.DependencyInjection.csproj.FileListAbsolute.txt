@@ -20,3 +20,5 @@ D:\TGBotPlanner\Rocket-Project\main_src\ReportTaskPlanner.DependencyInjection\ob
 D:\TGBotPlanner\Rocket-Project\main_src\ReportTaskPlanner.DependencyInjection\obj\Debug\net9.0\refint\ReportTaskPlanner.DependencyInjection.dll
 D:\TGBotPlanner\Rocket-Project\main_src\ReportTaskPlanner.DependencyInjection\obj\Debug\net9.0\ReportTaskPlanner.DependencyInjection.pdb
 D:\TGBotPlanner\Rocket-Project\main_src\ReportTaskPlanner.DependencyInjection\obj\Debug\net9.0\ref\ReportTaskPlanner.DependencyInjection.dll
+D:\TGBotPlanner\Rocket-Project\main_src\ReportTaskPlanner.DependencyInjection\bin\Debug\net9.0\ReportTaskPlanner.TimeZoneDbProvider.dll
+D:\TGBotPlanner\Rocket-Project\main_src\ReportTaskPlanner.DependencyInjection\bin\Debug\net9.0\ReportTaskPlanner.TimeZoneDbProvider.pdb

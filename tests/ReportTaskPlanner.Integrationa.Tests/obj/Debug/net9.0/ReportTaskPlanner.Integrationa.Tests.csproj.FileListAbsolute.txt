@@ -118,3 +118,5 @@ D:\TGBotPlanner\Rocket-Project\tests\ReportTaskPlanner.Integrationa.Tests\obj\De
 D:\TGBotPlanner\Rocket-Project\tests\ReportTaskPlanner.Integrationa.Tests\obj\Debug\net9.0\ReportTaskPlanner.Integrationa.Tests.pdb
 D:\TGBotPlanner\Rocket-Project\tests\ReportTaskPlanner.Integrationa.Tests\obj\Debug\net9.0\ReportTaskPlanner.Integrationa.Tests.genruntimeconfig.cache
 D:\TGBotPlanner\Rocket-Project\tests\ReportTaskPlanner.Integrationa.Tests\obj\Debug\net9.0\ref\ReportTaskPlanner.Integrationa.Tests.dll
+D:\TGBotPlanner\Rocket-Project\tests\ReportTaskPlanner.Integrationa.Tests\bin\Debug\net9.0\ReportTaskPlanner.TimeZoneDbProvider.dll
+D:\TGBotPlanner\Rocket-Project\tests\ReportTaskPlanner.Integrationa.Tests\bin\Debug\net9.0\ReportTaskPlanner.TimeZoneDbProvider.pdb
