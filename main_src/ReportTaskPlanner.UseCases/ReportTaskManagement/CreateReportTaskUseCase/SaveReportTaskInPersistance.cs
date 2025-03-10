@@ -1,7 +1,7 @@
 using ReportTaskPlanner.Main.ReportTasksManagement;
 using ReportTaskPlanner.Utilities.ResultPattern;
 
-namespace ReportTaskPlanner.UseCases.CreateReportTaskUseCase;
+namespace ReportTaskPlanner.UseCases.ReportTaskManagement.CreateReportTaskUseCase;
 
 public abstract record SaveReportTaskInPersistance
 {

@@ -1,21 +1,16 @@
 ﻿using System.Text.Json;
 using ReportTaskPlanner.Utilities.ResultPattern;
 
-namespace ReportTaskPlanner.TimeZoneDbProvider;
+namespace ReportTaskPlanner.TimeZoneDbProvider.Configuration;
 
 public sealed record TimeZoneDbOptions
 {
     public string Token { get; }
     public TimeZoneDbOptions(string token) => Token = token;
-}
 
-public delegate Result<TimeZoneDbOptions> GetTimeZoneDbOptionsFromFile(string filePath);
-public delegate Result SaveTimeZoneDbOptionsAsFile(string filePath, string token);
-public delegate Result<TimeZoneDbOptions> UpdateTimeZoneDbOptions(string filePath, TimeZoneDbOptions options);
-
-public static class TimeZoneDbOptionsActions
-{
-    public static GetTimeZoneDbOptionsFromFile GetTimeZoneDbOptions = (filePath) =>
+    public static class Actions
+    {
+        public static GetTimeZoneDbOptionsFromFile GetTimeZoneDbOptions = (filePath) =>
     {
         if (!File.Exists(filePath))
             return new Error("Не существует конфигурации Time zone Db Options");
@@ -66,4 +61,9 @@ public static class TimeZoneDbOptionsActions
 
         return options;
     };
+    }
 }
+
+public delegate Result<TimeZoneDbOptions> GetTimeZoneDbOptionsFromFile(string filePath);
+public delegate Result SaveTimeZoneDbOptionsAsFile(string filePath, string token);
+public delegate Result<TimeZoneDbOptions> UpdateTimeZoneDbOptions(string filePath, TimeZoneDbOptions options);

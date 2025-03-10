@@ -1,4 +1,4 @@
-﻿using ReportTaskPlanner.TimeZoneDbProvider;
+﻿using ReportTaskPlanner.TimeZoneDbProvider.Configuration;
 using ReportTaskPlanner.Utilities.ResultPattern;
 
 namespace ReportTaskPlanner.Integrationa.Tests.TimeZoneDbProviderTests;
@@ -8,7 +8,7 @@ public sealed class Test_Token_Configuration : BaseTest
     private static string filePath = Path.Combine("Configuration", "TIME_ZONE_DB_CONFIG.json");
     private const string tokenValue = "Test Token";
     private const string updatedTokenValue = "Test Updated";
-    
+
     [Fact]
     public void Test_Save_Configuration()
     {
@@ -33,7 +33,7 @@ public sealed class Test_Token_Configuration : BaseTest
         TimeZoneDbOptions newOptions = new TimeZoneDbOptions(updatedTokenValue);
         Result updateResult = repository.Update(filePath, newOptions);
         Assert.True(updateResult.IsSuccess);
-        
+
         Result<TimeZoneDbOptions> options = repository.Get(filePath);
         Assert.True(options.IsSuccess);
         Assert.Equal(newOptions, options.Value);

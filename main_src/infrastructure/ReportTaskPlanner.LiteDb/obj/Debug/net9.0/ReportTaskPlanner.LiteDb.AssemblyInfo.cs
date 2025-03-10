@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ReportTaskPlanner.LiteDb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+705591b6a6c4878c21c4439f5087cc288c335cec")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f2d297ec423f840c8dbabc51f83e079327f8910c")]
 [assembly: System.Reflection.AssemblyProductAttribute("ReportTaskPlanner.LiteDb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ReportTaskPlanner.LiteDb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

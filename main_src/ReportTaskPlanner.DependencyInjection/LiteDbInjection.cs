@@ -3,7 +3,6 @@ using Microsoft.Extensions.DependencyInjection;
 using ReportTaskPlanner.LiteDb;
 using ReportTaskPlanner.LiteDb.Configurations;
 using ReportTaskPlanner.LiteDb.ReportTaskManagement;
-using ReportTaskPlanner.UseCases.CreateReportTaskUseCase;
 
 namespace ReportTaskPlanner.DependencyInjection;
 

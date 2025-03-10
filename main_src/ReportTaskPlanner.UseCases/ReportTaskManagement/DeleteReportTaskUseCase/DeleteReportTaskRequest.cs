@@ -1,11 +1,10 @@
 using FluentValidation.Results;
-using ReportTaskPlanner.Main.ReportTasksManagement;
 using ReportTaskPlanner.UseCases.Abstractions.Handlers;
 using ReportTaskPlanner.UseCases.Extensions;
 using ReportTaskPlanner.Utilities.ResultPattern;
 using Serilog;
 
-namespace ReportTaskPlanner.UseCases.DeleteReportTaskUseCase;
+namespace ReportTaskPlanner.UseCases.ReportTaskManagement.DeleteReportTaskUseCase;
 
 public record DeleteReportTaskRequest(string? Id = null, string? Message = null) : IRequest;
 

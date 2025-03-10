@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace ReportTaskPlanner.UseCases.DeleteReportTaskUseCase;
+namespace ReportTaskPlanner.UseCases.ReportTaskManagement.DeleteReportTaskUseCase;
 
 public sealed class RemoveReportTaskRequestValidator : AbstractValidator<DeleteReportTaskRequest>
 {

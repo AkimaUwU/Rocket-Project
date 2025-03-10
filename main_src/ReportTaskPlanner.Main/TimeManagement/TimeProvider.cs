@@ -27,5 +27,5 @@ public sealed record PlannerTime
 public delegate Result SaveGlobalPlannerTime(PlannerTime plannerTime);
 public delegate Result<PlannerTime> UpdateGlobalPlannerTime(PlannerTime newPlannerTime);
 public delegate Result<PlannerTime> GetGlobalPlannerTime();
-public delegate Task<Result<IEnumerable<PlannerTime>>> ListPlannerTimesAsync();
+public delegate Result<IEnumerable<PlannerTime>> ListPlannerTimes();
 public delegate Result<U> ConvertPlannerTime<U>(PlannerTime plannerTime);

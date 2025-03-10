@@ -2,7 +2,7 @@ using FluentValidation;
 using ReportTaskPlanner.Main.ReportTasksManagement;
 using ReportTaskPlanner.Utilities.ResultPattern;
 
-namespace ReportTaskPlanner.UseCases.CreateReportTaskUseCase;
+namespace ReportTaskPlanner.UseCases.ReportTaskManagement.CreateReportTaskUseCase;
 
 public sealed class CreateReportTaskDtoValidator : AbstractValidator<CreateReportTaskDto>
 {

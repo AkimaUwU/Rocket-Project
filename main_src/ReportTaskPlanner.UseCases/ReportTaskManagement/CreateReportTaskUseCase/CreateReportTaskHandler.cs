@@ -5,7 +5,7 @@ using ReportTaskPlanner.UseCases.Extensions;
 using ReportTaskPlanner.Utilities.ResultPattern;
 using Serilog;
 
-namespace ReportTaskPlanner.UseCases.CreateReportTaskUseCase;
+namespace ReportTaskPlanner.UseCases.ReportTaskManagement.CreateReportTaskUseCase;
 
 public sealed record CreateReportTaskRequest(CreateReportTaskDto Dto) : IRequest<ReportTask>;
 
