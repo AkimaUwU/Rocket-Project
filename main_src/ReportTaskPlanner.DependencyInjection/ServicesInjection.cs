@@ -9,5 +9,6 @@ public static class ServicesInjection
         services.InjectLogger();
         services.InjectLiteDb();
         services.InjectUseCases();
+        services.InjectTimeZoneDb();
     }
 }

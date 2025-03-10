@@ -1,4 +1,5 @@
 ﻿using ReportTaskPlanner.Utilities.Common;
+using ReportTaskPlanner.Utilities.ResultPattern;
 
 namespace ReportTaskPlanner.Main.TimeManagement;
 
@@ -22,3 +23,9 @@ public sealed record PlannerTime
     private DateTime FromUnixTimeStamp(ulong timeStamp) =>
         new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc).AddSeconds(timeStamp);
 }
+
+public delegate Result SaveGlobalPlannerTime(PlannerTime plannerTime);
+public delegate Result<PlannerTime> UpdateGlobalPlannerTime(PlannerTime newPlannerTime);
+public delegate Result<PlannerTime> GetGlobalPlannerTime();
+public delegate Task<Result<IEnumerable<PlannerTime>>> ListPlannerTimesAsync();
+public delegate Result<U> ConvertPlannerTime<U>(PlannerTime plannerTime);
