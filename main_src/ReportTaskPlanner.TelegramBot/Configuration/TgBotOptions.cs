@@ -27,12 +27,12 @@ public static class TgBotOptionsResolver
         token = token.Trim();
         TgBotOptions options = new (token);
         string serializedOptions = JsonSerializer.Serialize(options);
-        File.WriteAllText(ConfigurationVariables.TelegramBotTokenConfig, serializedOptions);
+        File.WriteAllText(ConfigurationVariables.TelegramBotTokenConfigPath, serializedOptions);
     }
 
     public static TgBotOptions LoadTgBotOptions()
     {
-        using JsonDocument document = JsonDocument.Parse(File.ReadAllText(ConfigurationVariables.TelegramBotTokenConfig));
+        using JsonDocument document = JsonDocument.Parse(File.ReadAllText(ConfigurationVariables.TelegramBotTokenConfigPath));
         document.RootElement.TryGetProperty("Token", out JsonElement token);
         string? tokenValue = token.GetString();
         if (string.IsNullOrWhiteSpace(tokenValue))

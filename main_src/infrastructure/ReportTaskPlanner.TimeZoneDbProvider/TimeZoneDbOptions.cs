@@ -1,54 +1,69 @@
 ﻿using System.Text.Json;
+using ReportTaskPlanner.Utilities.ResultPattern;
 
 namespace ReportTaskPlanner.TimeZoneDbProvider;
 
-public sealed class TimeZoneDbOptions
+public sealed record TimeZoneDbOptions
 {
     public string Token { get; }
     public TimeZoneDbOptions(string token) => Token = token;
 }
 
-public static class TimeZoneDbOptionsManager
+public delegate Result<TimeZoneDbOptions> GetTimeZoneDbOptionsFromFile(string filePath);
+public delegate Result SaveTimeZoneDbOptionsAsFile(string filePath, string token);
+public delegate Result<TimeZoneDbOptions> UpdateTimeZoneDbOptions(string filePath, TimeZoneDbOptions options);
+
+public static class TimeZoneDbOptionsActions
 {
-    public static TimeZoneDbOptions CreateNewTimeZoneDbOptionsFile(string token, string filePath)
+    public static GetTimeZoneDbOptionsFromFile GetTimeZoneDbOptions = (filePath) =>
     {
-        if (string.IsNullOrWhiteSpace(token))
-            throw new ArgumentException("Time Zone Db токен был пустым");
+        if (!File.Exists(filePath))
+            return new Error("Не существует конфигурации Time zone Db Options");
         
-        TimeZoneDbOptions options = new TimeZoneDbOptions(token);
-        string serializedOptions = JsonSerializer.Serialize(options);
-        File.WriteAllText(filePath, serializedOptions);
-        return options;
-    }
-
-    public static TimeZoneDbOptions UpdateTimeZoneDbOptionsFile(string token, string filePath)
-    {
-        if (string.IsNullOrWhiteSpace(token))
-            throw new ArgumentException("Time Zone Db токен был пустым");
-        if (string.IsNullOrWhiteSpace(filePath))
-            throw new ArgumentException("Путь к файлу конфигурации тайм зоны был пустым");
-        
-        TimeZoneDbOptions options = GetCurrentTimeZoneDbOptions(filePath);
-        File.Delete(filePath);
-        
-        TimeZoneDbOptions newOptions = CreateNewTimeZoneDbOptionsFile(options.Token, filePath);
-        return newOptions;
-    }
-
-    public static TimeZoneDbOptions GetCurrentTimeZoneDbOptions(string filePath)
-    {
-        if (string.IsNullOrWhiteSpace(filePath))
-            throw new ArgumentException("Путь к файлу конфигурации тайм зоны был пустым");
-        
-        using JsonDocument document = JsonDocument.Parse(File.ReadAllText(filePath));
+        string timeZoneDbOptionsJson = File.ReadAllText(filePath);
+        using JsonDocument document = JsonDocument.Parse(timeZoneDbOptionsJson);
         bool canGetValue = document.RootElement.TryGetProperty("Token", out JsonElement value);
+        
         if (!canGetValue)
-            throw new ArgumentException("Конфигурационный файл настроек тайм зоны некорректный");
+            return new Error("Конфигурационный файл Time Zone Db Options не корректный");
         
         string? token = value.GetString();
+        
         if (string.IsNullOrWhiteSpace(token))
-            throw new ArgumentException(message: "Значение токена Time Zone Db было пустым");
+            return new Error("Конфигурационный файл Time Zone Db Options не корректный");
+        
+        TimeZoneDbOptions options = new(token);
+        return options;
+    };
 
-        return new TimeZoneDbOptions(token);
-    }
+    public static SaveTimeZoneDbOptionsAsFile SaveTimeZoneDbOptions = (filePath, token) =>
+    {
+        if (string.IsNullOrWhiteSpace(token))
+            return new Error("Токен Time Zone Db Options некорректный.");
+
+        TimeZoneDbOptions options = new(token);
+        string serialized = JsonSerializer.Serialize(options);
+        
+        File.WriteAllText(filePath, serialized);
+        return Result.Success();
+    };
+
+    public static UpdateTimeZoneDbOptions UpdateTimeZoneDbOptionsFile = (filePath, options) =>
+    {
+        Result<TimeZoneDbOptions> existingOptions = GetTimeZoneDbOptions(filePath);
+        if (!existingOptions.IsSuccess)
+            return existingOptions.Error;
+        
+        File.Delete(filePath);
+        Result saveUpdatedOptions = SaveTimeZoneDbOptions(filePath, options.Token);
+        
+        if (!saveUpdatedOptions.IsSuccess)
+        {
+            SaveTimeZoneDbOptions(filePath, existingOptions.Value.Token);
+            return new Error(
+                $"Не удалось сохранить новые настройки конфигурации Time Zone Db. Предыдущая конфигурация восстановлена для корректной работы приложения. Ошибка: {saveUpdatedOptions.Error.Message}");
+        }
+
+        return options;
+    };
 }
