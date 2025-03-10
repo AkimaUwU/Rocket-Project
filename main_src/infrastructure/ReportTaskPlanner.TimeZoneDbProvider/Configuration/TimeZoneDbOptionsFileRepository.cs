@@ -1,6 +1,6 @@
 ﻿using ReportTaskPlanner.Utilities.ResultPattern;
 
-namespace ReportTaskPlanner.TimeZoneDbProvider;
+namespace ReportTaskPlanner.TimeZoneDbProvider.Configuration;
 
 public sealed record TimeZoneDbOptionsFileRepository
 {

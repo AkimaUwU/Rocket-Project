@@ -10,26 +10,26 @@ public static class TGUpdateExtensions
     public static Option<string> GetMessage(this Update update)
     {
         TGMessage? message = update.Message;
-        
+
         if (message == null)
             return Option<string>.None<string>();
-        
+
         if (string.IsNullOrWhiteSpace(message.Text))
             return Option<string>.None<string>();
-        
+
         return Option<string>.Some(message.Text);
     }
 
     public static Option<long> GetUserId(this Update update)
     {
         TGMessage? message = update.Message;
-        
+
         if (message == null)
             return Option<long>.None<long>();
-        
+
         if (message.From == null)
             return Option<long>.None<long>();
-        
+
         return Option<long>.Some(message.From.Id);
     }
 
@@ -48,5 +48,12 @@ public static class TGUpdateExtensions
         {
             // ignored
         }
+    }
+
+    public static async Task RemoveMessageById(this ITelegramBotClient client, TGMessage message)
+    {
+        long chatId = message.Chat.Id;
+        int messageId = message.MessageId;
+        await client.DeleteMessage(chatId, messageId);
     }
 }

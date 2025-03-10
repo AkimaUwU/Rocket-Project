@@ -2,7 +2,7 @@ using LiteDB;
 using LiteDB.Async;
 using ReportTaskPlanner.LiteDb.Configurations;
 using ReportTaskPlanner.Main.ReportTasksManagement;
-using ReportTaskPlanner.UseCases.CreateReportTaskUseCase;
+using ReportTaskPlanner.UseCases.ReportTaskManagement.CreateReportTaskUseCase;
 using ReportTaskPlanner.Utilities.ResultPattern;
 using Serilog;
 

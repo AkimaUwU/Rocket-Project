@@ -1,7 +1,7 @@
 using LiteDB.Async;
 using ReportTaskPlanner.LiteDb.Configurations;
-using ReportTaskPlanner.UseCases.DeleteReportTaskUseCase;
 using ReportTaskPlanner.UseCases.Extensions;
+using ReportTaskPlanner.UseCases.ReportTaskManagement.DeleteReportTaskUseCase;
 using ReportTaskPlanner.Utilities.ResultPattern;
 using Serilog;
 

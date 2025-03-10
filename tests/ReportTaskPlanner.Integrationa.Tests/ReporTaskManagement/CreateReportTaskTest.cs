@@ -1,8 +1,8 @@
 using ReportTaskPlanner.DependencyInjection;
 using ReportTaskPlanner.Main.ReportTasksManagement;
 using ReportTaskPlanner.UseCases.Abstractions.Handlers;
-using ReportTaskPlanner.UseCases.CreateReportTaskUseCase;
-using ReportTaskPlanner.UseCases.DeleteReportTaskUseCase;
+using ReportTaskPlanner.UseCases.ReportTaskManagement.CreateReportTaskUseCase;
+using ReportTaskPlanner.UseCases.ReportTaskManagement.DeleteReportTaskUseCase;
 using ReportTaskPlanner.Utilities.ResultPattern;
 
 namespace ReportTaskPlanner.Integrationa.Tests.ReporTaskManagement;
