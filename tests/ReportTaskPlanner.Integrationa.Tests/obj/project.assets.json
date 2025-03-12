@@ -554,6 +554,7 @@
           "Microsoft.Extensions.DependencyInjection": "10.0.0-preview.1.25080.5",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.0-preview.1.25080.5",
           "ReportTaskPlanner.LiteDb": "1.0.0",
+          "ReportTaskPlanner.RegexDateTimeParser": "1.0.0",
           "ReportTaskPlanner.TimeZoneDbProvider": "1.0.0",
           "Scrutor": "6.0.1"
         },
@@ -589,6 +590,19 @@
         },
         "runtime": {
           "bin/placeholder/ReportTaskPlanner.Main.dll": {}
+        }
+      },
+      "ReportTaskPlanner.RegexDateTimeParser/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ReportTaskPlanner.UseCases": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ReportTaskPlanner.RegexDateTimeParser.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ReportTaskPlanner.RegexDateTimeParser.dll": {}
         }
       },
       "ReportTaskPlanner.TimeZoneDbProvider/1.0.0": {
@@ -1375,6 +1389,11 @@
       "type": "project",
       "path": "../../main_src/ReportTaskPlanner.Main/ReportTaskPlanner.Main.csproj",
       "msbuildProject": "../../main_src/ReportTaskPlanner.Main/ReportTaskPlanner.Main.csproj"
+    },
+    "ReportTaskPlanner.RegexDateTimeParser/1.0.0": {
+      "type": "project",
+      "path": "../../main_src/infrastructure/ReportTaskPlanner.RegexDateTimeParser/ReportTaskPlanner.RegexDateTimeParser.csproj",
+      "msbuildProject": "../../main_src/infrastructure/ReportTaskPlanner.RegexDateTimeParser/ReportTaskPlanner.RegexDateTimeParser.csproj"
     },
     "ReportTaskPlanner.TimeZoneDbProvider/1.0.0": {
       "type": "project",
