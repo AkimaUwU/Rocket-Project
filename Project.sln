@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportTaskPlanner.TelegramB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportTaskPlanner.TimeZoneDbProvider", "main_src\infrastructure\ReportTaskPlanner.TimeZoneDbProvider\ReportTaskPlanner.TimeZoneDbProvider.csproj", "{F447981F-75E5-40E4-952B-097D528ECE02}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportTaskPlanner.RegexDateTimeParser", "main_src\infrastructure\ReportTaskPlanner.RegexDateTimeParser\ReportTaskPlanner.RegexDateTimeParser.csproj", "{4D021B6A-2ED2-43C9-8A9E-E61FFCEE8400}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{F447981F-75E5-40E4-952B-097D528ECE02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F447981F-75E5-40E4-952B-097D528ECE02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F447981F-75E5-40E4-952B-097D528ECE02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D021B6A-2ED2-43C9-8A9E-E61FFCEE8400}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D021B6A-2ED2-43C9-8A9E-E61FFCEE8400}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D021B6A-2ED2-43C9-8A9E-E61FFCEE8400}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D021B6A-2ED2-43C9-8A9E-E61FFCEE8400}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -87,5 +93,6 @@ Global
 		{DB53B412-6C94-4B2D-91FC-2B981A54A8D2} = {DE3EDB09-6A71-443B-8B18-89C858128DB0}
 		{D59DFDF7-708E-45B9-99E0-5122EE55C2FC} = {6F0A63A5-DEE9-4E3E-B678-042D4DA11E41}
 		{F447981F-75E5-40E4-952B-097D528ECE02} = {1F0A4C37-C579-464B-8CC0-380400374B8C}
+		{4D021B6A-2ED2-43C9-8A9E-E61FFCEE8400} = {1F0A4C37-C579-464B-8CC0-380400374B8C}
 	EndGlobalSection
 EndGlobal

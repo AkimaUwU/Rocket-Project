@@ -57,6 +57,8 @@ public sealed record TimeZoneDbApiKeySetupController
                     "Опция проверки Time Zone Db ключа"
                 );
                 await client.RegisterCommandIfNotExists("/time_config", "Управление временем бота");
+                await client.RegisterCommandIfNotExists("/bot_time", "Текущее время бота");
+                await client.RegisterCommandIfNotExists("/task_create", "Создание уведомления");
                 await Message.Send(
                     client,
                     update,
@@ -267,6 +269,8 @@ public sealed record TimeZoneDbApiKeySetupController
             "Опция проверки Time Zone Db ключа"
         );
         await client.RegisterCommandIfNotExists("/time_config", "Управление временем бота");
+        await client.RegisterCommandIfNotExists("/bot_time", "Текущее время бота");
+        await client.RegisterCommandIfNotExists("/task_create", "Создание уведомления");
     }
 
     [ReplyMenuHandler(
