@@ -5,6 +5,10 @@
 
 .idea/
 
+# db files
+.db
+*.db
+
 # dotenv files
 .env
 
