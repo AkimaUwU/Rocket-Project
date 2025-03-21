@@ -11,14 +11,4 @@ public static class ConfigurationVariables
         ConfigurationFolder,
         "TG_BOT_CONFIG.json"
     );
-
-    public static readonly string TimeZoneDbTokenConfigPath = Path.Combine(
-        ConfigurationFolder,
-        "TIME_ZONE_DB_CONFIG.json"
-    );
-
-    public static readonly string PlannerTimeConfigPath = Path.Combine(
-        ConfigurationFolder,
-        "PLANNER_TIME_CONFIG.json"
-    );
 }
