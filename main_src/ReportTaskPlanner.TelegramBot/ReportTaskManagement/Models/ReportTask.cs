@@ -23,7 +23,7 @@ public sealed class ReportTask
         return $"""
             {Text}
 
-            {whenToFire.ToString("HH:mm dd.MM.yyyy")}
+            Вызов задачи в: {whenToFire:HH:mm dd.MM.yyyy}
             """;
     }
 }

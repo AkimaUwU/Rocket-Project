@@ -17,14 +17,22 @@ public class CreateReportTaskLoggingDecorator(
     {
         _logger.Information("{Context} invoked.", nameof(CreateReportTask));
         Result<ReportTask> result = await _handler.Handle(command);
-        if (result.IsFailure)
-            _logger.LogError(result.Error, nameof(CreateReportTask));
-        else
-            _logger.Information(
-                "{Context} created report task",
-                nameof(CreateReportTask),
-                result.Value.ToString()
-            );
-        return result;
+        return result
+            .ToLoggerChunk(_logger)
+            .LogOnError(logger =>
+                logger.Error(
+                    "{Context}. {Error}",
+                    nameof(CreateReportTaskCommand),
+                    result.Error.Message
+                )
+            )
+            .LogOnSuccess(logger =>
+                logger.Information(
+                    "{Context} created report task with attributes: {Props}",
+                    nameof(CreateReportTaskCommand),
+                    result.Value.ToString()
+                )
+            )
+            .BackToResult();
     }
 }

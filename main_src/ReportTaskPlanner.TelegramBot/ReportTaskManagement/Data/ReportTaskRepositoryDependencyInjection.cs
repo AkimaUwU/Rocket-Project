@@ -8,8 +8,8 @@ public static class ReportTaskRepositoryDependencyInjection
     [InjectionMethod]
     public static void Inject(this IServiceCollection services)
     {
-        services.AddScoped<ReportTaskDbContext>();
-        services.AddScoped<ReportTaskRepository>();
+        services.AddSingleton<ReportTaskDbContext>();
+        services.AddSingleton<ReportTaskRepository>();
         ReportTaskRepositoryConstants.RegisterMapping();
     }
 }

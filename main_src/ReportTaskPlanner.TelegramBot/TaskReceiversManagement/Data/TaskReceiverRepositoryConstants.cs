@@ -6,7 +6,7 @@ namespace ReportTaskPlanner.TelegramBot.TaskReceiversManagement.Data;
 public static class TaskReceiverRepositoryConstants
 {
     public const string CollectionName = "Task_Receivers";
-    public static readonly string ConnectionString = "Filename=TaskReceivers.db;Connection=shared";
+    public static readonly string ConnectionString = "Filename=TaskReceivers.db;Connection=Shared";
 
     public static void RegisterBsonMapping()
     {

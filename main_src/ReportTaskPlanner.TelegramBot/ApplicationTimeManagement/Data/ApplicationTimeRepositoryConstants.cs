@@ -8,7 +8,7 @@ public static class ApplicationTimeRepositoryConstants
     public const string CollectionName = "Application_Time";
 
     public static readonly string ConnectionString =
-        "Filename=ApplicationTime.db;Connection=shared";
+        "Filename=ApplicationTime.db;Connection=Shared";
 
     public static void RegisterBsonMapping() =>
         BsonMapper

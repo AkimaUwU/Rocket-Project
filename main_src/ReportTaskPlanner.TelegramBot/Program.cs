@@ -13,22 +13,22 @@ if (!File.Exists(ConfigurationVariables.TelegramBotTokenConfigPath))
     TgBotOptionsResolver.ResolveTgOptions();
 
 TgBotOptions options = TgBotOptionsResolver.LoadTgBotOptions();
-var builder = Host.CreateApplicationBuilder(args);
+HostApplicationBuilder builder = Host.CreateApplicationBuilder(args);
 Serilog.ILogger logger = new LoggerConfiguration().WriteTo.Console().CreateLogger();
-builder.Services.AddSingleton<Serilog.ILogger>(logger);
+builder.Services.AddSingleton(logger);
 builder.Services.InjectAllServices();
 builder.Services.AddScopedBotHandlers();
 builder.Services.AddSingleton<Worker>();
 builder.Services.AddHostedService<Worker>();
-builder.Services.AddScoped<TelegramBotClient>(_ =>
+builder.Services.AddSingleton<TelegramBotClient>(_ =>
 {
-    TelegramBotClient client = new TelegramBotClient(options.Token);
+    TelegramBotClient client = new(options.Token);
     return client;
 });
 
-var host = builder.Build();
+IHost host = builder.Build();
 IServiceProvider provider = host.Services.GetRequiredService<IServiceProvider>();
-var botInstance = new PRBotBuilder(options.Token)
+PRBotBase botInstance = new PRBotBuilder(options.Token)
     .SetClearUpdatesOnStart(true)
     .SetServiceProvider(provider)
     .Build();

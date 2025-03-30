@@ -8,8 +8,8 @@ public static class ApplicationTimeRepositoryDependencyInjection
     [InjectionMethod]
     public static void Inject(this IServiceCollection services)
     {
-        services.AddScoped<ApplicationTimeDbContext>();
-        services.AddScoped<ApplicationTimeRepository>();
+        services.AddSingleton<ApplicationTimeDbContext>();
+        services.AddSingleton<ApplicationTimeRepository>();
         ApplicationTimeRepositoryConstants.RegisterBsonMapping();
     }
 }
