@@ -80,5 +80,7 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f873f4d2_002Df4aa_002D4835_002D97de_002Dc669671f7e6d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Create_Date_Of_Month_Date_Type" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.GetTimeZoneDbTimeTests.GetUpdatedTimeZoneDbTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.CreateReportTaskTests.Create_ReportTask_With_Relative_DateTime_Yesterday&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.CreateReportTaskTests.Create_ReportTask_MultiThread&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

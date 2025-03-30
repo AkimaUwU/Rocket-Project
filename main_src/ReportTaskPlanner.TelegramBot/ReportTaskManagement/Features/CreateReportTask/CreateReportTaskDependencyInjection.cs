@@ -44,6 +44,7 @@ public static class CreateReportTaskDependencyInjection
                 .With(new MonthDateRegexConverter());
 
             CreateReportTaskCommandHandler h1 = new(repository, context, converter);
+
             CreateReportTaskGetCurrentAppTimeDecorator h2 = new(
                 context,
                 h1,
@@ -52,8 +53,9 @@ public static class CreateReportTaskDependencyInjection
                 getTzOptions
             );
             CreateReportTaskRecognizeTimeDecorator h3 = new(context, h2);
-            CreateReportTaskLoggingDecorator h4 = new(logger, h3);
-            return h4;
+            CreateReportTaskExceptionDecorator h4 = new(h3, logger);
+            CreateReportTaskLoggingDecorator h5 = new(logger, h4);
+            return h5;
         });
     }
 }

@@ -6,7 +6,7 @@ namespace ReportTaskPlanner.TelegramBot.ReportTaskManagement.Data;
 public sealed class ReportTaskRepositoryConstants
 {
     public const string CollectionName = "Report_Tasks";
-    public static readonly string ConnectionString = "Filename=ReportTasks.db;Connection=shared";
+    public static readonly string ConnectionString = "Filename=ReportTasks.db;Connection=Shared";
 
     public static void RegisterMapping()
     {

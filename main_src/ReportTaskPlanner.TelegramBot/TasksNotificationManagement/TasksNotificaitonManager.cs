@@ -16,7 +16,6 @@ public sealed class TasksNotificaitonManager(
     IQueryHandler<GetUpdatedApplicationTimeQuery, Option<ApplicationTime>> getAppTime,
     IQueryHandler<GetReceiversQuery, Option<IEnumerable<TaskReceiver>>> getReceivers,
     ICommandHandler<RemovePendingTasksCommand, bool> removePendingTasks,
-    TelegramBotClient client,
     Serilog.ILogger logger
 )
 {
@@ -37,46 +36,56 @@ public sealed class TasksNotificaitonManager(
 
     private readonly ICommandHandler<RemovePendingTasksCommand, bool> _removePendingTasks =
         removePendingTasks;
-    private readonly TelegramBotClient _client = client;
 
     private readonly Serilog.ILogger _logger = logger;
 
-    public async Task ManagePendingTasks()
+    public async Task ManagePendingTasks(TelegramBotClient client)
     {
         _logger.Information("Managing pending tasks...");
-        Option<ApplicationTime> appTime = await _getAppTime.Handle(new());
-        Option<IEnumerable<ReportTask>> tasks = await _getPendingTasks.Handle(new());
-        Option<IEnumerable<TaskReceiver>> receivers = await _getReceivers.Handle(new());
+        Option<ApplicationTime> appTime = await _getAppTime.Handle(
+            new GetUpdatedApplicationTimeQuery()
+        );
+        Option<IEnumerable<ReportTask>> tasks = await _getPendingTasks.Handle(
+            new GetPendingTasksQuery()
+        );
+        Option<IEnumerable<TaskReceiver>> receivers = await _getReceivers.Handle(
+            new GetReceiversQuery()
+        );
         if (!appTime.HasValue)
         {
             _logger.Warning("Managing pending tasks stopped. Application time is not configured.");
             return;
         }
+
         if (!tasks.HasValue)
         {
             _logger.Warning("Managing pending tasks stopped. No pending tasks.");
             return;
         }
+
         if (!receivers.HasValue)
         {
             _logger.Warning("Managing pending tasks stopped. No receivers.");
             return;
         }
+
         int count = 0;
-        foreach (var receiver in receivers.Value)
+        foreach (TaskReceiver receiver in receivers.Value)
         {
-            foreach (var task in tasks.Value)
+            foreach (ReportTask task in tasks.Value)
             {
-                await _client.SendMessage(receiver.Id, task.Text);
+                await client.SendMessage(receiver.Id, task.Text);
                 count++;
             }
         }
+
         if (count == 0)
         {
             _logger.Warning("Managing pending tasks stopped. No pending tasks.");
             return;
         }
-        await _removePendingTasks.Handle(new(appTime));
+
+        await _removePendingTasks.Handle(new RemovePendingTasksCommand(appTime));
         _logger.Information("Managing pending tasks. Managed: {Count}", count);
     }
 }
