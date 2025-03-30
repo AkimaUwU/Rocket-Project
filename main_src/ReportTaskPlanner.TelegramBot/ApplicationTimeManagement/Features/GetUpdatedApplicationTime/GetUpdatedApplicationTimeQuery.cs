@@ -26,23 +26,17 @@ public sealed class GetUpdatedApplicationTimeQueryHandler(
 
     public async Task<Option<ApplicationTime>> Handle(GetUpdatedApplicationTimeQuery query)
     {
-        var getAppTime = _appTimeRepository.Get();
-        var getTzOptions = _tzRepository.Get();
+        Task<Result<ApplicationTime>> getAppTime = _appTimeRepository.Get();
+        Task<Result<TimeZoneDbOptions>> getTzOptions = _tzRepository.Get();
         await Task.WhenAll(getAppTime, getTzOptions);
         Result<ApplicationTime> appTime = getAppTime.Result;
         Result<TimeZoneDbOptions> opts = getTzOptions.Result;
 
-        if (appTime.IsFailure)
-            return Option<ApplicationTime>.None();
-
-        if (opts.IsFailure)
+        if (appTime.IsFailure || opts.IsFailure)
             return Option<ApplicationTime>.None();
 
         UpdateApplicationTimeCommand updateCommand = new(appTime, opts);
         Result<ApplicationTime> updated = await _updateTimeHandler.Handle(updateCommand);
-        if (updated.IsFailure)
-            return Option<ApplicationTime>.None();
-
-        return Option<ApplicationTime>.Some(updated);
+        return updated.IsFailure ? Option<ApplicationTime>.None() : Option<ApplicationTime>.Some(updated);
     }
 }

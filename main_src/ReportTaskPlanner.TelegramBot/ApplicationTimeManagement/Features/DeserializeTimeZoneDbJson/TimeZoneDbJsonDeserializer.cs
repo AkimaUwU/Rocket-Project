@@ -23,17 +23,20 @@ public sealed class TimeZoneDbJsonDeserializer
         ApplicationTime[] times = new ApplicationTime[zonesArrayElement.GetArrayLength()];
         int lastIndex = 0;
 
-        foreach (var element in zonesArrayElement.EnumerateArray())
+        foreach (JsonElement element in zonesArrayElement.EnumerateArray())
         {
             JsonElement timeZoneElement = element.GetProperty("zoneName");
             JsonElement timeStampElement = element.GetProperty("timestamp");
+            JsonElement offsetElement = element.GetProperty("gmtOffset");
             string zoneName = timeZoneElement.GetString()!;
-            long timeStamp = timeStampElement.GetInt64();
+            long offSetValue = offsetElement.GetInt64();
+            long timeStamp = timeStampElement.GetInt64() - offSetValue;
             DateTime dateTime = timeStamp.FromUnixTime();
             ApplicationTime time = new(zoneName, zoneName, timeStamp, dateTime);
             times[lastIndex] = time;
             lastIndex++;
         }
+
         return times;
     }
 }

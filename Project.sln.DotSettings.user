@@ -21,6 +21,8 @@
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AJsonConverterOfT_002EReadCore_002Ecs_002Fl_003AC_0021_003FUsers_003FRamwsh_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003Fa7e99f3da3fc9d80c1949ce87d548d992a745092d1c720f44952dbbd144437f_003FJsonConverterOfT_002EReadCore_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AMenuGenerator_002Ecs_002Fl_003AC_0021_003FUsers_003FRamwsh_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003F1e24f44830614ba3850734b0e82c1df734600_003F35_003F1f9d67f8_003FMenuGenerator_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AMethodBaseInvoker_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003Fd882146b4f265f10bcbec2663fce248db9ffec5fa1aeaf76e32a11ba5eafcd6_003FMethodBaseInvoker_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AMutex_002EWindows_002Ecs_002Fl_003AC_0021_003FUsers_003FRamwsh_003FAppData_003FRoaming_003FJetBrains_003FRider2025_002E1_003Fresharper_002Dhost_003FSourcesCache_003Fdd6c73164669d1ec65499e7c8e9b99d6226395deda5230fc20ae28a332b2acc7_003FMutex_002EWindows_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ARuntimeType_002ECoreCLR_002Ecs_002Fl_003AC_0021_003FUsers_003FRamwsh_003FAppData_003FRoaming_003FJetBrains_003FRider2025_002E1_003Fresharper_002Dhost_003FSourcesCache_003Fad1d58b8dd22123dfae3f2cf5d8b199992465c9c344d032f93a826d8e5539ff_003FRuntimeType_002ECoreCLR_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ASafeFileHandle_002EWindows_002Ecs_002Fl_003AC_0021_003FUsers_003FRamwsh_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003F6ef8e7d549f6bfb5b9eafaaa0ff48d8cbfc564f32be26323b5f60e63aef4dd1_003FSafeFileHandle_002EWindows_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AServiceProviderExtension_002Ecs_002Fl_003AC_0021_003FUsers_003FRamwsh_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003F1e24f44830614ba3850734b0e82c1df734600_003Ffc_003Ffeb133ca_003FServiceProviderExtension_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AServiceProvider_002Ecs_002Fl_003AC_0021_003FUsers_003FRamwsh_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003Fd02ee82559a9dde31db684d7f07bc2edbcc1713ac6113c4153dd31985def165_003FServiceProvider_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
@@ -48,7 +50,12 @@
 	<s:String x:Key="/Default/CodeInspection/PencilsConfiguration/FiltersState/=SpellingFilter/@EntryIndexedValue">Off</s:String>
 	<s:String x:Key="/Default/Environment/Hierarchy/Build/BuildTool/CustomBuildToolPath/@EntryValue">D:\JetBrains Rider 2024.3.6\tools\MSBuild\Current\Bin\amd64\MSBuild.exe</s:String>
 	<s:Int64 x:Key="/Default/Environment/Hierarchy/Build/BuildTool/MsbuildVersion/@EntryValue">1114112</s:Int64>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9aa89f48_002Dbbf1_002D476a_002Da71f_002De01472150cf6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5fd1c234_002D4fbd_002D4e6d_002Da953_002De2a62a98c631/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetUpdatedTimeZoneDbTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.GetTimeZoneDbTimeTests.GetUpdatedTimeZoneDbTest&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9aa89f48_002Dbbf1_002D476a_002Da71f_002De01472150cf6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::B5706522-610B-4D0D-8064-8E8FC7AE1F18::net9.0::ReportTaskPlanner.Main.Tests.ReportTaskManagement.CreateReportTaskTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::DB53B412-6C94-4B2D-91FC-2B981A54A8D2::net9.0::ReportTaskPlanner.Integrationa.Tests.ReporTaskManagement.CreateReportTaskTest.Create_And_Save_Report_Task&lt;/TestId&gt;&#xD;
@@ -67,17 +74,11 @@
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=de155274_002D2251_002D4bda_002D9c72_002D23bb06e9690e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from &amp;lt;RocketPlanner.Application.Tests&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::B5706522-610B-4D0D-8064-8E8FC7AE1F18::net9.0::ReportTaskPlanner.Main.Tests.ReportTaskManagement.CreateReportTaskTests&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::DB53B412-6C94-4B2D-91FC-2B981A54A8D2::net9.0::ReportTaskPlanner.Integrationa.Tests.ReporTaskManagement.CreateReportTaskTest.Create_And_Save_Report_Task&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::DB53B412-6C94-4B2D-91FC-2B981A54A8D2::net9.0::ReportTaskPlanner.Integrationa.Tests.TimeZoneDbProviderTests.Time_Zone_Db_Provider_Tests.Create_Time_Zone_Db_Options&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::DB53B412-6C94-4B2D-91FC-2B981A54A8D2::net9.0::ReportTaskPlanner.Integrationa.Tests.TimeZoneDbProviderTests.Test_Token_Configuration.Test_Save_Configuration&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::B5706522-610B-4D0D-8064-8E8FC7AE1F18::net9.0::ReportTaskPlanner.Main.Tests.FunctionalReportTask.CreateDateTypeTests.CreateStringDateType&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::DB53B412-6C94-4B2D-91FC-2B981A54A8D2::net9.0::ReportTaskPlanner.Integrationa.Tests.RegexDateTimeParserTests.RegexDateTimeParserTest.Detect_Today_Date&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::DB53B412-6C94-4B2D-91FC-2B981A54A8D2::net9.0::ReportTaskPlanner.Integrationa.Tests.RegexDateTimeParserTests.RegexDateTimeParserTest.Create_Relative_Regex_Match&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.GetTimeZoneDbTimeTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f873f4d2_002Df4aa_002D4835_002D97de_002Dc669671f7e6d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Create_Date_Of_Month_Date_Type" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f873f4d2_002Df4aa_002D4835_002D97de_002Dc669671f7e6d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Create_Date_Of_Month_Date_Type" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::DB53B412-6C94-4B2D-91FC-2B981A54A8D2::net9.0::ReportTaskPlanner.Integrationa.Tests.RegexDateTimeParserTests.RegexDateTimeParserTest.Create_Date_Of_Month_Date_Type&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.GetTimeZoneDbTimeTests.GetUpdatedTimeZoneDbTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

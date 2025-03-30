@@ -24,7 +24,7 @@ public sealed class UpdateApplicationTimeDeserializing
     public async Task<Result<ApplicationTime>> Handle(UpdateApplicationTimeCommand command)
     {
         string json = _context.TimeZoneDbJson.Value;
-        TimeZoneDbJsonDeserializer deserializer = new TimeZoneDbJsonDeserializer(json);
+        TimeZoneDbJsonDeserializer deserializer = new(json);
         Result<ApplicationTime[]> deserialized = deserializer.Deserialize();
         if (deserialized.IsFailure)
             _context.SetError(deserialized.Error);
