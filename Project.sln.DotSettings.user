@@ -55,6 +55,14 @@
     &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.GetTimeZoneDbTimeTests.GetUpdatedTimeZoneDbTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=95145d80_002Db24f_002D4a36_002Da3c5_002D7f2aa768d0ce/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="DayOfWeekRecognizerTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.DayOfWeekRecognizerTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.MonthRecognitionTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.PeriodicTimeTypeTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.TimeRecognitionTests.Invoke&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9aa89f48_002Dbbf1_002D476a_002Da71f_002De01472150cf6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::B5706522-610B-4D0D-8064-8E8FC7AE1F18::net9.0::ReportTaskPlanner.Main.Tests.ReportTaskManagement.CreateReportTaskTests&lt;/TestId&gt;&#xD;
@@ -77,10 +85,13 @@
     &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.GetTimeZoneDbTimeTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f873f4d2_002Df4aa_002D4835_002D97de_002Dc669671f7e6d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Create_Date_Of_Month_Date_Type" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f873f4d2_002Df4aa_002D4835_002D97de_002Dc669671f7e6d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Create_Date_Of_Month_Date_Type" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.GetTimeZoneDbTimeTests.GetUpdatedTimeZoneDbTest&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.CreateReportTaskTests.Create_ReportTask_With_Relative_DateTime_Yesterday&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.CreateReportTaskTests.Create_ReportTask_MultiThread&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.PeriodicTimeTypeTests.Test_Recognition&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.PeriodicTimeTypeTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.TimeRecognitionTests.Invoke&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
