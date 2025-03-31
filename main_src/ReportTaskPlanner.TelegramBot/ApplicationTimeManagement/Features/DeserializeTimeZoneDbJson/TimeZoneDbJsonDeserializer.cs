@@ -16,9 +16,12 @@ public sealed class TimeZoneDbJsonDeserializer
         if (string.IsNullOrWhiteSpace(_json))
             return new Error("Ответ от Time Zone Db был пустым.");
 
-        using JsonDocument document = JsonDocument.Parse(_json);
+        JsonDocument document = JsonDocument.Parse(_json);
         if (!document.RootElement.TryGetProperty("zones", out JsonElement zonesArrayElement))
+        {
+            document.Dispose();
             return new Error($"Некорректный ответ от Time Zone Db. Ответ: {_json}");
+        }
 
         ApplicationTime[] times = new ApplicationTime[zonesArrayElement.GetArrayLength()];
         int lastIndex = 0;
@@ -37,6 +40,7 @@ public sealed class TimeZoneDbJsonDeserializer
             lastIndex++;
         }
 
+        document.Dispose();
         return times;
     }
 }

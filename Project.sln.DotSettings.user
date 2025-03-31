@@ -2,6 +2,7 @@
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AAsyncTaskMethodBuilderT_002Ecs_002Fl_003AC_0021_003FUsers_003FRamwsh_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003F2f2b1d92f1ffcf2dabd664473f8c9dafa6039595ac228ce4b75a0f1619c5991_003FAsyncTaskMethodBuilderT_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AAsyncTaskMethodBuilderT_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003Ffb367341658aaedd7de424d4c9189db33c4387e268dcc4011918569442ab12_003FAsyncTaskMethodBuilderT_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AAsyncToSyncAdapter_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003F9133a9652c40f25fd0942c8d926d35b748f04837845f3839b4e5803b5ec0_003FAsyncToSyncAdapter_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ABasicMemoryVectorDatabase_002Ecs_002Fl_003AC_0021_003FUsers_003FRamwsh_003FAppData_003FRoaming_003FJetBrains_003FRider2025_002E1_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003F7b5fdd36e06d432d9c53e5d57a81d4e012e00_003Fb7_003F426b90f7_003FBasicMemoryVectorDatabase_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ABooleanAsserts_002Ecs_002Fl_003AC_0021_003FUsers_003FRamwsh_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003Fbfff78ecaa39c818519fc918bb2d4bbdca6ad93d7170f5cf325f67ccd0b97d43_003FBooleanAsserts_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ABotHandlerAttribute_002Ecs_002Fl_003AC_0021_003FUsers_003FRamwsh_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003F1e24f44830614ba3850734b0e82c1df734600_003F41_003Fb8a2107a_003FBotHandlerAttribute_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ACacheExtension_002Ecs_002Fl_003AC_0021_003FUsers_003FRamwsh_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003F1e24f44830614ba3850734b0e82c1df734600_003F79_003F2e93a32c_003FCacheExtension_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
@@ -18,7 +19,9 @@
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AIExecuteStep_002Ecs_002Fl_003AC_0021_003FUsers_003FRamwsh_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003F1e24f44830614ba3850734b0e82c1df734600_003F37_003F71967791_003FIExecuteStep_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AILiteCollectionAsync_00601_002Ecs_002Fl_003AC_0021_003FUsers_003FRamwsh_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003Fc9f9109ef3444de596197a6ad09e3854fe00_003F84_003F340d4794_003FILiteCollectionAsync_00601_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AInlineCallback_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003F0c429258f0054ee18194d4f95611231234000_003Fbc_003F956ec687_003FInlineCallback_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AIVectorDatabase_00602_002Ecs_002Fl_003AC_0021_003FUsers_003FRamwsh_003FAppData_003FRoaming_003FJetBrains_003FRider2025_002E1_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003F7b5fdd36e06d432d9c53e5d57a81d4e012e00_003Fda_003F70ad8444_003FIVectorDatabase_00602_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AJsonConverterOfT_002EReadCore_002Ecs_002Fl_003AC_0021_003FUsers_003FRamwsh_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003Fa7e99f3da3fc9d80c1949ce87d548d992a745092d1c720f44952dbbd144437f_003FJsonConverterOfT_002EReadCore_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AMemoryVectorDatabase_00601_002Ecs_002Fl_003AC_0021_003FUsers_003FRamwsh_003FAppData_003FRoaming_003FJetBrains_003FRider2025_002E1_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003F7b5fdd36e06d432d9c53e5d57a81d4e012e00_003Fe4_003F0603ad24_003FMemoryVectorDatabase_00601_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AMenuGenerator_002Ecs_002Fl_003AC_0021_003FUsers_003FRamwsh_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003F1e24f44830614ba3850734b0e82c1df734600_003F35_003F1f9d67f8_003FMenuGenerator_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AMethodBaseInvoker_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003Fd882146b4f265f10bcbec2663fce248db9ffec5fa1aeaf76e32a11ba5eafcd6_003FMethodBaseInvoker_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AMutex_002EWindows_002Ecs_002Fl_003AC_0021_003FUsers_003FRamwsh_003FAppData_003FRoaming_003FJetBrains_003FRider2025_002E1_003Fresharper_002Dhost_003FSourcesCache_003Fdd6c73164669d1ec65499e7c8e9b99d6226395deda5230fc20ae28a332b2acc7_003FMutex_002EWindows_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
@@ -38,6 +41,7 @@
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ATask_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003F2e49d132ea68ff47071c64476ae29138fa965dc555ef7c3f4991586431de241_003FTask_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ATelegramBotClientExtensions_002EApiMethods_002Ecs_002Fl_003AC_0021_003FUsers_003FRamwsh_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003F6dd97983a9a0ced4a29a34da83dfdb52d83a226e3c5baba8748e17f314cdcd_003FTelegramBotClientExtensions_002EApiMethods_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ATelegramBotClientExtensions_002EApiMethods_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003F4fc9c6934ac28fb203cce7fe86a3d27fac29d22b5862482eb7e987f17bca2_003FTelegramBotClientExtensions_002EApiMethods_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ATestInvoker_002Ecs_002Fl_003AC_0021_003FUsers_003FRamwsh_003FAppData_003FRoaming_003FJetBrains_003FRider2025_002E1_003Fresharper_002Dhost_003FSourcesCache_003F5e14a4e27990972fa4ae94975603bd298aaf328ee083c03b10569ee4724d57_003FTestInvoker_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ATestMethodCommand_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003Ffc423736d3854482b8e0d96af14ca889656672207d32f5f22759155cd2fea7_003FTestMethodCommand_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AThrowHelpers_002Ecs_002Fl_003AC_0021_003FUsers_003FRamwsh_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003Fbb2a94dce7ca55a596694df58d3ca91c6d9c9c9c9813775e4d1abd0f91dc59_003FThrowHelpers_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ATypeAsserts_002Ecs_002Fl_003AC_0021_003FUsers_003FRamwsh_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003Fd427c7ebaeaeb5b095ee93c6d12f116eddeba3abd69f5d12ecad4bf72f0f3_003FTypeAsserts_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
@@ -50,17 +54,85 @@
 	<s:String x:Key="/Default/CodeInspection/PencilsConfiguration/FiltersState/=SpellingFilter/@EntryIndexedValue">Off</s:String>
 	<s:String x:Key="/Default/Environment/Hierarchy/Build/BuildTool/CustomBuildToolPath/@EntryValue">D:\JetBrains Rider 2024.3.6\tools\MSBuild\Current\Bin\amd64\MSBuild.exe</s:String>
 	<s:Int64 x:Key="/Default/Environment/Hierarchy/Build/BuildTool/MsbuildVersion/@EntryValue">1114112</s:Int64>
+	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">C:\Users\Ramwsh\AppData\Local\JetBrains\Rider2025.1\resharper-host\temp\Rider\vAny\CoverageData\_Project.1350638867\Snapshot\snapshot.utdcvr</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=33c8563e_002D1e51_002D4e75_002D8df3_002D8734a8cb04ab/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="BasicMonthRecognitionTests #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.CalculationWithRecognitionTests.BasicMonthRecognitionTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3c34d7a9_002D76fd_002D4799_002D8108_002Dd1bc2663b244/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="BasicPeriodicMinutesRecognitionTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.CalculationWithPeriodicTimeTests.BasicPeriodicMinutesRecognitionTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=463bed06_002D1440_002D468e_002Db62e_002Ddefcef60da51/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="BasicRelativeRecognitionTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.CalculationWithRecognitionTests.BasicRelativeRecognitionTest&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=492b0f88_002D90b1_002D4717_002Da272_002Ded6bc3e75311/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Create_Every_1_Minute_Periodic_Recognition" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.CalculationWithPeriodicTimeTests.BasicPeriodicMinutesRecognitionTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=4d0f8d9d_002D7881_002D4e4f_002Dbbc9_002D26eae10e272d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Invoke_Day_Of_WeekTest_Monday" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.FacadeTimeCalculationTests.Invoke_Day_Of_WeekTest_Monday&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.FacadeTimeCalculationTests.Invoke_Day_Of_WeekTest_Tuesday&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.FacadeTimeCalculationTests.Invoke_Day_Of_WeekTest_Wednesday&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.FacadeTimeCalculationTests.Invoke_Day_Of_WeekTest_Thursday&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=4f60617b_002Dcca6_002D40e5_002D8273_002D4b9340122bb4/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Invoke_Day_Of_WeekTest_Sunday" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.CalculationWithRecognitionTests.BasicMonthRecognitionTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5fd1c234_002D4fbd_002D4e6d_002Da953_002De2a62a98c631/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetUpdatedTimeZoneDbTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.GetTimeZoneDbTimeTests.GetUpdatedTimeZoneDbTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=95145d80_002Db24f_002D4a36_002Da3c5_002D7f2aa768d0ce/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="DayOfWeekRecognizerTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=68a51f3b_002Dc347_002D4bf7_002D9045_002D86b1f7a0df33/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Invoke_Day_Of_WeekTest_Saturday" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.FacadeTimeCalculationTests.Invoke_Day_Of_WeekTest_Saturday&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=77699830_002D8f7a_002D4228_002Da694_002D94ae9a1670c1/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="BasicWeekDayRecognitionsTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.CalculationWithRecognitionTests.BasicWeekDayRecognitionsTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.RecognizersTests.DayOfWeekRecognizerTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.RecognizersTests.FacadeTimeRecognitionTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.RecognizersTests.MonthRecognitionTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.RecognizersTests.PeriodicTimeTypeTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.RecognizersTests.RelativeDateRecognizerTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.RecognizersTests.TimeRecognitionTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=79767cdb_002De7fc_002D4a14_002D9416_002Dd1da5ed7c32d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Create_Every_1_Hour_Periodic_Recognition" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.CalculationWithPeriodicTimeTests.BasicPeriodicHourRecognitionTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=851dddbd_002Dddd5_002D4ce9_002Daf81_002D1b0e7046def1/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="BasicPeriodicRecognitionTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.CalculationWithPeriodicTimeTests.BasicPeriodicMinutesRecognitionTests.Create_Every_1_Minute_Periodic_Recognition&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.CalculationWithPeriodicTimeTests.BasicPeriodicMinutesRecognitionTests.Create_Every_1_Minute_Periodic_Recognition_Sample_2&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.CalculationWithPeriodicTimeTests.BasicPeriodicMinutesRecognitionTests.Create_Every_2_Minute_Periodic_Recognition&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=95145d80_002Db24f_002D4a36_002Da3c5_002D7f2aa768d0ce/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="DayOfWeekRecognizerTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.DayOfWeekRecognizerTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.MonthRecognitionTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.PeriodicTimeTypeTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.TimeRecognitionTests.Invoke&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.RelativeDateRecognizerTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9836b64a_002D7536_002D4460_002D9ec4_002Dd4f5d27db2ed/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Invoke_Relative_Day_AfterTomorrow" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.FacadeTimeCalculationTests.Invoke_Relative_Day_AfterTomorrow&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9aa89f48_002Dbbf1_002D476a_002Da71f_002De01472150cf6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
@@ -80,9 +152,59 @@
     &lt;TestId&gt;xUnit::DB53B412-6C94-4B2D-91FC-2B981A54A8D2::net9.0::ReportTaskPlanner.Integrationa.Tests.RegexDateTimeParserTests.RegexDateTimeParserTest.Create_Date_Of_Month_Date_Type&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ad07a110_002D314b_002D44bf_002D8157_002Da6f5063a71de/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Create_Every_1_Minute_Periodic_Recognition_Sample_2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.CalculationWithPeriodicTimeTests.BasicPeriodicMinutesRecognitionTests.Create_Every_1_Minute_Periodic_Recognition_Sample_2&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=bd31ba25_002D6e90_002D4f98_002Da011_002D50f418e0c34f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Invoke_Day_Month_Recognition_May" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.CalculationWithRecognitionTests.BasicMonthRecognitionTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.CalculationWithRecognitionTests.BasicPeriodicRecognitionTests.Create_Every_1_Hour_Periodic_Recognition&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.CalculationWithRecognitionTests.BasicPeriodicRecognitionTests.Create_Every_2_Hour_Periodic_Recognition&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.CalculationWithRecognitionTests.BasicPeriodicRecognitionTests.Create_Every_3_Hour_Periodic_Recognition&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.CalculationWithRecognitionTests.BasicPeriodicRecognitionTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=bd8b516a_002D7065_002D414d_002D8fa3_002D929b4bc1174c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Create_Every_X_Minute_Periodic_Recognition" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.CalculationWithPeriodicTimeTests.BasicPeriodicMinutesRecognitionTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.CalculationWithPeriodicTimeTests.BasicPeriodicHourRecognitionTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.CalculationWithPeriodicTimeTests.BasicPeriodicWeekdayRecognitionTests.Create_Every_Monday_At_Specific_Time&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.CalculationWithPeriodicTimeTests.BasicPeriodicWeekdayRecognitionTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ce07db34_002Da390_002D450f_002Db5c9_002D52b25e2b6f63/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="BasicMonthRecognitionTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.CalculationWithRecognitionTests.BasicMonthRecognitionTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d9c4dba8_002D30a3_002D4009_002D8018_002D275cb559ead3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Invoke_Day_Of_WeekTest_Friday" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.FacadeTimeCalculationTests.Invoke_Day_Of_WeekTest_Friday&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=de155274_002D2251_002D4bda_002D9c72_002D23bb06e9690e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from &amp;lt;RocketPlanner.Application.Tests&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.GetTimeZoneDbTimeTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f2d06b99_002D497c_002D413e_002Dac7d_002Dcb390a85b203/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="DayOfWeekRecognizerTests #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.DayOfWeekRecognizerTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.FacadeTimeRecognitionTests.Recognize_Non_Periodic_Time&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f5e7823a_002D445a_002D4cdd_002Dbdba_002D980faf2f2e5b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="BasicPeriodicWeekdayRecognitionTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.CalculationWithPeriodicTimeTests.BasicPeriodicWeekdayRecognitionTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f765516b_002D80f3_002D4ea2_002D967d_002Db6a3ef37db63/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Create_Every_2_Minute_Periodic_Recognition" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.CalculationWithPeriodicTimeTests.BasicPeriodicMinutesRecognitionTests.Create_Every_X_Minute_Periodic_Recognition&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.CalculationWithPeriodicTimeTests.BasicPeriodicMinutesRecognitionTests.Scratches&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.CalculationWithPeriodicTimeTests.BasicPeriodicMinutesRecognitionTests.Create_Every_1_Minute_Periodic_Recognition&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f873f4d2_002Df4aa_002D4835_002D97de_002Dc669671f7e6d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Create_Date_Of_Month_Date_Type" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
@@ -93,5 +215,23 @@
     &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.PeriodicTimeTypeTests.Test_Recognition&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.PeriodicTimeTypeTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.TimeRecognitionTests.Invoke&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.RelativeDateRecognizerTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.TimeRecognitionTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.RelativeDateRecognizerTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.PeriodicTimeTypeTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.MonthRecognitionTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.GetTimeZoneDbTimeTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.FacadeTimeRecognitionTests.Recognize_Periodic_Time&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.FacadeTimeRecognitionTests.Collect_Recognition_Metadata_From_Periodic_Time&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.FacadeTimeRecognitionTests.Collect_Recognition_Metadata_From_NoTimeContext&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.FacadeTimeRecognitionTests.Collect_Recognition_Metadata_From_Date_WithoutTime_Set&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.FacadeTimeRecognitionTests.Collect_Recognition_Metadata_From_Date_With_Month&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.FacadeTimeRecognitionTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.FacadeTimeCalculationTests.Invoke&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.FacadeTimeCalculationTests.Invoke_Relative_Day_Today&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.FacadeTimeCalculationTests.Invoke_Relative_Day_AfterTomorrow&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.FacadeTimeCalculationTests.Invoke_Day_Of_WeekTest_Monday&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.FacadeTimeCalculationTests.Invoke_Day_Of_WeekTest_Tuesday&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::CE3D1A48-93B4-410A-92F9-DA45270D3DD5::net9.0::TgBotPlannerTests.Models.Tests.FacadeTimeCalculationTests.Invoke_Relative_Tomorrow&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
