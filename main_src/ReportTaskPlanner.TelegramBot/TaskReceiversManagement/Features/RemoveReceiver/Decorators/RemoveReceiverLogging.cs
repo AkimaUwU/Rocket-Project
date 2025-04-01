@@ -6,15 +6,15 @@ namespace ReportTaskPlanner.TelegramBot.TaskReceiversManagement.Features.RemoveR
 
 public sealed class RemoveReceiverLogging(
     Serilog.ILogger logger,
-    ICommandHandler<RemoveReceiverCommand, long> handler
-) : ICommandHandler<RemoveReceiverCommand, long>
+    ICommandHandler<RemoveReceiverCommand, bool> handler
+) : ICommandHandler<RemoveReceiverCommand, bool>
 {
     private readonly Serilog.ILogger _logger = logger;
-    private readonly ICommandHandler<RemoveReceiverCommand, long> _handler = handler;
+    private readonly ICommandHandler<RemoveReceiverCommand, bool> _handler = handler;
 
-    public async Task<Result<long>> Handle(RemoveReceiverCommand command)
+    public async Task<Result<bool>> Handle(RemoveReceiverCommand command)
     {
-        Result<long> result = await _handler.Handle(command);
+        Result<bool> result = await _handler.Handle(command);
         if (result.IsFailure)
             _logger.LogError(result.Error, nameof(RemoveReceiverCommand));
         else

@@ -8,6 +8,6 @@ public static class TaskReceiversManagmentApiInjection
     [InjectionMethod]
     public static void Inject(this IServiceCollection services)
     {
-        services.AddScoped<TaskReceiversManagementApi>();
+        services.AddTransient<TaskReceiversManagementApi>();
     }
 }

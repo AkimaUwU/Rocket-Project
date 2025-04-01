@@ -8,8 +8,12 @@ public static class TaskReceiverRepositoryDependencyInjection
     [InjectionMethod]
     public static void Inject(this IServiceCollection services)
     {
-        services.AddSingleton<TaskReceiverDbContext>();
-        services.AddSingleton<TaskReceiverRepository>();
-        TaskReceiverRepositoryConstants.RegisterBsonMapping();
+        services.AddTransient<ITaskReceiverRepository>(_ =>
+        {
+            TaskReceiverRepository repository = new TaskReceiverRepository(
+                new TaskReceiverDbContext()
+            );
+            return repository;
+        });
     }
 }

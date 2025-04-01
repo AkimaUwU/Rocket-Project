@@ -52,7 +52,7 @@ public sealed class TaskReceiversManagementController(TaskReceiversManagementApi
             return;
 
         long chatId = message.Chat.Id;
-        Result<long> removed = await _api.RemoveReceiver(chatId);
+        Result<bool> removed = await _api.RemoveReceiver(chatId);
         if (removed.IsFailure)
         {
             await removed.Error.Send(client, update);

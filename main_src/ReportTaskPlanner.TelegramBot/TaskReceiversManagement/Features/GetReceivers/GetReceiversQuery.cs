@@ -7,10 +7,10 @@ namespace ReportTaskPlanner.TelegramBot.TaskReceiversManagement.Features.GetRece
 
 public sealed record GetReceiversQuery : IQuery<Option<IEnumerable<TaskReceiver>>>;
 
-public sealed class GetReceiversQueryHandler(TaskReceiverRepository repostiroy)
+public sealed class GetReceiversQueryHandler(ITaskReceiverRepository repostiroy)
     : IQueryHandler<GetReceiversQuery, Option<IEnumerable<TaskReceiver>>>
 {
-    private readonly TaskReceiverRepository _repository = repostiroy;
+    private readonly ITaskReceiverRepository _repository = repostiroy;
 
     public async Task<Option<IEnumerable<TaskReceiver>>> Handle(GetReceiversQuery query)
     {

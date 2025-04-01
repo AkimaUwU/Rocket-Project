@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Features.ListTimeZones.Decorators;
 using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Models;
 using ReportTaskPlanner.TelegramBot.Shared.ResultPattern;
 using ReportTaskPlanner.TelegramBot.Shared.Utils;
@@ -34,8 +35,9 @@ public sealed class TimeZoneDbJsonDeserializer
             string zoneName = timeZoneElement.GetString()!;
             long offSetValue = offsetElement.GetInt64();
             long timeStamp = timeStampElement.GetInt64() - offSetValue;
+            string displayName = ListTimeZonesRusificator.TryFormat(zoneName);
             DateTime dateTime = timeStamp.FromUnixTime();
-            ApplicationTime time = new(zoneName, zoneName, timeStamp, dateTime);
+            ApplicationTime time = new(zoneName, displayName, timeStamp, dateTime);
             times[lastIndex] = time;
             lastIndex++;
         }

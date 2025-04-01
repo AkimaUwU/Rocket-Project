@@ -8,31 +8,20 @@ public sealed class ApplicationTime
     public string DisplayName { get; private set; } = string.Empty;
     public long TimeStamp { get; private set; }
     public DateTime DateTime { get; private set; }
-    public bool IsPeriodic { get; private set; }
 
-    private ApplicationTime() { } // lite db constructor
+    private ApplicationTime() { } // ef db constructor
 
     public ApplicationTime(
         string zoneName,
         string displayName,
         long timeStamp,
-        DateTime dateTime,
-        bool isPeriodic = false
+        DateTime dateTime
     ) =>
-        (ZoneName, DisplayName, TimeStamp, DateTime, IsPeriodic) = (
-            zoneName,
-            displayName,
-            timeStamp,
-            dateTime,
-            isPeriodic
-        );
+        (ZoneName, DisplayName, TimeStamp, DateTime) = (zoneName, displayName, timeStamp, dateTime);
 
     public ApplicationTime(ApplicationTime other)
         : this(other.ZoneName, other.DisplayName, other.TimeStamp, other.TimeStamp.FromUnixTime())
     { }
-
-    public ApplicationTime(ApplicationTime other, bool isPeriodic)
-        : this(other) => IsPeriodic = isPeriodic;
 
     public ApplicationTime(ApplicationTime other, long seconds)
         : this(other)

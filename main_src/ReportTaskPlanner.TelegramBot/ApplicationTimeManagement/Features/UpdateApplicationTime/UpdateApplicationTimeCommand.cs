@@ -1,6 +1,6 @@
-﻿using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Data;
+﻿using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Data.ApplicationTimeData;
+using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Data.TimeZoneDbData;
 using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Models;
-using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Provider;
 using ReportTaskPlanner.TelegramBot.Shared.CqrsPattern;
 using ReportTaskPlanner.TelegramBot.Shared.ResultPattern;
 
@@ -14,11 +14,11 @@ public sealed record UpdateApplicationTimeCommand(
 public sealed class UpdateApplicationTimeCommandHandler
     : ICommandHandler<UpdateApplicationTimeCommand, ApplicationTime>
 {
-    private readonly ApplicationTimeRepository _repository;
+    private readonly IApplicationTimeRepository _repository;
     private readonly UpdateApplicationTimeSharedContext _context;
 
     public UpdateApplicationTimeCommandHandler(
-        ApplicationTimeRepository repository,
+        IApplicationTimeRepository repository,
         UpdateApplicationTimeSharedContext context
     )
     {

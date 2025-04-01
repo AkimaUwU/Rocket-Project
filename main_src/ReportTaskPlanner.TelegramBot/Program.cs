@@ -17,7 +17,7 @@ HostApplicationBuilder builder = Host.CreateApplicationBuilder(args);
 Serilog.ILogger logger = new LoggerConfiguration().WriteTo.Console().CreateLogger();
 builder.Services.AddSingleton(logger);
 builder.Services.InjectAllServices();
-builder.Services.AddScopedBotHandlers();
+builder.Services.AddTransientBotHandlers();
 builder.Services.AddSingleton<Worker>();
 builder.Services.AddHostedService<Worker>();
 builder.Services.AddSingleton<TelegramBotClient>(_ =>

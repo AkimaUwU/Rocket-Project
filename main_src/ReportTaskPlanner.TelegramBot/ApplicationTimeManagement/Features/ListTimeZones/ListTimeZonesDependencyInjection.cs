@@ -1,6 +1,6 @@
-﻿using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Features.ListTimeZones.Decorators;
+﻿using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Data.TimeZoneDbData;
+using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Features.ListTimeZones.Decorators;
 using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Models;
-using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Provider;
 using ReportTaskPlanner.TelegramBot.Shared.CqrsPattern;
 using ReportTaskPlanner.TelegramBot.Shared.Extensions;
 using ILogger = Serilog.ILogger;
@@ -13,9 +13,9 @@ public static class ListTimeZonesDependencyInjection
     [InjectionMethod]
     public static void Inject(this IServiceCollection services)
     {
-        services.AddScoped<IQueryHandler<ListTimeZonesQuery, ApplicationTime[]>>(p =>
+        services.AddTransient<IQueryHandler<ListTimeZonesQuery, ApplicationTime[]>>(p =>
         {
-            TimeZoneDbRepository repository = p.GetRequiredService<TimeZoneDbRepository>();
+            ITimeZoneDbRepository repository = p.GetRequiredService<ITimeZoneDbRepository>();
             ILogger logger = p.GetRequiredService<ILogger>();
             ListTimeZonesSharedContext context = new();
             ListTimeZonesQueryHandler h1 = new(context);

@@ -1,15 +1,14 @@
-using LiteDB.Async;
-using ReportTaskPlanner.TelegramBot.TaskReceiversManagement.Models;
+using Microsoft.EntityFrameworkCore;
+using ReportTaskPlanner.TelegramBot.Shared.Data;
+using ReportTaskPlanner.TelegramBot.TaskReceiversManagement.Data.EntityConfigurations;
 
 namespace ReportTaskPlanner.TelegramBot.TaskReceiversManagement.Data;
 
-public sealed class TaskReceiverDbContext
+public sealed class TaskReceiverDbContext : CustomDbContext
 {
-    private readonly LiteDatabaseAsync _db = new(TaskReceiverRepositoryConstants.ConnectionString);
-    public ILiteCollectionAsync<TaskReceiver> Collection { get; }
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) =>
+        optionsBuilder.UseSqlite("Filename=TaskReceiversDb.db");
 
-    public TaskReceiverDbContext() =>
-        Collection = _db.GetCollection<TaskReceiver>(
-            TaskReceiverRepositoryConstants.CollectionName
-        );
+    protected override void OnModelCreating(ModelBuilder modelBuilder) =>
+        modelBuilder.ApplyConfiguration(new TaskReceiverEntityConfiguration());
 }

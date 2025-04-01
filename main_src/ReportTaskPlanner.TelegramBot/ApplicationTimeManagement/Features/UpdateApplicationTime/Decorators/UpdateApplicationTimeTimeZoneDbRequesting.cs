@@ -1,5 +1,5 @@
-﻿using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Models;
-using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Provider;
+﻿using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Data.TimeZoneDbData;
+using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Models;
 using ReportTaskPlanner.TelegramBot.Shared.CqrsPattern;
 using ReportTaskPlanner.TelegramBot.Shared.OptionPattern;
 using ReportTaskPlanner.TelegramBot.Shared.ResultPattern;

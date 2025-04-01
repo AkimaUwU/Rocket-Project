@@ -3,9 +3,9 @@ using PRTelegramBot.Extensions;
 using PRTelegramBot.Models;
 using PRTelegramBot.Models.Enums;
 using PRTelegramBot.Utils;
+using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Data.TimeZoneDbData;
 using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Features;
 using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Models;
-using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Provider;
 using ReportTaskPlanner.TelegramBot.Shared.Extensions;
 using ReportTaskPlanner.TelegramBot.Shared.OptionPattern;
 using ReportTaskPlanner.TelegramBot.Shared.ResultPattern;
@@ -122,6 +122,7 @@ public sealed class BotPlannerTimeController
                 );
                 return;
             }
+
             previous.Cache.AddTimes(times);
 
             List<List<KeyboardButton>> timeButtons = [];
@@ -139,8 +140,10 @@ public sealed class BotPlannerTimeController
                     selectTimeText = $"\ud83d\udc49 {time.DisplayName} / {time.DateString}";
                     builder = builder.AddButton(selectTimeText);
                 }
+
                 timeButtons.Add(builder.Buttons.ToList());
             }
+
             timeButtons.Add([new KeyboardButton(leaveMenuText)]);
 
             string replyMessage = string.Intern("Выберите временную зону:");
