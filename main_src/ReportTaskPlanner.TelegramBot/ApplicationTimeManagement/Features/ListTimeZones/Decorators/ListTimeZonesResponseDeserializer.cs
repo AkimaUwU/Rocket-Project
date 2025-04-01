@@ -26,7 +26,7 @@ public sealed class ListTimeZonesResponseDeserializer
         }
 
         string json = _context.TimeZoneDbResponseJson.Value;
-        TimeZoneDbJsonDeserializer deserializer = new TimeZoneDbJsonDeserializer(json);
+        TimeZoneDbJsonDeserializer deserializer = new(json);
         Result<ApplicationTime[]> deserialized = deserializer.Deserialize();
         if (deserialized.IsFailure)
         {

@@ -1,8 +1,8 @@
+using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Data.TimeZoneDbData;
 using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Features.GetCurrentAppTime;
 using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Features.GetTimeZoneDbOptions;
 using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Features.UpdateApplicationTime;
 using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Models;
-using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Provider;
 using ReportTaskPlanner.TelegramBot.ReportTaskManagement.Models;
 using ReportTaskPlanner.TelegramBot.Shared.CqrsPattern;
 using ReportTaskPlanner.TelegramBot.Shared.OptionPattern;
@@ -20,10 +20,13 @@ public sealed class CreateReportTaskGetCurrentAppTimeDecorator(
 {
     private readonly CreateReportTaskContext _context = context;
     private readonly ICommandHandler<CreateReportTaskCommand, ReportTask> _handler = handler;
+
     private readonly ICommandHandler<UpdateApplicationTimeCommand, ApplicationTime> _updateAppTime =
         updateAppTime;
+
     private readonly IQueryHandler<GetCurrentAppTimeQuery, Option<ApplicationTime>> _getAppTime =
         getAppTime;
+
     private readonly IQueryHandler<
         GetTimeZoneDbOptionsQuery,
         Option<TimeZoneDbOptions>
@@ -31,8 +34,12 @@ public sealed class CreateReportTaskGetCurrentAppTimeDecorator(
 
     public async Task<Result<ReportTask>> Handle(CreateReportTaskCommand command)
     {
-        var getAppTimeTask = _getAppTime.Handle(new());
-        var getTzOptionsTask = _getTzOptions.Handle(new());
+        Task<Option<ApplicationTime>> getAppTimeTask = _getAppTime.Handle(
+            new GetCurrentAppTimeQuery()
+        );
+        Task<Option<TimeZoneDbOptions>> getTzOptionsTask = _getTzOptions.Handle(
+            new GetTimeZoneDbOptionsQuery()
+        );
         await Task.WhenAll(getAppTimeTask, getTzOptionsTask);
 
         Option<ApplicationTime> currentTime = getAppTimeTask.Result;

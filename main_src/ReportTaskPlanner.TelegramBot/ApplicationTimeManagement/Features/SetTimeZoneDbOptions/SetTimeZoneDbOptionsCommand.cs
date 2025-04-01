@@ -1,4 +1,4 @@
-﻿using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Provider;
+﻿using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Data.TimeZoneDbData;
 using ReportTaskPlanner.TelegramBot.Shared.CqrsPattern;
 using ReportTaskPlanner.TelegramBot.Shared.ResultPattern;
 
@@ -9,9 +9,9 @@ public sealed record SetTimeZoneDbOptionsCommand(string Token) : ICommand<TimeZo
 public sealed class SetTimeZoneDbOptionsCommandHandler
     : ICommandHandler<SetTimeZoneDbOptionsCommand, TimeZoneDbOptions>
 {
-    private readonly TimeZoneDbRepository _repository;
+    private readonly ITimeZoneDbRepository _repository;
 
-    public SetTimeZoneDbOptionsCommandHandler(TimeZoneDbRepository repository) =>
+    public SetTimeZoneDbOptionsCommandHandler(ITimeZoneDbRepository repository) =>
         _repository = repository;
 
     public async Task<Result<TimeZoneDbOptions>> Handle(SetTimeZoneDbOptionsCommand command)
@@ -19,7 +19,7 @@ public sealed class SetTimeZoneDbOptionsCommandHandler
         if (string.IsNullOrWhiteSpace(command.Token))
             return new Error("Токен был пустым.");
         TimeZoneDbOptions options = new TimeZoneDbOptions(command.Token);
-        await _repository.Update(options);
-        return options;
+        Result saving = await _repository.Save(options);
+        return saving.IsSuccess ? options : saving.Error;
     }
 }

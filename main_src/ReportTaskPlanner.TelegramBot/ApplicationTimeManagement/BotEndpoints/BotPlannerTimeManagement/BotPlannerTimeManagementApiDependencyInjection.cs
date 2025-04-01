@@ -9,6 +9,6 @@ public class BotPlannerTimeManagementApiDependencyInjection
     [InjectionMethod]
     public static void Inject(IServiceCollection services)
     {
-        services.AddScoped<BotPlannerTimeManagementApi>();
+        services.AddTransient<BotPlannerTimeManagementApi>();
     }
 }

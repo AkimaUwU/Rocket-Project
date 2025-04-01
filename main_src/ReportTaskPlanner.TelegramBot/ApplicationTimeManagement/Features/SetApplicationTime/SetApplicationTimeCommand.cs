@@ -1,4 +1,4 @@
-﻿using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Data;
+﻿using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Data.ApplicationTimeData;
 using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Models;
 using ReportTaskPlanner.TelegramBot.Shared.CqrsPattern;
 using ReportTaskPlanner.TelegramBot.Shared.ResultPattern;
@@ -10,14 +10,14 @@ public sealed record SetApplicationTimeCommand(ApplicationTime Time) : ICommand<
 public sealed class SetApplicationTimeCommandHandler
     : ICommandHandler<SetApplicationTimeCommand, ApplicationTime>
 {
-    private readonly ApplicationTimeRepository _repository;
+    private readonly IApplicationTimeRepository _repository;
 
-    public SetApplicationTimeCommandHandler(ApplicationTimeRepository repository) =>
+    public SetApplicationTimeCommandHandler(IApplicationTimeRepository repository) =>
         _repository = repository;
 
     public async Task<Result<ApplicationTime>> Handle(SetApplicationTimeCommand command)
     {
-        await _repository.Update(command.Time);
-        return command.Time;
+        Result result = await _repository.Save(command.Time);
+        return result.IsSuccess ? command.Time : result.Error;
     }
 }

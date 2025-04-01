@@ -8,6 +8,6 @@ public static class ReportTaskManagementApiDependencyInjection
     [InjectionMethod]
     public static void Inject(this IServiceCollection services)
     {
-        services.AddScoped<ReportTaskManagementApi>();
+        services.AddTransient<ReportTaskManagementApi>();
     }
 }

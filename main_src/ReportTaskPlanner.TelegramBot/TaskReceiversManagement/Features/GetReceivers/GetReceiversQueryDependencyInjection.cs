@@ -11,7 +11,7 @@ public static class GetReceiversQueryDependencyInjection
     [InjectionMethod]
     public static void Inject(this IServiceCollection services)
     {
-        services.AddScoped<
+        services.AddTransient<
             IQueryHandler<GetReceiversQuery, Option<IEnumerable<TaskReceiver>>>,
             GetReceiversQueryHandler
         >();

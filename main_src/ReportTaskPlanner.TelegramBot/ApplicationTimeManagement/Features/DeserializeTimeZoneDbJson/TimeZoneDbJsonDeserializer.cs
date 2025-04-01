@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Features.ListTimeZones.Decorators;
 using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Models;
 using ReportTaskPlanner.TelegramBot.Shared.ResultPattern;
 using ReportTaskPlanner.TelegramBot.Shared.Utils;
@@ -16,9 +17,12 @@ public sealed class TimeZoneDbJsonDeserializer
         if (string.IsNullOrWhiteSpace(_json))
             return new Error("Ответ от Time Zone Db был пустым.");
 
-        using JsonDocument document = JsonDocument.Parse(_json);
+        JsonDocument document = JsonDocument.Parse(_json);
         if (!document.RootElement.TryGetProperty("zones", out JsonElement zonesArrayElement))
+        {
+            document.Dispose();
             return new Error($"Некорректный ответ от Time Zone Db. Ответ: {_json}");
+        }
 
         ApplicationTime[] times = new ApplicationTime[zonesArrayElement.GetArrayLength()];
         int lastIndex = 0;
@@ -31,12 +35,14 @@ public sealed class TimeZoneDbJsonDeserializer
             string zoneName = timeZoneElement.GetString()!;
             long offSetValue = offsetElement.GetInt64();
             long timeStamp = timeStampElement.GetInt64() - offSetValue;
+            string displayName = ListTimeZonesRusificator.TryFormat(zoneName);
             DateTime dateTime = timeStamp.FromUnixTime();
-            ApplicationTime time = new(zoneName, zoneName, timeStamp, dateTime);
+            ApplicationTime time = new(zoneName, displayName, timeStamp, dateTime);
             times[lastIndex] = time;
             lastIndex++;
         }
 
+        document.Dispose();
         return times;
     }
 }

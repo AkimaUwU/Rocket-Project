@@ -1,5 +1,5 @@
-﻿using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Models;
-using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Provider;
+﻿using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Data.TimeZoneDbData;
+using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Models;
 using ReportTaskPlanner.TelegramBot.Shared.CqrsPattern;
 using ReportTaskPlanner.TelegramBot.Shared.OptionPattern;
 using ReportTaskPlanner.TelegramBot.Shared.ResultPattern;
@@ -23,7 +23,7 @@ public sealed class ListTimeZonesTimeZoneDbRequester
             return [];
 
         TimeZoneDbOptions options = _context.Options.Value;
-        using HttpClient client = new HttpClient();
+        using HttpClient client = new();
         string url = MakeRequestUrl(options);
         HttpResponseMessage responseMessage = await client.GetAsync(url);
         if (!responseMessage.IsSuccessStatusCode)

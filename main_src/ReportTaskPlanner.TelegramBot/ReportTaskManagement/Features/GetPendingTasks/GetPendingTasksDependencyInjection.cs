@@ -11,7 +11,7 @@ public static class GetPendingTasksDependencyInjection
     [InjectionMethod]
     public static void Inject(this IServiceCollection services)
     {
-        services.AddScoped<
+        services.AddTransient<
             IQueryHandler<GetPendingTasksQuery, Option<IEnumerable<ReportTask>>>,
             GetPendingTasksQueryHandler
         >();

@@ -4,10 +4,10 @@ using ILogger = Serilog.ILogger;
 
 namespace ReportTaskPlanner.TelegramBot;
 
-public class Worker(IServiceScopeFactory factory, TelegramBotClient client, ILogger logger)
+public class Worker(TasksNotificaitonManager manager, TelegramBotClient client, ILogger logger)
     : BackgroundService
 {
-    private readonly IServiceScopeFactory _factory = factory;
+    private readonly TasksNotificaitonManager _manager = manager;
     private readonly TelegramBotClient _client = client;
     private readonly ILogger _logger = logger;
 
@@ -15,14 +15,10 @@ public class Worker(IServiceScopeFactory factory, TelegramBotClient client, ILog
     {
         while (!stoppingToken.IsCancellationRequested)
         {
-            AsyncServiceScope scope = _factory.CreateAsyncScope();
-            IServiceProvider provider = scope.ServiceProvider;
-            TasksNotificaitonManager manager =
-                provider.GetRequiredService<TasksNotificaitonManager>();
             try
             {
                 _logger.Information("{Context} start managing pending tasks...", nameof(Worker));
-                await manager.ManagePendingTasks(_client);
+                await _manager.ManagePendingTasks(_client);
                 _logger.Information("{Context} pending tasks managed.", nameof(Worker));
             }
             catch (Exception ex)
@@ -32,10 +28,6 @@ public class Worker(IServiceScopeFactory factory, TelegramBotClient client, ILog
                     nameof(Worker),
                     ex.Message
                 );
-            }
-            finally
-            {
-                await scope.DisposeAsync();
             }
 
             await Task.Delay(TimeSpan.FromMinutes(1), stoppingToken);

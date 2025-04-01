@@ -7,26 +7,17 @@ using ReportTaskPlanner.TelegramBot.Shared.OptionPattern;
 
 namespace ReportTaskPlanner.TelegramBot.ReportTaskManagement.Features.GetPendingTasks;
 
-public sealed record GetPendingTasksQuery : IQuery<Option<IEnumerable<ReportTask>>>;
+public sealed record GetPendingTasksQuery(ApplicationTime Time)
+    : IQuery<Option<IEnumerable<ReportTask>>>;
 
-public sealed class GetPendingTasksQueryHandler(
-    ReportTaskRepository tasksRepository,
-    IQueryHandler<GetUpdatedApplicationTimeQuery, Option<ApplicationTime>> getAppTime
-) : IQueryHandler<GetPendingTasksQuery, Option<IEnumerable<ReportTask>>>
+public sealed class GetPendingTasksQueryHandler(IReportTaskRepository tasksRepository)
+    : IQueryHandler<GetPendingTasksQuery, Option<IEnumerable<ReportTask>>>
 {
-    private readonly ReportTaskRepository _tasksRepository = tasksRepository;
-    private readonly IQueryHandler<
-        GetUpdatedApplicationTimeQuery,
-        Option<ApplicationTime>
-    > _getAppTime = getAppTime;
+    private readonly IReportTaskRepository _tasksRepository = tasksRepository;
 
     public async Task<Option<IEnumerable<ReportTask>>> Handle(GetPendingTasksQuery query)
     {
-        Option<ApplicationTime> appTime = await _getAppTime.Handle(new());
-        if (!appTime.HasValue)
-            return Option<IEnumerable<ReportTask>>.None();
-
-        IEnumerable<ReportTask> tasks = await _tasksRepository.GetPendingTasks(appTime);
+        IEnumerable<ReportTask> tasks = await _tasksRepository.GetPendingTasks(query.Time);
         return tasks.Any()
             ? Option<IEnumerable<ReportTask>>.Some(tasks)
             : Option<IEnumerable<ReportTask>>.None();

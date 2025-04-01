@@ -1,7 +1,7 @@
-using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Data;
+using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Data.ApplicationTimeData;
+using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Data.TimeZoneDbData;
 using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Features.UpdateApplicationTime;
 using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Models;
-using ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Provider;
 using ReportTaskPlanner.TelegramBot.Shared.CqrsPattern;
 using ReportTaskPlanner.TelegramBot.Shared.OptionPattern;
 using ReportTaskPlanner.TelegramBot.Shared.ResultPattern;
@@ -11,13 +11,13 @@ namespace ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.Features.GetUp
 public sealed record GetUpdatedApplicationTimeQuery : IQuery<Option<ApplicationTime>>;
 
 public sealed class GetUpdatedApplicationTimeQueryHandler(
-    ApplicationTimeRepository appTimeRepository,
-    TimeZoneDbRepository tzRepository,
+    IApplicationTimeRepository appTimeRepository,
+    ITimeZoneDbRepository tzRepository,
     ICommandHandler<UpdateApplicationTimeCommand, ApplicationTime> updateHandler
 ) : IQueryHandler<GetUpdatedApplicationTimeQuery, Option<ApplicationTime>>
 {
-    private readonly ApplicationTimeRepository _appTimeRepository = appTimeRepository;
-    private readonly TimeZoneDbRepository _tzRepository = tzRepository;
+    private readonly IApplicationTimeRepository _appTimeRepository = appTimeRepository;
+    private readonly ITimeZoneDbRepository _tzRepository = tzRepository;
 
     private readonly ICommandHandler<
         UpdateApplicationTimeCommand,
@@ -37,6 +37,8 @@ public sealed class GetUpdatedApplicationTimeQueryHandler(
 
         UpdateApplicationTimeCommand updateCommand = new(appTime, opts);
         Result<ApplicationTime> updated = await _updateTimeHandler.Handle(updateCommand);
-        return updated.IsFailure ? Option<ApplicationTime>.None() : Option<ApplicationTime>.Some(updated);
+        return updated.IsFailure
+            ? Option<ApplicationTime>.None()
+            : Option<ApplicationTime>.Some(updated);
     }
 }

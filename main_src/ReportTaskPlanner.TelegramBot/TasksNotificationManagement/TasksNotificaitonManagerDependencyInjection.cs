@@ -8,6 +8,6 @@ public static class TasksNotificaitonManagerDependencyInjection
     [InjectionMethod]
     public static void Inject(this IServiceCollection services)
     {
-        services.AddScoped<TasksNotificaitonManager>();
+        services.AddSingleton<TasksNotificaitonManager>();
     }
 }

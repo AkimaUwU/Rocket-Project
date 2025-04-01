@@ -7,10 +7,10 @@ namespace ReportTaskPlanner.TelegramBot.TaskReceiversManagement.Features.Registe
 
 public sealed record RegisterReceiverCommand(long Id) : ICommand<TaskReceiver>;
 
-public sealed class RegisterReceiverCommandHandler(TaskReceiverRepository repository)
+public sealed class RegisterReceiverCommandHandler(ITaskReceiverRepository repository)
     : ICommandHandler<RegisterReceiverCommand, TaskReceiver>
 {
-    private readonly TaskReceiverRepository _repository = repository;
+    private readonly ITaskReceiverRepository _repository = repository;
 
     public async Task<Result<TaskReceiver>> Handle(RegisterReceiverCommand command)
     {
