@@ -36,7 +36,7 @@ public sealed class TaskReceiversManagementController(TaskReceiversManagementApi
         await Message.Send(
             client,
             update,
-            $"Чат с ID: {chatId} был добавлен в Tg Bot Task Planner"
+            $"Чат с ID: {chatId} был добавлен в Tg Bot Task Planner ✅."
         );
     }
 
@@ -62,7 +62,7 @@ public sealed class TaskReceiversManagementController(TaskReceiversManagementApi
         await Message.Send(
             client,
             update,
-            $"Чат с ID: {removed.Value} удален из Tg Bot Task Planner"
+            $"Чат с ID: {removed.Value} удален из Tg Bot Task Planner ✅."
         );
     }
 }

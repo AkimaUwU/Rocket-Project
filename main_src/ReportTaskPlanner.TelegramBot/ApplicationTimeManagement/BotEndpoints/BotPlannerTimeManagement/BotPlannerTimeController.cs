@@ -19,9 +19,9 @@ namespace ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.BotEndpoints.B
 [BotHandler]
 public sealed class BotPlannerTimeController
 {
-    private const string setupButton = "Настроить время";
-    private const string getCurrentTimeButton = "Узнать текущее время бота";
-    private const string leaveMenuButton = "Выйти из меню";
+    private const string setupButton = "Настроить время ⚙️";
+    private const string getCurrentTimeButton = "Узнать текущее время бота ❔";
+    private const string leaveMenuButton = "Выйти из меню ↩️";
     private readonly BotPlannerTimeManagementApi _api;
 
     public BotPlannerTimeController(BotPlannerTimeManagementApi api) => _api = api;
@@ -40,8 +40,8 @@ public sealed class BotPlannerTimeController
             .AddButton(leaveMenuButton)
             .Build(1);
         string replyMessage = """
-            Вы попали в опцию конфигурирования времени бота.
-            Я выдал вам меню, для выбора конкретных операций.
+            Вы попали в опцию конфигурирования времени бота 👋.
+            Я выдал вам меню, для выбора конкретных операций 👉.
             """;
         OptionMessage option = new OptionMessageBuilder()
             .AddText(replyMessage)
@@ -106,7 +106,7 @@ public sealed class BotPlannerTimeController
             new MessageAwaiter(
                 client,
                 update.GetChatId(),
-                string.Intern("Получаю список временных зон...")
+                string.Intern("Получаю список временных зон 🕔...")
             )
         )
         {
@@ -117,7 +117,7 @@ public sealed class BotPlannerTimeController
                     client,
                     update,
                     string.Intern(
-                        "Не удалось получить временные зоны. Возможно Time Zone Db провайдер не был настроен."
+                        "Не удалось получить временные зоны. Возможно Time Zone Db провайдер не был настроен ❌."
                     )
                 );
                 return;
@@ -146,7 +146,7 @@ public sealed class BotPlannerTimeController
 
             timeButtons.Add([new KeyboardButton(leaveMenuText)]);
 
-            string replyMessage = string.Intern("Выберите временную зону:");
+            string replyMessage = string.Intern("Выберите временную зону 👉:");
             OptionMessage option = new OptionMessageBuilder()
                 .AddText(replyMessage)
                 .AddReplyKeyboardMarkup(new ReplyKeyboardMarkup(timeButtons))
@@ -184,7 +184,7 @@ public sealed class BotPlannerTimeController
         Result<ApplicationTime> time = previous.Cache.Get(cityValue);
         if (time.IsFailure)
         {
-            string error = string.Intern("Вам нужно выбрать временную зону из меню.");
+            string error = string.Intern("Вам нужно выбрать временную зону из меню ℹ️.");
             await Message.Send(client, update, error);
             update.RegisterStepHandler(previous.ContinueNext(OnTimeZoneSelected));
             return;
@@ -192,7 +192,7 @@ public sealed class BotPlannerTimeController
 
         await _api.SaveTime(time);
         string replyMessage = $"""
-            Вы установили временную зону бота:
+            Вы установили временную зону бота ✅:
             {time.Value.DisplayName}
             """;
 
@@ -232,7 +232,7 @@ public sealed class BotPlannerTimeController
         Option<ApplicationTime> time = await _api.GetCurrentAppTime();
         if (!time.HasValue)
         {
-            Error error = new Error("Время приложения не было установлено.");
+            Error error = new Error("Время приложения не было установлено ❌.");
             await error.Send(client, update);
             return;
         }
@@ -240,7 +240,7 @@ public sealed class BotPlannerTimeController
         Option<TimeZoneDbOptions> tzOptions = await _api.GetTimeZoneDbOptions();
         if (!tzOptions.HasValue)
         {
-            Error error = new Error("Конфигурация Time Zone Db провайдера не была установлена.");
+            Error error = new Error("Конфигурация Time Zone Db провайдера не была установлена ❌.");
             await error.Send(client, update);
             return;
         }
@@ -255,7 +255,7 @@ public sealed class BotPlannerTimeController
         ApplicationTime updated = currentTime.Value;
 
         string replyMessage = $"""
-            Текущее время бота:
+            Текущее время бота 👉:
             Регион: {updated.DisplayName}
             Время: {updated.DateTime.ToString("HH:mm:ss  dd.MM.yyyy")}
             """;

@@ -17,8 +17,8 @@ namespace ReportTaskPlanner.TelegramBot.ApplicationTimeManagement.BotEndpoints.T
 [BotHandler]
 public sealed record TimeZoneDbApiKeySetupController
 {
-    public const string ContinueStepButtonText = "Продолжить";
-    public const string CancelSessionButtonText = "Отменить";
+    public const string ContinueStepButtonText = "Продолжить ➡️";
+    public const string CancelSessionButtonText = "Отменить 🛑";
     private readonly BotPlannerTimeManagementApi _api;
 
     public TimeZoneDbApiKeySetupController(BotPlannerTimeManagementApi api) => _api = api;
@@ -59,7 +59,7 @@ public sealed record TimeZoneDbApiKeySetupController
                 await Message.Send(
                     client,
                     update,
-                    "Добро пожаловать назад в бот-планировщик задач"
+                    "Добро пожаловать назад в бот-планировщик задач 👋"
                 );
                 return;
             }
@@ -68,27 +68,27 @@ public sealed record TimeZoneDbApiKeySetupController
         string replyMessage = startMessage switch
         {
             "/start" => """
-                Вас приветствует телеграм-бот планировщик задач.
+                Вас приветствует телеграм-бот планировщик задач 👋.
 
-                Для корректной работы бота необходимо выполнить первоначальную настройку.
+                Для корректной работы бота необходимо выполнить первоначальную настройку ⚙️.
 
-                Бот взаимодействует с сервисом Time Zone Db.
+                Бот взаимодействует с сервисом Time Zone Db 📡.
 
-                Зарегистрируйтесь на https://timezonedb.com чтобы получить ключ, который понадобится для настройки бота.
+                Зарегистрируйтесь на https://timezonedb.com чтобы получить ключ, который понадобится для настройки бота. ✏️
 
-                Чтобы остановить настройку, Вы можете написать команду: /stop_config.
-                Либо воспользуйтесь кнопкой Отменить в меню.
+                Чтобы остановить настройку, Вы можете написать команду: /stop_config 🛑.
+                Либо воспользуйтесь кнопкой Отменить в меню 🛑.
 
-                Когда Вы зарегистрируетесь нажмите Продолжить
+                Когда Вы зарегистрируетесь нажмите Продолжить ➡️
                 """,
             "/update_time_api_key" => """
-                Вы попали в опцию изменения токена Time Zone Db.
+                Вы попали в опцию изменения токена Time Zone Db 👋.
 
                 Для изменения токена, Вы должны быть зарегистрированы на платформе:
 
                 https://timezonedb.com
 
-                Если вы зарегистрированы на платформе, нажмите Продолжить.
+                Если вы зарегистрированы на платформе, нажмите Продолжить ➡️.
                 """,
             _ => throw new ArgumentException("Unsupported settings controller command"),
         };
@@ -146,23 +146,21 @@ public sealed record TimeZoneDbApiKeySetupController
             return;
         }
 
-        OptionMessage options = new OptionMessage();
-        options.ClearMenu = true;
+        OptionMessage options = new() { ClearMenu = true };
         previous.Cache.AddMessage(
-            await Message.Send(client, update, "Продолжаем настройку", options)
+            await Message.Send(client, update, "Продолжаем настройку ✅", options)
         );
 
         string replyMessage = """
-            Хорошо, теперь, отправьте мне API токен (API Key).
+            Хорошо, теперь, отправьте мне API токен (API Key) 🙏.
 
-            Найти API токен от Time Zone Db можно по следующей ссылке:
+            Найти API токен от Time Zone Db можно по следующей ссылке 👉:
 
             https://timezonedb.com/account
             """;
 
-        List<KeyboardButton> settingsSetupMenu = new List<KeyboardButton>();
-        settingsSetupMenu.Add(new KeyboardButton(CancelSessionButtonText));
-        var menu = MenuGenerator.ReplyKeyboard(1, settingsSetupMenu);
+        List<KeyboardButton> settingsSetupMenu = [new(CancelSessionButtonText)];
+        ReplyKeyboardMarkup menu = MenuGenerator.ReplyKeyboard(1, settingsSetupMenu);
         options.ClearMenu = false;
         options.MenuReplyKeyboardMarkup = menu;
         previous.Cache.AddMessage(await Message.Send(client, update, replyMessage, options));
@@ -203,8 +201,8 @@ public sealed record TimeZoneDbApiKeySetupController
             if (!char.IsUpper(character))
             {
                 string errorMessage = """
-                    Этот текст не похож на токен из Time Zone Db.
-                    Time Zone Db должен предоставить токен со со случайной последовательностью символов в верхнем регистре.
+                    Этот текст не похож на токен из Time Zone Db ❌.
+                    Time Zone Db должен предоставить токен со со случайной последовательностью символов в верхнем регистре ℹ️.
                     """;
 
                 previous.Cache.AddMessage(await Message.Send(client, update, errorMessage));
@@ -220,7 +218,7 @@ public sealed record TimeZoneDbApiKeySetupController
         if (!saving.IsSuccess)
         {
             string errorMessage = $"""
-                Произошла ошибка во время сохранения токена.
+                Произошла ошибка во время сохранения токена ❌.
                 Текст ошибки - {saving.Error.Message}.
                 """;
 
@@ -233,15 +231,15 @@ public sealed record TimeZoneDbApiKeySetupController
 
         OptionMessage replyMessageOption = new OptionMessage() { ClearMenu = true };
         string replyMessage = """
-            Отлично. Я сохранил токен Time Zone Db в своей конфигурации.
-            Данный токен является бессрочным.
+            Отлично. Я сохранил токен Time Zone Db в своей конфигурации ✅.
+            Данный токен является бессрочным ♾️.
 
             Теперь, после того, как я знаю ключ от Time Zone Db сервиса,
-            Вы можете установить мне время, в котором я буду работать.
+            Вы можете установить мне время, в котором я буду работать 🕔.
 
             Для этого вызовите команду /time_config
 
-            Вы можете в любое время поменять токен Time Zone Db.
+            Вы можете в любое время поменять токен Time Zone Db ℹ️.
             Для этого вызовите команду /update_time_api_key
             """;
 
@@ -277,7 +275,7 @@ public sealed record TimeZoneDbApiKeySetupController
         await update.RemoveLastMessage(client);
 
         string message = """
-            Этап настройки бота остановлен.
+            Этап настройки бота остановлен 🛑.
             """;
 
         if (update.HasStepHandler())
@@ -301,12 +299,12 @@ public sealed record TimeZoneDbApiKeySetupController
             true => await Message.Send(
                 client,
                 update,
-                "В боте существует конфигурация Time Zone Db."
+                "В боте существует конфигурация Time Zone Db. ✅"
             ),
             false => await Message.Send(
                 client,
                 update,
-                "В боте отсутствует конфигурация Time Zone Db."
+                "В боте отсутствует конфигурация Time Zone Db. ❌"
             ),
         };
     }
