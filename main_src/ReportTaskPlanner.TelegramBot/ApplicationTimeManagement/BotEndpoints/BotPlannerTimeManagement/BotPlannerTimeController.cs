@@ -190,6 +190,17 @@ public sealed class BotPlannerTimeController
             return;
         }
 
+        Option<ApplicationTime> currentApplicationTime = await _api.GetCurrentAppTime();
+        if (currentApplicationTime.HasValue)
+        {
+            await Message.Send(
+                client,
+                update,
+                "Обнаружена существующая настройка времени бота. Удаляю её."
+            );
+            await _api.DeleteAppTime(currentApplicationTime.Value.ZoneName);
+        }
+
         await _api.SaveTime(time);
         string replyMessage = $"""
             Вы установили временную зону бота ✅:
@@ -229,6 +240,7 @@ public sealed class BotPlannerTimeController
     )]
     public async Task OnCurrentPlannerTimeRequest(ITelegramBotClient client, Update update)
     {
+        await Message.Send(client, update, "Получаю текущее время приложения...");
         Option<ApplicationTime> time = await _api.GetCurrentAppTime();
         if (!time.HasValue)
         {
