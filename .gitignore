@@ -5,6 +5,8 @@
 
 .idea/
 
+.packages/
+
 # db files
 .db
 *.db
