@@ -21,7 +21,7 @@ public sealed class TaskReceiversManagementController(TaskReceiversManagementApi
     )]
     public async Task RegisterChat(ITelegramBotClient client, Update update)
     {
-        var message = update.Message;
+        TGMessage? message = update.Message;
         if (message == null)
             return;
 
@@ -47,7 +47,7 @@ public sealed class TaskReceiversManagementController(TaskReceiversManagementApi
     )]
     public async Task RemoveChat(ITelegramBotClient client, Update update)
     {
-        var message = update.Message;
+        TGMessage? message = update.Message;
         if (message == null)
             return;
 

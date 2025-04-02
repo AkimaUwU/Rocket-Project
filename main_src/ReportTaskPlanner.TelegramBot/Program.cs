@@ -10,7 +10,7 @@ if (!Directory.Exists(ConfigurationVariables.ConfigurationFolder))
     Directory.CreateDirectory(ConfigurationVariables.ConfigurationFolder);
 
 if (!File.Exists(ConfigurationVariables.TelegramBotTokenConfigPath))
-    TgBotOptionsResolver.ResolveTgOptions();
+    throw new FileNotFoundException("File with telegram bot token was not found. Can't start.");
 
 TgBotOptions options = TgBotOptionsResolver.LoadTgBotOptions();
 HostApplicationBuilder builder = Host.CreateApplicationBuilder(args);

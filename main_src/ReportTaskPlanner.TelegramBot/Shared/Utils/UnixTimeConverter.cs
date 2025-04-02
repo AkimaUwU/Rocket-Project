@@ -11,8 +11,10 @@ public static class UnixTimeConverter
 
     public static DateTime FromUnixTime(this long unixSeconds)
     {
-        DateTime unixEpoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
-        DateTime utcDateTime = unixEpoch.AddSeconds(unixSeconds);
-        return utcDateTime.ToLocalTime();
+        DateTimeOffset offset = DateTimeOffset.FromUnixTimeSeconds(unixSeconds);
+        return offset.DateTime;
+        // DateTime unixEpoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+        // DateTime utcDateTime = unixEpoch.AddSeconds(unixSeconds);
+        // return utcDateTime.ToLocalTime();
     }
 }

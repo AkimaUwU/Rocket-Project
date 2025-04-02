@@ -34,7 +34,7 @@ public sealed class TimeZoneDbJsonDeserializer
             JsonElement offsetElement = element.GetProperty("gmtOffset");
             string zoneName = timeZoneElement.GetString()!;
             long offSetValue = offsetElement.GetInt64();
-            long timeStamp = timeStampElement.GetInt64() - offSetValue;
+            long timeStamp = timeStampElement.GetInt64();
             string displayName = ListTimeZonesRusificator.TryFormat(zoneName);
             DateTime dateTime = timeStamp.FromUnixTime();
             ApplicationTime time = new(zoneName, displayName, timeStamp, dateTime);
